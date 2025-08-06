@@ -163,6 +163,33 @@ export default function AboutPage() {
           <CardContent className="space-y-6">
             <div>
               <h3 className="text-lg font-semibold mb-4 flex items-center">
+                <Badge variant="secondary" className="mr-2">Career</Badge>
+                Professional Experience
+              </h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <p className="font-medium">Assistant Professor</p>
+                    <p className="text-sm text-muted-foreground">School of Life Sciences, Tsinghua University</p>
+                    <p className="text-sm text-muted-foreground">Tsinghua University-Peking University Center for Life Sciences</p>
+                    <p className="text-sm text-muted-foreground">Beijing Frontier Research Center for Biological Structure</p>
+                  </div>
+                  <Badge variant="outline">2025-Present</Badge>
+                </div>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <p className="font-medium">Senior Researcher</p>
+                    <p className="text-sm text-muted-foreground">Microsoft Research</p>
+                  </div>
+                  <Badge variant="outline">2019-2025</Badge>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 flex items-center">
                 <Badge variant="secondary" className="mr-2">Education</Badge>
                 Academic Background
               </h3>
@@ -195,51 +222,7 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <Separator />
 
-            <div>
-              <h3 className="text-lg font-semibold mb-4 flex items-center">
-                <Badge variant="secondary" className="mr-2">Career</Badge>
-                Professional Experience
-              </h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">Assistant Professor</p>
-                    <p className="text-sm text-muted-foreground">School of Life Sciences, Tsinghua University</p>
-                    <p className="text-sm text-muted-foreground">Tsinghua University-Peking University Center for Life Sciences</p>
-                    <p className="text-sm text-muted-foreground">Beijing Frontier Research Center for Biological Structure</p>
-                  </div>
-                  <Badge variant="outline">2025-Present</Badge>
-                </div>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">Senior Researcher</p>
-                    <p className="text-sm text-muted-foreground">Microsoft Research</p>
-                  </div>
-                  <Badge variant="outline">2019-2025</Badge>
-                </div>
-              </div>
-            </div>
-
-            <Separator />
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4 flex items-center">
-                <Badge variant="secondary" className="mr-2">Honors</Badge>
-                Awards and Recognition
-              </h3>
-              <div className="space-y-2">
-                <div className="flex justify-between items-center">
-                  <p className="text-sm">Top 10 Advances in Bioinformatics in China</p>
-                  <Badge variant="outline">2024</Badge>
-                </div>
-                <div className="flex justify-between items-center">
-                  <p className="text-sm">Champion of the First Global AI Drug Discovery Competition</p>
-                  <Badge variant="outline">2023</Badge>
-                </div>
-              </div>
-            </div>
           </CardContent>
         </Card>
 
@@ -399,7 +382,7 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <div className="flex justify-between items-start p-4 border rounded-lg">
                     <div>
-                      <p className="font-medium">First AI Drug Development Algorithm Competition Finals</p>
+                      <p className="font-medium">Champion of the First Global AI Drug Discovery Competition</p>
                       <p className="text-sm text-muted-foreground">AI Drug Development Competition</p>
                       <p className="text-xs text-muted-foreground mt-1">
                         Recognized for innovative AI algorithms in pharmaceutical research
@@ -410,7 +393,7 @@ export default function AboutPage() {
 
                   <div className="flex justify-between items-start p-4 border rounded-lg">
                     <div>
-                      <p className="font-medium">Top Ten Advances in Chinese Bioinformatics for 2024</p>
+                      <p className="font-medium">Top 10 Advances in Chinese Bioinformatics for 2024</p>
                       <p className="text-sm text-muted-foreground">Chinese Society for Bioinformatics</p>
                       <p className="text-xs text-muted-foreground mt-1">
                         Outstanding contribution to bioinformatics research in China
