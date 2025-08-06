@@ -1,6 +1,18 @@
+'use client';
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Mail, MapPin, Phone, Globe } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import Link from "next/link";
+import dynamic from "next/dynamic";
+
+// Dynamically import the map component with no SSR
+const MapComponent = dynamic(() => import('./map-component'), {
+  ssr: false,
+  loading: () => <div className="bg-gray-100 h-[450px] rounded-lg flex items-center justify-center">
+    <p className="text-muted-foreground">Loading map...</p>
+  </div>
+});
 
 export default function ContactPage() {
   return (
@@ -31,7 +43,7 @@ export default function ContactPage() {
                 <Phone className="h-5 w-5 text-muted-foreground" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-muted-foreground">+1 (555) 123-4567</p>
+                  <p className="text-muted-foreground">Coming Soon</p>
                 </div>
               </div>
               
@@ -47,16 +59,7 @@ export default function ContactPage() {
                 </div>
               </div>
               
-              <div className="flex items-center space-x-3">
-                <Globe className="h-5 w-5 text-muted-foreground" />
-                <div>
-                  <p className="font-medium">Office Hours</p>
-                  <p className="text-muted-foreground">
-                    Monday - Friday: 9:00 AM - 5:00 PM<br />
-                    By appointment
-                  </p>
-                </div>
-              </div>
+
             </CardContent>
           </Card>
 
@@ -70,60 +73,36 @@ export default function ContactPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <h3 className="font-semibold mb-2">Prospective Students</h3>
+                <h3 className="font-semibold mb-2">Join Our Research Group</h3>
                 <p className="text-muted-foreground text-sm mb-3">
-                  We are always looking for motivated PhD and Master's students
-                  with strong backgrounds in computer science, mathematics, or
-                  related fields.
+                  We are always looking for motivated students, postdoctoral researchers,
+                  and research assistants with strong backgrounds in computer science,
+                  mathematics, or related fields.
                 </p>
-                <Button variant="outline" size="sm">
-                  Application Information
-                </Button>
-              </div>
-              
-              <div>
-                <h3 className="font-semibold mb-2">Postdoctoral Researchers</h3>
-                <p className="text-muted-foreground text-sm mb-3">
-                  Opportunities available for postdoctoral researchers with
-                  expertise in machine learning and artificial intelligence.
-                </p>
-                <Button variant="outline" size="sm">
-                  Postdoc Positions
-                </Button>
-              </div>
-              
-              <div>
-                <h3 className="font-semibold mb-2">Collaborations</h3>
-                <p className="text-muted-foreground text-sm mb-3">
-                  We welcome collaborations with industry partners and
-                  researchers from other institutions.
-                </p>
-                <Button variant="outline" size="sm">
-                  Partnership Opportunities
-                </Button>
+                <Link href="/positions">
+                  <Button variant="outline" size="sm">
+                    View Open Positions
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
         </div>
 
-        {/* Location Map Placeholder */}
+        {/* Location Map */}
         <Card className="mt-8">
           <CardHeader>
             <CardTitle>Location</CardTitle>
             <CardDescription>
-              Find us on campus
+              Tsinghua University Biomedical Building
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="bg-gray-100 h-64 rounded-lg flex items-center justify-center">
-              <p className="text-muted-foreground">
-                Interactive campus map would be embedded here
-              </p>
-            </div>
+            <MapComponent />
             <div className="mt-4">
               <p className="text-sm text-muted-foreground">
-                <strong>Directions:</strong> The Computer Science Building is located
-                in the heart of campus, easily accessible by public transportation
+                <strong>Directions:</strong> The Biomedical Building is located
+                in the heart of Tsinghua University campus, easily accessible by public transportation
                 and with visitor parking available nearby.
               </p>
             </div>
@@ -139,13 +118,15 @@ export default function ContactPage() {
                 <p className="text-sm text-muted-foreground mb-4">
                   Explore our recent research contributions
                 </p>
-                <Button variant="outline" size="sm">
-                  View Publications
-                </Button>
+                <Link href="/publications">
+                  <Button variant="outline" size="sm">
+                    View Publications
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardContent className="pt-6">
               <div className="text-center">
@@ -153,23 +134,27 @@ export default function ContactPage() {
                 <p className="text-sm text-muted-foreground mb-4">
                   Learn about our research focus
                 </p>
-                <Button variant="outline" size="sm">
-                  About Our Research
-                </Button>
+                <Link href="/#research-areas">
+                  <Button variant="outline" size="sm">
+                    About Our Research
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardContent className="pt-6">
               <div className="text-center">
-                <h3 className="font-semibold mb-2">News & Updates</h3>
+                <h3 className="font-semibold mb-2">News</h3>
                 <p className="text-sm text-muted-foreground mb-4">
                   Stay updated with our latest news
                 </p>
-                <Button variant="outline" size="sm">
-                  Latest News
-                </Button>
+                <Link href="/news">
+                  <Button variant="outline" size="sm">
+                    Latest News
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>

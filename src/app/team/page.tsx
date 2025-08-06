@@ -1,7 +1,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Mail, ExternalLink, GraduationCap, Users } from "lucide-react";
+import { Mail, ExternalLink, GraduationCap, Users, Briefcase } from "lucide-react";
+import Link from "next/link";
 
 export default function TeamPage() {
   return (
@@ -87,68 +88,23 @@ export default function TeamPage() {
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <div>
-                    <CardTitle>Alex Chen</CardTitle>
-                    <CardDescription>PhD Student (Year 4)</CardDescription>
+                    <CardTitle>Zhuoxuan Yang</CardTitle>
+                    <CardDescription>Laboratory Administrator</CardDescription>
                   </div>
-                  <Badge variant="default">PhD</Badge>
+                  <Badge variant="secondary">Admin</Badge>
                 </div>
               </CardHeader>
               <CardContent className="space-y-3">
                 <p className="text-sm text-muted-foreground">
-                  Focusing on deep learning optimization and neural architecture search. 
-                  Working on novel training algorithms for large-scale models.
+                  Laboratory administrator responsible for managing lab operations,
+                  coordinating research activities, and supporting team members.
                 </p>
                 <div>
                   <h5 className="font-medium text-sm mb-1">Research Areas</h5>
                   <div className="flex flex-wrap gap-1">
-                    <Badge variant="outline">Deep Learning</Badge>
-                    <Badge variant="outline">Optimization</Badge>
+                    <Badge variant="outline">AI + Biomolecular Structure</Badge>
+                    <Badge variant="outline">Molecular Dynamics</Badge>
                   </div>
-                </div>
-                <div className="flex space-x-2">
-                  <Button variant="outline" size="sm">
-                    <Mail className="h-3 w-3 mr-1" />
-                    Contact
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    <ExternalLink className="h-3 w-3 mr-1" />
-                    Profile
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-            
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div>
-                    <CardTitle>Maria Rodriguez</CardTitle>
-                    <CardDescription>PhD Student (Year 3)</CardDescription>
-                  </div>
-                  <Badge variant="default">PhD</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <p className="text-sm text-muted-foreground">
-                  Researching computer vision applications in healthcare. Developing 
-                  interpretable AI systems for medical image analysis.
-                </p>
-                <div>
-                  <h5 className="font-medium text-sm mb-1">Research Areas</h5>
-                  <div className="flex flex-wrap gap-1">
-                    <Badge variant="outline">Computer Vision</Badge>
-                    <Badge variant="outline">Healthcare AI</Badge>
-                  </div>
-                </div>
-                <div className="flex space-x-2">
-                  <Button variant="outline" size="sm">
-                    <Mail className="h-3 w-3 mr-1" />
-                    Contact
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    <ExternalLink className="h-3 w-3 mr-1" />
-                    Profile
-                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -163,18 +119,18 @@ export default function TeamPage() {
             If you are passionate about machine learning and AI research, we would love to hear from you.
           </p>
           <div className="flex justify-center space-x-4">
-            <Button size="lg">
-              <GraduationCap className="mr-2 h-4 w-4" />
-              Apply for PhD
-            </Button>
-            <Button variant="outline" size="lg">
-              <Users className="mr-2 h-4 w-4" />
-              Master Program
-            </Button>
-            <Button variant="outline" size="lg">
-              <Mail className="mr-2 h-4 w-4" />
-              Contact Us
-            </Button>
+            <Link href="/positions">
+              <Button size="lg">
+                <Briefcase className="mr-2 h-4 w-4" />
+                Positions
+              </Button>
+            </Link>
+            <Link href="/contact">
+              <Button variant="outline" size="lg">
+                <Mail className="mr-2 h-4 w-4" />
+                Contact Us
+              </Button>
+            </Link>
           </div>
         </section>
       </div>

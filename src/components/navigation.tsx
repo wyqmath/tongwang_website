@@ -19,6 +19,7 @@ const navigationItems = [
   { name: "Publications", href: "/publications" },
   { name: "News", href: "/news" },
   { name: "Positions", href: "/positions" },
+  { name: "Contact", href: "/contact" },
   ...(process.env.NODE_ENV === 'development' ? [{ name: "Admin", href: "/admin" }] : []),
 ];
 

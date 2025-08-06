@@ -38,7 +38,7 @@ export default function AdminPage() {
             <CardContent className="pt-6">
               <div className="text-center">
                 <FileText className="h-8 w-8 mx-auto mb-2 text-blue-500" />
-                <div className="text-2xl font-bold">45</div>
+                <div className="text-2xl font-bold">29</div>
                 <p className="text-xs text-muted-foreground">Publications</p>
               </div>
             </CardContent>
@@ -47,7 +47,7 @@ export default function AdminPage() {
             <CardContent className="pt-6">
               <div className="text-center">
                 <Newspaper className="h-8 w-8 mx-auto mb-2 text-green-500" />
-                <div className="text-2xl font-bold">12</div>
+                <div className="text-2xl font-bold">2</div>
                 <p className="text-xs text-muted-foreground">News Articles</p>
               </div>
             </CardContent>
@@ -56,7 +56,7 @@ export default function AdminPage() {
             <CardContent className="pt-6">
               <div className="text-center">
                 <Users className="h-8 w-8 mx-auto mb-2 text-purple-500" />
-                <div className="text-2xl font-bold">8</div>
+                <div className="text-2xl font-bold">2</div>
                 <p className="text-xs text-muted-foreground">Team Members</p>
               </div>
             </CardContent>
@@ -65,8 +65,8 @@ export default function AdminPage() {
             <CardContent className="pt-6">
               <div className="text-center">
                 <BarChart3 className="h-8 w-8 mx-auto mb-2 text-orange-500" />
-                <div className="text-2xl font-bold">1,234</div>
-                <p className="text-xs text-muted-foreground">Total Views</p>
+                <div className="text-2xl font-bold">861</div>
+                <p className="text-xs text-muted-foreground">Total Citations</p>
               </div>
             </CardContent>
           </Card>
@@ -112,14 +112,15 @@ export default function AdminPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  {/* Sample Publication Entry */}
+                  {/* Real Publication Entry */}
                   <div className="flex items-center justify-between p-4 border rounded-lg">
                     <div className="flex-1">
-                      <h4 className="font-semibold">Advanced Optimization Techniques for Large-Scale Neural Networks</h4>
-                      <p className="text-sm text-muted-foreground">Tong Wang, Alex Chen, Maria Rodriguez - 2024</p>
+                      <h4 className="font-semibold">Ab initio characterization of protein molecular dynamics with AI2BMD</h4>
+                      <p className="text-sm text-muted-foreground">Wang, T., He, X., Li, M., Li, Y., Bi, R., Wang, Y., Cheng, C., Shen, X., Meng, J., Zhang, H., Liu, H., Wang, Z., Li, S., Shao, B., & Liu, T. Y. - 2024</p>
                       <div className="flex gap-2 mt-2">
                         <Badge variant="secondary">Journal</Badge>
-                        <Badge variant="outline">Nature MI</Badge>
+                        <Badge variant="outline">Nature</Badge>
+                        <Badge variant="destructive">High Impact</Badge>
                       </div>
                     </div>
                     <div className="flex gap-2">
@@ -137,11 +138,11 @@ export default function AdminPage() {
 
                   <div className="flex items-center justify-between p-4 border rounded-lg">
                     <div className="flex-1">
-                      <h4 className="font-semibold">Interpretable AI for Healthcare: A Comprehensive Framework</h4>
-                      <p className="text-sm text-muted-foreground">Maria Rodriguez, Tong Wang, Dr. Lisa Thompson - 2024</p>
+                      <h4 className="font-semibold">Enhancing protein language models with structure-based encoder and pre-training</h4>
+                      <p className="text-sm text-muted-foreground">Wang, T., Qiao, Y., Ding, W., Mao, W., Zhou, Y., & Gong, H. - 2023</p>
                       <div className="flex gap-2 mt-2">
-                        <Badge variant="secondary">Conference</Badge>
-                        <Badge variant="outline">ICML</Badge>
+                        <Badge variant="secondary">Journal</Badge>
+                        <Badge variant="outline">Nature Machine Intelligence</Badge>
                       </div>
                     </div>
                     <div className="flex gap-2">
@@ -182,11 +183,12 @@ export default function AdminPage() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 border rounded-lg">
                     <div className="flex-1">
-                      <h4 className="font-semibold">$2.5M NSF Grant Awarded for AI Research</h4>
-                      <p className="text-sm text-muted-foreground">Published: January 15, 2025</p>
+                      <h4 className="font-semibold">Champion of the First Global AI Drug Discovery Competition</h4>
+                      <p className="text-sm text-muted-foreground">Published: 2024</p>
                       <div className="flex gap-2 mt-2">
                         <Badge variant="default">Featured</Badge>
-                        <Badge variant="outline">Grant Award</Badge>
+                        <Badge variant="outline">Award</Badge>
+                        <Badge variant="outline">AI Drug Discovery</Badge>
                       </div>
                     </div>
                     <div className="flex gap-2">
@@ -204,11 +206,12 @@ export default function AdminPage() {
 
                   <div className="flex items-center justify-between p-4 border rounded-lg">
                     <div className="flex-1">
-                      <h4 className="font-semibold">Paper Accepted at ICML 2025</h4>
-                      <p className="text-sm text-muted-foreground">Published: December 20, 2024</p>
+                      <h4 className="font-semibold">Top 10 Advances in Chinese Bioinformatics for 2024</h4>
+                      <p className="text-sm text-muted-foreground">Published: 2024</p>
                       <div className="flex gap-2 mt-2">
-                        <Badge variant="secondary">Publication</Badge>
-                        <Badge variant="outline">ICML 2025</Badge>
+                        <Badge variant="default">Featured</Badge>
+                        <Badge variant="outline">Recognition</Badge>
+                        <Badge variant="outline">Bioinformatics</Badge>
                       </div>
                     </div>
                     <div className="flex gap-2">
@@ -249,7 +252,7 @@ export default function AdminPage() {
                 <div className="space-y-4">
                   <div className="flex items-center justify-between p-4 border rounded-lg">
                     <div className="flex-1">
-                      <h4 className="font-semibold">Professor Tong Wang</h4>
+                      <h4 className="font-semibold">Tong Wang</h4>
                       <p className="text-sm text-muted-foreground">Principal Investigator</p>
                       <div className="flex gap-2 mt-2">
                         <Badge variant="default">PI</Badge>
@@ -268,10 +271,10 @@ export default function AdminPage() {
 
                   <div className="flex items-center justify-between p-4 border rounded-lg">
                     <div className="flex-1">
-                      <h4 className="font-semibold">Alex Chen</h4>
-                      <p className="text-sm text-muted-foreground">PhD Student (Year 4)</p>
+                      <h4 className="font-semibold">Zhuoxuan Yang</h4>
+                      <p className="text-sm text-muted-foreground">Laboratory Administrator</p>
                       <div className="flex gap-2 mt-2">
-                        <Badge variant="secondary">PhD</Badge>
+                        <Badge variant="secondary">Admin</Badge>
                         <Badge variant="outline">Current</Badge>
                       </div>
                     </div>
@@ -319,16 +322,16 @@ export default function AdminPage() {
                   <div className="space-y-4">
                     <div>
                       <label className="block text-sm font-medium mb-2">Site Title</label>
-                      <input 
-                        type="text" 
-                        defaultValue="Tong Wang Research Group"
+                      <input
+                        type="text"
+                        defaultValue="Tong Wang - Tsinghua University"
                         className="w-full p-2 border rounded-md"
                       />
                     </div>
                     <div>
                       <label className="block text-sm font-medium mb-2">Site Description</label>
-                      <textarea 
-                        defaultValue="Research group website for Professor Tong Wang"
+                      <textarea
+                        defaultValue="Research group focused on AI + Biomolecular Structure, Molecular Dynamics, Graph Neural Networks, and Drug Discovery at Tsinghua University"
                         className="w-full p-2 border rounded-md h-20"
                       />
                     </div>

@@ -341,21 +341,11 @@ export default function MolecularDynamicsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h4 className="font-semibold mb-3">Current Team Members</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• 3 PhD students specializing in AI-MD methods</li>
-                    <li>• 2 Postdocs with quantum chemistry background</li>
-                    <li>• 1 Research scientist in machine learning</li>
-                    <li>• Visiting scholars from international institutions</li>
-                  </ul>
+                  <p className="text-sm text-muted-foreground">Coming Soon</p>
                 </div>
                 <div>
                   <h4 className="font-semibold mb-3">Key Collaborations</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Microsoft Research Asia</li>
-                    <li>• DeepMind (AlphaFold team)</li>
-                    <li>• MIT Computational Biology</li>
-                    <li>• Max Planck Institute for Biophysics</li>
-                  </ul>
+                  <p className="text-sm text-muted-foreground">Coming Soon</p>
                 </div>
               </div>
             </CardContent>
