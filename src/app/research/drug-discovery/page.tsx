@@ -366,24 +366,25 @@ export default function DrugDiscoveryPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-8 flex items-center">
             <BookOpen className="mr-3 text-primary" />
-            Recent Publications
+            Key Publications
           </h2>
-          
+
           <div className="space-y-4">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-blue-500">
               <CardContent className="pt-6">
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
-                    <h4 className="font-semibold mb-2">
-                      AI-Driven Drug Discovery: From Target Identification to Clinical Trials
+                    <h4 className="font-semibold mb-2 text-lg">
+                      DSN-DDI: An accurate and generalized framework for drug–drug interaction prediction by dual-view representation learning
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Wang, T.*; Li, M.; Zhang, H.; Chen, X.; Liu, T.; Shao, B.
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Li, Z., Zhu, S., Shao, B., Zeng, X., Wang, T., & Liu, T. Y.
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                      <Badge variant="secondary">Nature Reviews Drug Discovery</Badge>
-                      <span>2024</span>
-                      <span>Impact Factor: 84.1</span>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <Badge className="bg-teal-600 hover:bg-teal-700">Briefings in Bioinformatics</Badge>
+                      <span className="text-muted-foreground">2023</span>
+                      <span className="text-muted-foreground">IF: 7.7</span>
+                      <span className="text-muted-foreground">24(1), bbac597</span>
                     </div>
                   </div>
                   <Button variant="outline" size="sm">
@@ -394,20 +395,21 @@ export default function DrugDiscoveryPage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-green-500">
               <CardContent className="pt-6">
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
-                    <h4 className="font-semibold mb-2">
-                      Transformer-Based Molecular Property Prediction for Drug Discovery
+                    <h4 className="font-semibold mb-2 text-lg">
+                      Improved drug–target interaction prediction with intermolecular graph transformer
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Chen, X.; Wang, T.*; Li, Y.; Shao, B.; Liu, T.
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Liu, S., Wang, Y., Deng, Y., He, L., Shao, B., Yin, J., Wang, T., & Liu, T. Y.
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                      <Badge variant="secondary">Journal of Medicinal Chemistry</Badge>
-                      <span>2024</span>
-                      <span>Impact Factor: 7.3</span>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <Badge className="bg-teal-600 hover:bg-teal-700">Briefings in Bioinformatics</Badge>
+                      <span className="text-muted-foreground">2022</span>
+                      <span className="text-muted-foreground">IF: 7.7</span>
+                      <span className="text-muted-foreground">23(5), bbac162</span>
                     </div>
                   </div>
                   <Button variant="outline" size="sm">
@@ -418,20 +420,22 @@ export default function DrugDiscoveryPage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-purple-500">
               <CardContent className="pt-6">
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
-                    <h4 className="font-semibold mb-2">
-                      Generative Models for Novel Drug Design and Optimization
+                    <h4 className="font-semibold mb-2 text-lg">
+                      Improved fragment sampling for ab initio protein structure prediction using deep neural networks
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Li, Y.; Wang, T.*; Zhang, H.; Liu, T.
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Wang, T., Qiao, Y., Ding, W., Mao, W., Zhou, Y., & Gong, H.
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                      <Badge variant="secondary">Nature Communications</Badge>
-                      <span>2024</span>
-                      <span>Impact Factor: 16.6</span>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <Badge className="bg-emerald-600 hover:bg-emerald-700">Nature Machine Intelligence</Badge>
+                      <Badge variant="outline" className="text-orange-700 border-orange-700">Breakthrough</Badge>
+                      <span className="text-muted-foreground">2019</span>
+                      <span className="text-muted-foreground">IF: 23.9</span>
+                      <span className="text-muted-foreground">1(8), 347-355</span>
                     </div>
                   </div>
                   <Button variant="outline" size="sm">
@@ -444,66 +448,9 @@ export default function DrugDiscoveryPage() {
           </div>
         </section>
 
-        {/* Industry Partnerships */}
-        <section className="mb-12">
-          <Card className="bg-gradient-to-r from-gray-50 to-gray-100">
-            <CardHeader>
-              <CardTitle className="flex items-center text-2xl">
-                <Users className="mr-2 text-primary" />
-                Industry Partnerships & Collaborations
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold mb-3">Pharmaceutical Partners</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Roche/Genentech</li>
-                    <li>• Novartis Institutes for BioMedical Research</li>
-                    <li>• Johnson & Johnson Innovation</li>
-                    <li>• AstraZeneca AI Centre</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-3">Technology Partners</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Microsoft Research AI4Science</li>
-                    <li>• Google DeepMind</li>
-                    <li>• NVIDIA Clara Discovery</li>
-                    <li>• Schrödinger Inc.</li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
 
-        {/* Call to Action */}
-        <section className="text-center">
-          <Card className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/20">
-            <CardContent className="pt-8 pb-8">
-              <h3 className="text-2xl font-bold mb-4">Accelerate Drug Discovery with AI</h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Join us in revolutionizing pharmaceutical research through artificial intelligence. 
-                Together, we can bring life-saving treatments to patients faster.
-              </p>
-              <div className="flex gap-4 justify-center">
-                <Button asChild size="lg">
-                  <Link href="/positions">
-                    <Users className="h-4 w-4 mr-2" />
-                    Join Our Mission
-                  </Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link href="/contact">
-                    Partner with Us
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
+
+
       </div>
     </div>
   );

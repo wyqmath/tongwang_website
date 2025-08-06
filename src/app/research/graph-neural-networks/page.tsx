@@ -335,24 +335,26 @@ export default function GraphNeuralNetworksPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-8 flex items-center">
             <BookOpen className="mr-3 text-primary" />
-            Recent Publications
+            Key Publications
           </h2>
-          
+
           <div className="space-y-4">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-blue-500">
               <CardContent className="pt-6">
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
-                    <h4 className="font-semibold mb-2">
-                      Graph Neural Networks and Machine Learning Force Fields
+                    <h4 className="font-semibold mb-2 text-lg">
+                      Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Wang, T.*; et al.
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Wang, Y., Wang, T., Li, S., He, X., Li, M., Wang, Z., Zheng, N., Shao, B., & Liu, T. Y.
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                      <Badge variant="secondary">Nature Communications</Badge>
-                      <span>2024</span>
-                      <span>Impact Factor: 16.6</span>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <Badge className="bg-orange-600 hover:bg-orange-700">Nature Communications</Badge>
+                      <Badge variant="outline" className="text-purple-700 border-purple-700">Editors' Highlights</Badge>
+                      <span className="text-muted-foreground">2024</span>
+                      <span className="text-muted-foreground">IF: 15.7</span>
+                      <span className="text-muted-foreground">15(1), 313</span>
                     </div>
                   </div>
                   <Button variant="outline" size="sm">
@@ -363,20 +365,20 @@ export default function GraphNeuralNetworksPage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-green-500">
               <CardContent className="pt-6">
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
-                    <h4 className="font-semibold mb-2">
-                      Geometric Deep Learning for Molecular Systems
+                    <h4 className="font-semibold mb-2 text-lg">
+                      Long-short-range message-passing: A physics-informed framework to capture non-local interaction for scalable molecular dynamics simulation
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Li, M.*; Wang, T.*; et al.
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Li, Y., Wang, Y., Huang, L., Yang, H., Wei, X., Zhang, J., Wang, T., Wang, Z., Shao, B., & Liu, T. Y.
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                      <Badge variant="secondary">ICLR</Badge>
-                      <span>2024</span>
-                      <span>Top-tier ML Conference</span>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <Badge className="bg-indigo-600 hover:bg-indigo-700">ICLR</Badge>
+                      <Badge variant="outline" className="text-green-700 border-green-700">Top-tier ML</Badge>
+                      <span className="text-muted-foreground">2024</span>
                     </div>
                   </div>
                   <Button variant="outline" size="sm">
@@ -387,20 +389,21 @@ export default function GraphNeuralNetworksPage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-purple-500">
               <CardContent className="pt-6">
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
-                    <h4 className="font-semibold mb-2">
-                      Neural Network Potentials for Biomolecular Systems
+                    <h4 className="font-semibold mb-2 text-lg">
+                      Efficiently incorporating quintuple interactions into geometric deep learning force fields
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Wang, T.*; et al.
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Wang, Z., Liu, G., Zhou, Y., Wang, T., & Shao, B.
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                      <Badge variant="secondary">NeurIPS</Badge>
-                      <span>2023</span>
-                      <span>Top-tier ML Conference</span>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <Badge className="bg-red-600 hover:bg-red-700">NeurIPS</Badge>
+                      <Badge variant="outline" className="text-green-700 border-green-700">Top-tier ML</Badge>
+                      <span className="text-muted-foreground">2023</span>
+                      <span className="text-muted-foreground">36, 77043-77055</span>
                     </div>
                   </div>
                   <Button variant="outline" size="sm">
@@ -413,66 +416,9 @@ export default function GraphNeuralNetworksPage() {
           </div>
         </section>
 
-        {/* Team & Collaboration */}
-        <section className="mb-12">
-          <Card className="bg-gradient-to-r from-gray-50 to-gray-100">
-            <CardHeader>
-              <CardTitle className="flex items-center text-2xl">
-                <Users className="mr-2 text-primary" />
-                Research Team & Collaborations
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold mb-3">Current Team Members</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• 4 PhD students in geometric deep learning</li>
-                    <li>• 2 Postdocs with GNN expertise</li>
-                    <li>• 1 Research scientist in molecular modeling</li>
-                    <li>• International visiting researchers</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-3">Key Collaborations</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Google DeepMind</li>
-                    <li>• Stanford University (Jure Leskovec)</li>
-                    <li>• University of Cambridge</li>
-                    <li>• NVIDIA Research</li>
-                  </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
 
-        {/* Call to Action */}
-        <section className="text-center">
-          <Card className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/20">
-            <CardContent className="pt-8 pb-8">
-              <h3 className="text-2xl font-bold mb-4">Explore Graph Neural Networks with Us</h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Join our cutting-edge research in geometric deep learning for molecular systems. 
-                We're always looking for talented researchers and collaborators.
-              </p>
-              <div className="flex gap-4 justify-center">
-                <Button asChild size="lg">
-                  <Link href="/positions">
-                    <Users className="h-4 w-4 mr-2" />
-                    Join Our Research
-                  </Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link href="/contact">
-                    Contact Us
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
+
+
       </div>
     </div>
   );

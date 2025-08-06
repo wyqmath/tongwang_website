@@ -274,24 +274,26 @@ export default function MolecularDynamicsPage() {
         <section className="mb-12">
           <h2 className="text-3xl font-bold mb-8 flex items-center">
             <BookOpen className="mr-3 text-primary" />
-            Recent Publications
+            Key Publications
           </h2>
-          
+
           <div className="space-y-4">
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-green-500">
               <CardContent className="pt-6">
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
-                    <h4 className="font-semibold mb-2">
+                    <h4 className="font-semibold mb-2 text-lg">
                       Ab initio characterization of protein molecular dynamics with AI2BMD
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Wang, T.#*; He, X.#; Li, M.#; Li, Y.#; Bi, R.; Wang, Y.; Cheng, C.; Shen, X.; Meng, J.; Zhang, H.; Liu, H.; Wang, Z.; Li, S.; Shao, B.*; Liu, T.
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Wang, T., He, X., Li, M., Li, Y., Bi, R., Wang, Y., Cheng, C., Shen, X., Meng, J., Zhang, H., Liu, H., Wang, Z., Li, S., Shao, B., & Liu, T. Y.
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                      <Badge variant="secondary">Nature</Badge>
-                      <span>2024</span>
-                      <span>Impact Factor: 64.8</span>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <Badge className="bg-red-600 hover:bg-red-700">Nature</Badge>
+                      <Badge variant="outline" className="text-green-700 border-green-700">High Impact</Badge>
+                      <span className="text-muted-foreground">2024</span>
+                      <span className="text-muted-foreground">IF: 48.5</span>
+                      <span className="text-muted-foreground">635, 1019-1027</span>
                     </div>
                   </div>
                   <Button variant="outline" size="sm">
@@ -302,20 +304,48 @@ export default function MolecularDynamicsPage() {
               </CardContent>
             </Card>
 
-            <Card className="hover:shadow-lg transition-shadow">
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-blue-500">
               <CardContent className="pt-6">
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
-                    <h4 className="font-semibold mb-2">
-                      Machine Learning Enhanced Molecular Dynamics for Protein Folding
+                    <h4 className="font-semibold mb-2 text-lg">
+                      Loss of Spike N370 glycosylation as an important evolutionary event for the enhanced infectivity of SARS-CoV-2
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Li, M.; Wang, T.*; Zhang, H.; Liu, T.; Shao, B.
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Zhang, S., Liang, Q., He, X., Zhao, C., Ren, W., Yang, Z., Wang, Z., Ding, Q., Deng, H., Wang, T., Zhang, L., & Wang, X.
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-muted-foreground">
-                      <Badge variant="secondary">JACS</Badge>
-                      <span>2024</span>
-                      <span>Impact Factor: 15.4</span>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <Badge className="bg-blue-600 hover:bg-blue-700">Cell Research</Badge>
+                      <Badge variant="outline" className="text-green-700 border-green-700">High Impact</Badge>
+                      <span className="text-muted-foreground">2022</span>
+                      <span className="text-muted-foreground">IF: 46.3</span>
+                      <span className="text-muted-foreground">32(3), 315-318</span>
+                    </div>
+                  </div>
+                  <Button variant="outline" size="sm">
+                    <ExternalLink className="h-4 w-4 mr-1" />
+                    View
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow border-l-4 border-l-purple-500">
+              <CardContent className="pt-6">
+                <div className="flex justify-between items-start">
+                  <div className="flex-1">
+                    <h4 className="font-semibold mb-2 text-lg">
+                      Structural insights into the SARS-CoV-2 Omicron RBD-ACE2 interaction
+                    </h4>
+                    <p className="text-sm text-muted-foreground mb-3">
+                      Lan, J., He, X., Ren, Y., Wang, Z., Zhou, H., Fan, S., Qi, C., Guo, A., Wang, L., Wang, T., & Wang, X.
+                    </p>
+                    <div className="flex items-center space-x-4 text-sm">
+                      <Badge className="bg-blue-600 hover:bg-blue-700">Cell Research</Badge>
+                      <Badge variant="outline" className="text-green-700 border-green-700">High Impact</Badge>
+                      <span className="text-muted-foreground">2022</span>
+                      <span className="text-muted-foreground">IF: 46.3</span>
+                      <span className="text-muted-foreground">32(6), 593-595</span>
                     </div>
                   </div>
                   <Button variant="outline" size="sm">
@@ -328,56 +358,9 @@ export default function MolecularDynamicsPage() {
           </div>
         </section>
 
-        {/* Team & Collaboration */}
-        <section className="mb-12">
-          <Card className="bg-gradient-to-r from-gray-50 to-gray-100">
-            <CardHeader>
-              <CardTitle className="flex items-center text-2xl">
-                <Users className="mr-2 text-primary" />
-                Research Team & Collaborations
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold mb-3">Current Team Members</h4>
-                  <p className="text-sm text-muted-foreground">Coming Soon</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-3">Key Collaborations</h4>
-                  <p className="text-sm text-muted-foreground">Coming Soon</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
 
-        {/* Call to Action */}
-        <section className="text-center">
-          <Card className="bg-gradient-to-r from-primary/10 to-primary/5 border-primary/20">
-            <CardContent className="pt-8 pb-8">
-              <h3 className="text-2xl font-bold mb-4">Interested in Our Research?</h3>
-              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Join us in revolutionizing molecular simulation through AI. We welcome 
-                collaborations, student applications, and research partnerships.
-              </p>
-              <div className="flex gap-4 justify-center">
-                <Button asChild size="lg">
-                  <Link href="/positions">
-                    <Users className="h-4 w-4 mr-2" />
-                    Join Our Team
-                  </Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link href="/contact">
-                    Contact Us
-                    <ArrowRight className="h-4 w-4 ml-2" />
-                  </Link>
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
+
+
       </div>
     </div>
   );
