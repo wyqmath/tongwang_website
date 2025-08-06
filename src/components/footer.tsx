@@ -3,38 +3,47 @@ import Link from "next/link";
 export function Footer() {
   return (
     <footer className="border-t bg-background">
-      <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
-        <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0 md:ml-4">
-          <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
+      <div className="container mx-auto px-4 py-6">
+        <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+          {/* Copyright */}
+          <p className="text-sm text-muted-foreground">
             © 2025 Tong Wang Research Group. All rights reserved.
           </p>
-        </div>
-        <div className="flex flex-col items-center space-y-2 md:flex-row md:space-y-0 md:space-x-6">
-          <Link
-            href="/contact"
-            className="text-sm text-muted-foreground hover:text-foreground"
-          >
-            Contact
-          </Link>
-          <div className="flex flex-col items-center space-y-1 md:items-start">
-            <span className="text-sm font-medium text-muted-foreground">Useful Links</span>
-            <div className="flex flex-col space-y-1 md:space-y-0 md:space-x-4 md:flex-row">
+
+          {/* Contact and Affiliations */}
+          <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-8">
+            {/* Contact Section */}
+            <div className="text-center md:text-left">
+              <h4 className="text-sm font-semibold text-foreground mb-2">Contact</h4>
               <Link
-                href="https://www.tsinghua.edu.cn/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-muted-foreground hover:text-foreground"
+                href="/contact"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
-                Tsinghua University
+                Get in Touch
               </Link>
-              <Link
-                href="https://www.frcbs.tsinghua.edu.cn/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-muted-foreground hover:text-foreground"
-              >
-                Beijing Frontier Research Center
-              </Link>
+            </div>
+
+            {/* Affiliations Section */}
+            <div className="text-center md:text-left">
+              <h4 className="text-sm font-semibold text-foreground mb-2">Affiliations</h4>
+              <div className="flex flex-col space-y-1">
+                <Link
+                  href="https://www.tsinghua.edu.cn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Tsinghua University
+                </Link>
+                <Link
+                  href="https://www.frcbs.tsinghua.edu.cn/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  Beijing Frontier Research Center for Biological Structure
+                </Link>
+              </div>
             </div>
           </div>
         </div>
