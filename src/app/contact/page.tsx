@@ -23,7 +23,7 @@ export default function ContactPage() {
                 <Mail className="h-5 w-5 text-muted-foreground" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-muted-foreground">tong.wang@university.edu</p>
+                  <p className="text-muted-foreground">tongwang@mail.tsinghua.edu.cn</p>
                 </div>
               </div>
               
@@ -40,9 +40,9 @@ export default function ContactPage() {
                 <div>
                   <p className="font-medium">Office Address</p>
                   <p className="text-muted-foreground">
-                    Room 123, Computer Science Building<br />
-                    University Name<br />
-                    City, State 12345
+                    Room A216-1, Biomedical Building<br />
+                    School of Life Sciences, Tsinghua University<br />
+                    Haidian District, Beijing, China
                   </p>
                 </div>
               </div>

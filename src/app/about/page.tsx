@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 export default function AboutPage() {
@@ -8,14 +9,14 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Professor Tong Wang</h1>
+          <h1 className="text-4xl font-bold mb-4">Dr. Tong Wang</h1>
           <p className="text-xl text-muted-foreground mb-6">
-            Principal Investigator & Research Group Leader
+            Assistant Professor
           </p>
           <div className="flex justify-center space-x-4">
-            <Badge variant="secondary">Machine Learning</Badge>
-            <Badge variant="secondary">Artificial Intelligence</Badge>
-            <Badge variant="secondary">Data Science</Badge>
+            <Badge variant="secondary">AI + Biomolecular Structure</Badge>
+            <Badge variant="secondary">Deep Learning</Badge>
+            <Badge variant="secondary">Molecular Dynamics</Badge>
           </div>
         </div>
 
@@ -29,25 +30,22 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              Professor Tong Wang is a distinguished researcher and educator in the fields of
-              machine learning and artificial intelligence. He currently serves as a Professor
-              in the Department of Computer Science at [University Name], where he leads a
-              dynamic research group focused on advancing the theoretical foundations and
-              practical applications of AI systems.
+              Dr. Tong Wang is an Assistant Professor at the School of Life Sciences, Tsinghua University,
+              and a researcher at the Tsinghua-Peking Center for Life Sciences and Beijing Frontier Research
+              Center for Biological Structure. His research focuses on "Artificial Intelligence + Biomolecular
+              Structure," utilizing deep learning for structural representation learning, property and interaction
+              prediction, dynamics simulation, and sequence design of biological macromolecules and drug molecules.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Dr. Wang received his Ph.D. in Computer Science from [University Name] in [Year],
-              where his dissertation work on [Research Topic] laid the groundwork for his
-              subsequent research contributions. Prior to his current position, he held
-              research positions at [Previous Institution] and completed postdoctoral
-              research at [Postdoc Institution].
+              Dr. Wang received his Bachelor's degree from Shandong University (2010-2014) and his Ph.D. from
+              Tsinghua University (2014-2019). He served as a Senior Researcher at Microsoft Research (2019-2025)
+              before joining Tsinghua University as an Assistant Professor in 2025.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              His research has been published in top-tier venues including Nature, Science,
-              ICML, NeurIPS, and ICLR, with over [X] publications and [Y] citations.
-              Dr. Wang's work has been recognized with several prestigious awards and has
-              led to practical applications in healthcare, autonomous systems, and
-              scientific discovery.
+              His research has been published in top-tier venues including Nature, Nature Communications,
+              ICLR, and NeurIPS. His work on AI-driven molecular dynamics simulation (AI2BMD) was published
+              in Nature in 2024, representing a significant breakthrough in ab initio characterization of
+              protein molecular dynamics using artificial intelligence.
             </p>
           </CardContent>
         </Card>
@@ -62,30 +60,110 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              The Tong Wang Research Group is a vibrant and collaborative environment
-              that brings together researchers from diverse backgrounds to tackle
-              challenging problems in machine learning and artificial intelligence.
-              Our group consists of PhD students, Master's students, postdoctoral
-              researchers, and visiting scholars.
+              The Tong Wang Research Group focuses on "Artificial Intelligence + Biomolecular Structure,"
+              bringing together researchers from computational biology, machine learning, and structural
+              biology to tackle challenging problems in biomolecular dynamics and drug discovery.
+              Our group consists of PhD students, Master's students, postdoctoral researchers, and
+              visiting scholars working on cutting-edge AI applications in life sciences.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
               <div>
                 <h4 className="font-semibold mb-2">Laboratory Facilities</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• High-performance computing cluster with GPU acceleration</li>
-                  <li>• Dedicated workstations for algorithm development</li>
-                  <li>• Collaborative meeting and presentation spaces</li>
-                  <li>• Access to university supercomputing resources</li>
+                  <li>• High-performance computing cluster for molecular simulations</li>
+                  <li>• GPU workstations for deep learning model training</li>
+                  <li>• Access to Tsinghua University supercomputing resources</li>
+                  <li>• Collaborative workspace in Biomedical Building A216-1</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold mb-2">Research Infrastructure</h4>
+                <h4 className="font-semibold mb-2">Research Environment</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Cloud computing resources (AWS, Google Cloud)</li>
-                  <li>• Large-scale dataset storage and management</li>
-                  <li>• Specialized software and development tools</li>
-                  <li>• Industry partnership computing resources</li>
+                  <li>• Weekly group meetings and journal clubs</li>
+                  <li>• Collaboration with Microsoft Research and industry partners</li>
+                  <li>• International research exchange programs</li>
+                  <li>• Access to cutting-edge molecular datasets and simulation tools</li>
                 </ul>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Education and Career */}
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle className="flex items-center">
+              <span className="text-2xl mr-2">🎓</span>
+              Education and Career
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 flex items-center">
+                <Badge variant="secondary" className="mr-2">Education</Badge>
+                Academic Background
+              </h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <p className="font-medium">Ph.D. in Life Sciences</p>
+                    <p className="text-sm text-muted-foreground">Tsinghua University</p>
+                  </div>
+                  <Badge variant="outline">2014-2019</Badge>
+                </div>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <p className="font-medium">Bachelor's Degree</p>
+                    <p className="text-sm text-muted-foreground">Shandong University</p>
+                  </div>
+                  <Badge variant="outline">2010-2014</Badge>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 flex items-center">
+                <Badge variant="secondary" className="mr-2">Career</Badge>
+                Professional Experience
+              </h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-start">
+                  <div>
+                    <p className="font-medium">Assistant Professor</p>
+                    <p className="text-sm text-muted-foreground">School of Life Sciences, Tsinghua University</p>
+                    <p className="text-sm text-muted-foreground">Tsinghua-Peking Center for Life Sciences</p>
+                    <p className="text-sm text-muted-foreground">Beijing Frontier Research Center for Biological Structure</p>
+                  </div>
+                  <Badge variant="outline">2025-Present</Badge>
+                </div>
+                <div className="flex justify-between items-start">
+                  <div>
+                    <p className="font-medium">Senior Researcher</p>
+                    <p className="text-sm text-muted-foreground">Microsoft Research</p>
+                  </div>
+                  <Badge variant="outline">2019-2025</Badge>
+                </div>
+              </div>
+            </div>
+
+            <Separator />
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4 flex items-center">
+                <Badge variant="secondary" className="mr-2">Honors</Badge>
+                Awards and Recognition
+              </h3>
+              <div className="space-y-2">
+                <div className="flex justify-between items-center">
+                  <p className="text-sm">Top 10 Advances in Bioinformatics in China</p>
+                  <Badge variant="outline">2024</Badge>
+                </div>
+                <div className="flex justify-between items-center">
+                  <p className="text-sm">Champion of the First Global AI Drug Discovery Competition</p>
+                  <Badge variant="outline">2023</Badge>
+                </div>
               </div>
             </div>
           </CardContent>
@@ -101,9 +179,10 @@ export default function AboutPage() {
           </CardHeader>
           <CardContent className="space-y-6">
             <p className="text-muted-foreground leading-relaxed">
-              Our research spans multiple areas of machine learning and artificial
-              intelligence, with a focus on developing both theoretical foundations
-              and practical applications that can make a real-world impact.
+              Our research focuses on "Artificial Intelligence + Biomolecular Structure," utilizing deep learning
+              for structural representation learning, property and interaction prediction, dynamics simulation,
+              and sequence design of biological macromolecules and drug molecules to reveal the dynamic mechanisms
+              of life activities and assist in drug discovery.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -111,33 +190,33 @@ export default function AboutPage() {
                 <div>
                   <h4 className="font-semibold mb-2 flex items-center">
                     <Badge variant="outline" className="mr-2">Core</Badge>
-                    Machine Learning Theory
+                    AI-Driven Molecular Dynamics
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Developing new algorithms for optimization, generalization,
-                    and robustness in machine learning systems.
+                    Design and application of AI-driven biomolecular dynamics simulation
+                    algorithms, including ab initio molecular dynamics with machine learning.
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-semibold mb-2 flex items-center">
                     <Badge variant="outline" className="mr-2">Core</Badge>
-                    Deep Learning
+                    Graph Neural Networks
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Novel architectures, training methods, and applications
-                    of deep neural networks.
+                    Development of geometric deep learning algorithms and machine learning
+                    force fields for molecular systems.
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-semibold mb-2 flex items-center">
                     <Badge variant="outline" className="mr-2">Applied</Badge>
-                    Computer Vision
+                    AI-Assisted Drug Discovery
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Image recognition, object detection, and visual understanding
-                    for real-world applications.
+                    Machine learning approaches for molecular property prediction,
+                    drug-target interaction, and drug discovery applications.
                   </p>
                 </div>
               </div>
@@ -146,22 +225,22 @@ export default function AboutPage() {
                 <div>
                   <h4 className="font-semibold mb-2 flex items-center">
                     <Badge variant="outline" className="mr-2">Applied</Badge>
-                    Natural Language Processing
+                    Protein Structure Prediction
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Language understanding, generation, and multimodal
-                    language-vision systems.
+                    Deep learning methods for protein structure prediction,
+                    conformational sampling, and dynamics analysis.
                   </p>
                 </div>
 
                 <div>
                   <h4 className="font-semibold mb-2 flex items-center">
                     <Badge variant="outline" className="mr-2">Emerging</Badge>
-                    AI for Science
+                    Biomolecular Design
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Applying machine learning to accelerate scientific
-                    discovery in physics, chemistry, and biology.
+                    AI-driven sequence design and optimization of biological
+                    macromolecules for therapeutic applications.
                   </p>
                 </div>
 
@@ -175,6 +254,89 @@ export default function AboutPage() {
                     in AI system development.
                   </p>
                 </div>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Representative Publications */}
+        <Card className="mb-8">
+          <CardHeader>
+            <CardTitle className="flex items-center">
+              <span className="text-2xl mr-2">📚</span>
+              Representative Publications
+            </CardTitle>
+            <CardDescription>
+              Selected recent publications from our research group
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-4">
+            <div className="space-y-6">
+              <div className="border-l-4 border-blue-500 pl-4">
+                <h4 className="font-semibold text-sm mb-1">
+                  Ab initio characterization of protein molecular dynamics with AI2BMD
+                </h4>
+                <p className="text-xs text-muted-foreground mb-2">
+                  Wang, T.#*; He, X.#; Li, M.#; Li, Y.#; Bi, R.; Wang, Y.; Cheng, C.; Shen, X.; Meng, J.; Zhang, H.; Liu, H.; Wang, Z.; Li, S.; Shao, B.*; Liu, T.
+                </p>
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="secondary">Nature</Badge>
+                  <Badge variant="outline">2024</Badge>
+                  <Badge variant="outline">635, 1019-1027</Badge>
+                </div>
+              </div>
+
+              <div className="border-l-4 border-green-500 pl-4">
+                <h4 className="font-semibold text-sm mb-1">
+                  Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing
+                </h4>
+                <p className="text-xs text-muted-foreground mb-2">
+                  Wang, Y.#; Wang, T.#*; Li, S.#; He, X.; Li, M.; Wang, Z.; Zheng, N.; Shao, B.; Liu, T.
+                </p>
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="secondary">Nature Communications</Badge>
+                  <Badge variant="outline">2024</Badge>
+                  <Badge variant="outline">15 (1), 313</Badge>
+                  <Badge variant="destructive">Editors' Highlights</Badge>
+                </div>
+              </div>
+
+              <div className="border-l-4 border-purple-500 pl-4">
+                <h4 className="font-semibold text-sm mb-1">
+                  Long-short-range message-passing: A physics-informed framework to capture non-local interaction for scalable molecular dynamics simulation
+                </h4>
+                <p className="text-xs text-muted-foreground mb-2">
+                  Li, Y.#; Wang, Y.#; Huang, L.*; Yang, H.; Wei, X.; Zhang, J.*; Wang, T.*; Wang, Z.; Shao, B.; Liu, T.
+                </p>
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="secondary">ICLR</Badge>
+                  <Badge variant="outline">2024</Badge>
+                </div>
+              </div>
+
+              <div className="border-l-4 border-orange-500 pl-4">
+                <h4 className="font-semibold text-sm mb-1">
+                  Improved fragment sampling for ab initio protein structure prediction using deep neural networks
+                </h4>
+                <p className="text-xs text-muted-foreground mb-2">
+                  Wang, T.; Qiao, Y.; Ding, W.; Mao, W.; Zhou, Y.*; Gong, H.*
+                </p>
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="secondary">Nature Machine Intelligence</Badge>
+                  <Badge variant="outline">2019</Badge>
+                  <Badge variant="outline">1 (8), 347-355</Badge>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6 pt-4 border-t">
+              <p className="text-sm text-muted-foreground">
+                #: Co-first author; *: Corresponding author
+              </p>
+              <div className="mt-2">
+                <Button variant="outline" size="sm">
+                  View All Publications
+                </Button>
               </div>
             </div>
           </CardContent>

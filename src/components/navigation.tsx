@@ -18,6 +18,7 @@ const navigationItems = [
   { name: "Our Team", href: "/team" },
   { name: "Publications", href: "/publications" },
   { name: "News", href: "/news" },
+  { name: "Positions", href: "/positions" },
   ...(process.env.NODE_ENV === 'development' ? [{ name: "Admin", href: "/admin" }] : []),
 ];
 
@@ -28,7 +29,7 @@ export function Navigation() {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="mr-4 hidden md:flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
+          <Link href="/" className="mr-6 flex items-center space-x-2 ml-4">
             <span className="hidden font-bold sm:inline-block">
               Tong Wang Research Group
             </span>
@@ -52,7 +53,7 @@ export function Navigation() {
         {/* Mobile Navigation */}
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
           <div className="w-full flex-1 md:w-auto md:flex-none">
-            <Link href="/" className="flex items-center space-x-2 md:hidden">
+            <Link href="/" className="flex items-center space-x-2 md:hidden ml-4">
               <span className="font-bold">Tong Wang Research Group</span>
             </Link>
           </div>

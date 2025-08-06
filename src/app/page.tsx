@@ -13,12 +13,12 @@ export default function Home() {
               Tong Wang Research Group
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Advancing the frontiers of machine learning and artificial intelligence
-              through innovative research and collaborative discovery.
+              Pioneering AI-driven biomolecular structure research to reveal life's dynamic
+              mechanisms and accelerate drug discovery through deep learning innovations.
             </p>
             <div className="flex gap-4 justify-center">
               <Button asChild size="lg">
-                <Link href="/about">About Our Research</Link>
+                <Link href="/about">About PI</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
                 <Link href="/publications">View Publications</Link>
@@ -34,41 +34,47 @@ export default function Home() {
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Research Areas</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Machine Learning</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Developing novel algorithms and methodologies for advanced
-                    machine learning applications across various domains.
-                  </p>
-                </CardContent>
-              </Card>
+              <Link href="/research/molecular-dynamics">
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                  <CardHeader>
+                    <CardTitle>AI-Driven Molecular Dynamics</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Design and application of AI-driven biomolecular dynamics simulation
+                      algorithms, including ab initio molecular dynamics with machine learning.
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>Artificial Intelligence</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Exploring the theoretical foundations and practical applications
-                    of artificial intelligence systems.
-                  </p>
-                </CardContent>
-              </Card>
+              <Link href="/research/graph-neural-networks">
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                  <CardHeader>
+                    <CardTitle>ML Force Fields</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Development of graph neural networks, geometric deep learning algorithms
+                      and machine learning force fields for molecular systems and interactions.
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
 
-              <Card>
-                <CardHeader>
-                  <CardTitle>Data Science</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">
-                    Applying computational methods to extract insights from
-                    complex datasets and solve real-world problems.
-                  </p>
-                </CardContent>
-              </Card>
+              <Link href="/research/drug-discovery">
+                <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
+                  <CardHeader>
+                    <CardTitle>AI-Assisted Drug Discovery</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      Machine learning approaches for molecular property prediction,
+                      drug-target interaction, and accelerating pharmaceutical research.
+                    </p>
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
           </div>
         </div>

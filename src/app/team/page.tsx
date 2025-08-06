@@ -46,10 +46,10 @@ export default function TeamPage() {
                 <div>
                   <h4 className="font-semibold mb-2">Research Interests</h4>
                   <div className="flex flex-wrap gap-1">
-                    <Badge variant="outline">Machine Learning</Badge>
-                    <Badge variant="outline">Deep Learning</Badge>
-                    <Badge variant="outline">AI Theory</Badge>
-                    <Badge variant="outline">Computer Vision</Badge>
+                    <Badge variant="outline">AI + Biomolecular Structure</Badge>
+                    <Badge variant="outline">Molecular Dynamics</Badge>
+                    <Badge variant="outline">Graph Neural Networks</Badge>
+                    <Badge variant="outline">Drug Discovery</Badge>
                   </div>
                 </div>
                 <div>
@@ -57,7 +57,7 @@ export default function TeamPage() {
                   <div className="space-y-1">
                     <div className="flex items-center text-sm text-muted-foreground">
                       <Mail className="h-4 w-4 mr-2" />
-                      tong.wang@university.edu
+                      tongwang@mail.tsinghua.edu.cn
                     </div>
                     <div className="flex space-x-2 mt-2">
                       <Button variant="outline" size="sm">
