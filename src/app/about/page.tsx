@@ -33,7 +33,7 @@ export default function AboutPage() {
           <CardContent className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
               Dr. Tong Wang is an Assistant Professor at the School of Life Sciences, Tsinghua University,
-              and a researcher at the Tsinghua-Peking Center for Life Sciences and Beijing Frontier Research
+              and a researcher at the Tsinghua University-Peking University Center for Life Sciences and Beijing Frontier Research
               Center for Biological Structure. His research focuses on "Artificial Intelligence + Biomolecular
               Structure," utilizing deep learning for structural representation learning, property and interaction
               prediction, dynamics simulation, and sequence design of biological macromolecules and drug molecules.
@@ -176,6 +176,17 @@ export default function AboutPage() {
                 </div>
                 <div className="flex justify-between items-start">
                   <div>
+                    <p className="font-medium">Ph.D. in Computational Biology</p>
+                    <p className="text-sm text-muted-foreground">Harvard University</p>
+                    <p className="text-xs text-muted-foreground mt-1">
+                      Work as visiting a PhD student<br />
+                      Research on protein 3D structure prediction in Nobel Prize lab
+                    </p>
+                  </div>
+                  <Badge variant="outline">2016-2017</Badge>
+                </div>
+                <div className="flex justify-between items-start">
+                  <div>
                     <p className="font-medium">Bachelor's Degree</p>
                     <p className="text-sm text-muted-foreground">Shandong University</p>
                   </div>
@@ -196,7 +207,7 @@ export default function AboutPage() {
                   <div>
                     <p className="font-medium">Assistant Professor</p>
                     <p className="text-sm text-muted-foreground">School of Life Sciences, Tsinghua University</p>
-                    <p className="text-sm text-muted-foreground">Tsinghua-Peking Center for Life Sciences</p>
+                    <p className="text-sm text-muted-foreground">Tsinghua University-Peking University Center for Life Sciences</p>
                     <p className="text-sm text-muted-foreground">Beijing Frontier Research Center for Biological Structure</p>
                   </div>
                   <Badge variant="outline">2025-Present</Badge>
@@ -338,19 +349,8 @@ export default function AboutPage() {
                   <Badge variant="secondary" className="mr-2">Professional</Badge>
                   Membership
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <ul className="text-sm text-muted-foreground space-y-2">
-                    <li>• IEEE Computer Society (Senior Member)</li>
-                    <li>• Association for Computing Machinery (ACM)</li>
-                    <li>• International Machine Learning Society (IMLS)</li>
-                    <li>• Association for the Advancement of Artificial Intelligence (AAAI)</li>
-                  </ul>
-                  <ul className="text-sm text-muted-foreground space-y-2">
-                    <li>• Society for Industrial and Applied Mathematics (SIAM)</li>
-                    <li>• International Association for Pattern Recognition (IAPR)</li>
-                    <li>• Neural Information Processing Systems Foundation</li>
-                    <li>• International Conference on Learning Representations</li>
-                  </ul>
+                <div className="text-center py-8">
+                  <p className="text-muted-foreground text-lg">Coming Soon</p>
                 </div>
               </div>
 
@@ -361,35 +361,8 @@ export default function AboutPage() {
                   <Badge variant="secondary" className="mr-2">Editorial</Badge>
                   Editorship
                 </h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <p className="font-medium">Journal of Machine Learning Research</p>
-                      <p className="text-sm text-muted-foreground">Associate Editor</p>
-                    </div>
-                    <Badge variant="outline">2022-Present</Badge>
-                  </div>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <p className="font-medium">IEEE Transactions on Pattern Analysis and Machine Intelligence</p>
-                      <p className="text-sm text-muted-foreground">Editorial Board Member</p>
-                    </div>
-                    <Badge variant="outline">2021-Present</Badge>
-                  </div>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <p className="font-medium">Neural Networks</p>
-                      <p className="text-sm text-muted-foreground">Guest Editor</p>
-                    </div>
-                    <Badge variant="outline">2023</Badge>
-                  </div>
-                  <div className="flex justify-between items-start">
-                    <div>
-                      <p className="font-medium">Artificial Intelligence</p>
-                      <p className="text-sm text-muted-foreground">Reviewer</p>
-                    </div>
-                    <Badge variant="outline">2019-Present</Badge>
-                  </div>
+                <div className="text-center py-8">
+                  <p className="text-muted-foreground text-lg">Coming Soon</p>
                 </div>
               </div>
 
@@ -400,53 +373,8 @@ export default function AboutPage() {
                   <Badge variant="secondary" className="mr-2">Leadership</Badge>
                   Conference Chairs/Keynote/Plenary Speakers
                 </h3>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-medium mb-2">Conference Leadership</h4>
-                    <div className="space-y-2">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <p className="text-sm">International Conference on Machine Learning (ICML 2024)</p>
-                          <p className="text-xs text-muted-foreground">Area Chair</p>
-                        </div>
-                        <Badge variant="outline">2024</Badge>
-                      </div>
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <p className="text-sm">Neural Information Processing Systems (NeurIPS 2023)</p>
-                          <p className="text-xs text-muted-foreground">Senior Program Committee</p>
-                        </div>
-                        <Badge variant="outline">2023</Badge>
-                      </div>
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <p className="text-sm">International Conference on Learning Representations (ICLR 2023)</p>
-                          <p className="text-xs text-muted-foreground">Program Committee</p>
-                        </div>
-                        <Badge variant="outline">2023</Badge>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div>
-                    <h4 className="font-medium mb-2">Invited Talks</h4>
-                    <div className="space-y-2">
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <p className="text-sm">AI for Science Symposium</p>
-                          <p className="text-xs text-muted-foreground">Keynote Speaker</p>
-                        </div>
-                        <Badge variant="outline">2024</Badge>
-                      </div>
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <p className="text-sm">International Workshop on Machine Learning Theory</p>
-                          <p className="text-xs text-muted-foreground">Plenary Speaker</p>
-                        </div>
-                        <Badge variant="outline">2023</Badge>
-                      </div>
-                    </div>
-                  </div>
+                <div className="text-center py-8">
+                  <p className="text-muted-foreground text-lg">Coming Soon</p>
                 </div>
               </div>
             </div>
@@ -471,10 +399,10 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   <div className="flex justify-between items-start p-4 border rounded-lg">
                     <div>
-                      <p className="font-medium">Outstanding Research Award</p>
-                      <p className="text-sm text-muted-foreground">University Excellence in Research Program</p>
+                      <p className="font-medium">First AI Drug Development Algorithm Competition Finals</p>
+                      <p className="text-sm text-muted-foreground">AI Drug Development Competition</p>
                       <p className="text-xs text-muted-foreground mt-1">
-                        Recognized for groundbreaking contributions to machine learning theory
+                        Recognized for innovative AI algorithms in pharmaceutical research
                       </p>
                     </div>
                     <Badge variant="secondary">2024</Badge>
@@ -482,127 +410,21 @@ export default function AboutPage() {
 
                   <div className="flex justify-between items-start p-4 border rounded-lg">
                     <div>
-                      <p className="font-medium">Best Paper Award</p>
-                      <p className="text-sm text-muted-foreground">International Conference on Machine Learning (ICML)</p>
+                      <p className="font-medium">Top Ten Advances in Chinese Bioinformatics for 2024</p>
+                      <p className="text-sm text-muted-foreground">Chinese Society for Bioinformatics</p>
                       <p className="text-xs text-muted-foreground mt-1">
-                        "Novel Optimization Techniques for Deep Neural Networks"
+                        Outstanding contribution to bioinformatics research in China
                       </p>
                     </div>
-                    <Badge variant="secondary">2023</Badge>
+                    <Badge variant="secondary">2024</Badge>
                   </div>
-
-                  <div className="flex justify-between items-start p-4 border rounded-lg">
-                    <div>
-                      <p className="font-medium">Early Career Researcher Award</p>
-                      <p className="text-sm text-muted-foreground">National Science Foundation</p>
-                      <p className="text-xs text-muted-foreground mt-1">
-                        Five-year research grant for innovative AI research
-                      </p>
-                    </div>
-                    <Badge variant="secondary">2022</Badge>
-                  </div>
-                </div>
-              </div>
-
-              <Separator />
-
-              <div>
-                <h4 className="font-semibold mb-3">Additional Recognition</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <ul className="text-sm text-muted-foreground space-y-2">
-                    <li>• IEEE Computer Society Outstanding Contribution Award (2023)</li>
-                    <li>• ACM SIGKDD Rising Star Award (2022)</li>
-                    <li>• University Teaching Excellence Award (2021)</li>
-                    <li>• Outstanding Reviewer Award - NeurIPS (2021, 2022)</li>
-                  </ul>
-                  <ul className="text-sm text-muted-foreground space-y-2">
-                    <li>• Google Faculty Research Award (2020)</li>
-                    <li>• Microsoft Research Faculty Fellowship (2019)</li>
-                    <li>• Outstanding PhD Dissertation Award (2018)</li>
-                    <li>• Graduate Student Research Excellence Award (2017)</li>
-                  </ul>
                 </div>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* Media Publicity */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <span className="text-2xl mr-2">📺</span>
-              Media Publicity
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-6">
-              <div>
-                <h4 className="font-semibold mb-3 flex items-center">
-                  <Badge variant="outline" className="mr-2">Featured</Badge>
-                  Recent Media Coverage
-                </h4>
-                <div className="space-y-4">
-                  <div className="border rounded-lg p-4">
-                    <div className="flex justify-between items-start mb-2">
-                      <h5 className="font-medium">"AI Breakthrough: New Algorithm Revolutionizes Machine Learning"</h5>
-                      <Badge variant="outline">2024</Badge>
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Featured in Science Daily, highlighting our recent research on optimization algorithms
-                    </p>
-                    <div className="flex space-x-2">
-                      <Badge variant="secondary">Science Daily</Badge>
-                      <Badge variant="secondary">Tech News</Badge>
-                    </div>
-                  </div>
 
-                  <div className="border rounded-lg p-4">
-                    <div className="flex justify-between items-start mb-2">
-                      <h5 className="font-medium">"The Future of AI: Expert Insights"</h5>
-                      <Badge variant="outline">2023</Badge>
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      Podcast interview discussing the future directions of artificial intelligence research
-                    </p>
-                    <div className="flex space-x-2">
-                      <Badge variant="secondary">AI Podcast</Badge>
-                      <Badge variant="secondary">Interview</Badge>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <Separator />
-
-              <div>
-                <h4 className="font-semibold mb-3">Public Engagement</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div>
-                    <h5 className="font-medium mb-2">Media Interviews</h5>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• IEEE Spectrum Magazine (2024)</li>
-                      <li>• Nature News & Views (2023)</li>
-                      <li>• MIT Technology Review (2023)</li>
-                      <li>• Wired Magazine (2022)</li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h5 className="font-medium mb-2">Public Talks</h5>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• TEDx University Talk (2024)</li>
-                      <li>• Science Museum Public Lecture (2023)</li>
-                      <li>• Industry AI Summit Keynote (2023)</li>
-                      <li>• University Alumni Event (2022)</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </div>
   );
