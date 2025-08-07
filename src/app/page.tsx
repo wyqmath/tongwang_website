@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, ExternalLink } from "lucide-react";
 
 export default function Home() {
   return (
@@ -91,29 +93,71 @@ export default function Home() {
               </Button>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Card>
+              <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-lg">New Research Grant Awarded</CardTitle>
-                  <CardDescription>January 15, 2025</CardDescription>
+                  <div className="flex items-center mb-2">
+                    <Badge variant="default" className="mr-2">Award</Badge>
+                    <Badge variant="secondary">AI Drug Discovery</Badge>
+                  </div>
+                  <CardTitle className="text-lg">
+                    Champion of the First Global AI Drug Discovery Competition
+                  </CardTitle>
+                  <CardDescription className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    2024
+                  </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   <p className="text-muted-foreground">
-                    Our research group has been awarded a significant grant from
-                    the National Science Foundation...
+                    Recognized for innovative AI algorithms in pharmaceutical research
                   </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline">AI Drug Discovery</Badge>
+                    <Badge variant="outline">Competition Winner</Badge>
+                    <Badge variant="outline">Microsoft Research</Badge>
+                  </div>
+                  <div className="flex gap-2 pt-2">
+                    <Link href="https://www.microsoft.com/en-us/research/articles/ai-drug-rd-algorithm-competition/" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm">
+                        <ExternalLink className="h-3 w-3 mr-1" />
+                        Read More
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
 
-              <Card>
+              <Card className="hover:shadow-lg transition-shadow">
                 <CardHeader>
-                  <CardTitle className="text-lg">Paper Accepted at ICML 2025</CardTitle>
-                  <CardDescription>December 20, 2024</CardDescription>
+                  <div className="flex items-center mb-2">
+                    <Badge variant="default" className="mr-2">Recognition</Badge>
+                    <Badge variant="secondary">Bioinformatics</Badge>
+                  </div>
+                  <CardTitle className="text-lg">
+                    Top 10 Advances in Chinese Bioinformatics for 2024
+                  </CardTitle>
+                  <CardDescription className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-2" />
+                    2024
+                  </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="space-y-4">
                   <p className="text-muted-foreground">
-                    Our latest research on deep learning optimization has been
-                    accepted for presentation at ICML 2025...
+                    Outstanding contribution to bioinformatics research in China
                   </p>
+                  <div className="flex flex-wrap gap-2">
+                    <Badge variant="outline">Chinese Society for Bioinformatics</Badge>
+                    <Badge variant="outline">Top 10 Advances</Badge>
+                    <Badge variant="outline">Bioinformatics</Badge>
+                  </div>
+                  <div className="flex gap-2 pt-2">
+                    <Link href="https://gpb.big.ac.cn/news/1022" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" size="sm">
+                        <ExternalLink className="h-3 w-3 mr-1" />
+                        Read More
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             </div>
