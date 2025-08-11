@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 import {
   Pill,
   Brain,
@@ -64,6 +65,37 @@ export default function DrugDiscoveryPage() {
               </p>
             </CardContent>
           </Card>
+        </section>
+
+        {/* Architecture Overview */}
+        <section className="mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">AI-Assisted Drug Discovery Framework</h2>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              Comprehensive framework integrating structural biology, molecular dynamics simulation, and machine learning
+              for viral protein characterization and therapeutic target identification
+            </p>
+          </div>
+
+          <div className="relative max-w-5xl mx-auto">
+            <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-2xl">
+              <Image
+                src="/AI-Assisted Drug Discovery.png"
+                alt="AI-Assisted Drug Discovery Framework"
+                fill
+                className="object-cover rounded-xl"
+                priority
+              />
+            </div>
+
+            {/* Image description */}
+            <div className="mt-6 text-center">
+              <p className="text-muted-foreground leading-relaxed">
+                The AI-assisted drug discovery framework combines structural biology, molecular dynamics simulations, and machine learning
+                to understand viral pathogenesis and identify therapeutic targets for pandemic preparedness.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Key Research Areas */}

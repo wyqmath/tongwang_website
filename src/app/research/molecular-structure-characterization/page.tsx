@@ -11,6 +11,7 @@ import {
   Zap,
   Target
 } from "lucide-react";
+import Image from "next/image";
 
 export default function MolecularStructureCharacterizationPage() {
   return (
@@ -59,6 +60,37 @@ export default function MolecularStructureCharacterizationPage() {
               </p>
             </CardContent>
           </Card>
+        </section>
+
+        {/* Research Framework Architecture */}
+        <section className="mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">Research Framework Architecture</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Comprehensive framework integrating equivariant geometry-enhanced graph neural networks and geometric transformers
+              for accurate molecular property prediction and structure characterization
+            </p>
+          </div>
+
+          <div className="relative max-w-5xl mx-auto">
+            <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-2xl">
+              <Image
+                src="/Molecular Structure Characterization Learning and Property Prediction.png"
+                alt="Molecular Structure Characterization Learning and Property Prediction Architecture"
+                fill
+                className="object-cover rounded-xl"
+                priority
+              />
+            </div>
+
+            {/* Image description */}
+            <div className="mt-6 text-center">
+              <p className="text-muted-foreground leading-relaxed">
+                The molecular structure characterization framework combines equivariant geometry-enhanced graph neural networks
+                with geometric transformers to achieve superior molecular property prediction and structure understanding.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Key Research Areas */}

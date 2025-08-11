@@ -11,6 +11,7 @@ import {
   CheckCircle,
   Microscope
 } from "lucide-react";
+import Image from "next/image";
 
 export default function MolecularDynamicsPage() {
   return (
@@ -55,6 +56,37 @@ export default function MolecularDynamicsPage() {
               </p>
             </CardContent>
           </Card>
+        </section>
+
+        {/* System Architecture */}
+        <section className="mb-12">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold mb-4">System Architecture</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Comprehensive framework integrating artificial intelligence with quantum mechanical principles
+              for accurate and efficient biomolecular simulation
+            </p>
+          </div>
+
+          <div className="relative max-w-5xl mx-auto">
+            <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-2xl">
+              <Image
+                src="/AI-Driven Molecular Dynamics.png"
+                alt="AI-Driven Molecular Dynamics Architecture"
+                fill
+                className="object-cover rounded-xl"
+                priority
+              />
+            </div>
+
+            {/* Image description */}
+            <div className="mt-6 text-center">
+              <p className="text-muted-foreground leading-relaxed">
+                The AI-driven molecular dynamics framework combines machine learning force fields with quantum mechanical
+                calculations to achieve ab initio accuracy while maintaining computational efficiency for large biomolecular systems.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* Key Research Areas */}
