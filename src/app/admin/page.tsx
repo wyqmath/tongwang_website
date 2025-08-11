@@ -181,28 +181,7 @@ export default function AdminPage() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
-                  <div className="flex items-center justify-between p-4 border rounded-lg">
-                    <div className="flex-1">
-                      <h4 className="font-semibold">Champion of the First Global AI Drug Discovery Competition</h4>
-                      <p className="text-sm text-muted-foreground">Published: 2024</p>
-                      <div className="flex gap-2 mt-2">
-                        <Badge variant="default">Featured</Badge>
-                        <Badge variant="outline">Award</Badge>
-                        <Badge variant="outline">AI Drug Discovery</Badge>
-                      </div>
-                    </div>
-                    <div className="flex gap-2">
-                      <Button variant="outline" size="sm">
-                        <Eye className="h-4 w-4" />
-                      </Button>
-                      <Button variant="outline" size="sm">
-                        <Edit className="h-4 w-4" />
-                      </Button>
-                      <Button variant="outline" size="sm">
-                        <Trash2 className="h-4 w-4" />
-                      </Button>
-                    </div>
-                  </div>
+
 
                   <div className="flex items-center justify-between p-4 border rounded-lg">
                     <div className="flex-1">

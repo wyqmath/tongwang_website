@@ -49,7 +49,7 @@ export default function AboutPage() {
         <Card className="mb-8">
           <CardHeader>
             <CardTitle className="flex items-center">
-              <span className="text-2xl mr-2">👨‍🎓</span>
+              <span className="text-2xl mr-2">🎓</span>
               Brief Biosketch
             </CardTitle>
           </CardHeader>
@@ -168,19 +168,19 @@ export default function AboutPage() {
               <div>
                 <h4 className="font-semibold mb-2">Laboratory Facilities</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• High-performance computing cluster for molecular simulations</li>
-                  <li>• GPU workstations for deep learning model training</li>
-                  <li>• Access to Tsinghua University supercomputing resources</li>
-                  <li>• Collaborative workspace in Biomedical Building A216-1</li>
+                  <li>- High-performance computing cluster for molecular simulations</li>
+                  <li>- GPU workstations for deep learning model training</li>
+                  <li>- Access to Tsinghua University supercomputing resources</li>
+                  <li>- Collaborative workspace in Biomedical Building A216-1</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold mb-2">Research Environment</h4>
                 <ul className="text-sm text-muted-foreground space-y-1">
-                  <li>• Weekly group meetings and journal clubs</li>
-                  <li>• Collaboration with Microsoft Research and industry partners</li>
-                  <li>• International research exchange programs</li>
-                  <li>• Access to cutting-edge molecular datasets and simulation tools</li>
+                  <li>- Weekly group meetings and journal clubs</li>
+                  <li>- Collaboration with Microsoft Research and industry partners</li>
+                  <li>- International research exchange programs</li>
+                  <li>- Access to cutting-edge molecular datasets and simulation tools</li>
                 </ul>
               </div>
             </div>
@@ -415,16 +415,7 @@ export default function AboutPage() {
                   Major Awards & Recognition
                 </h4>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-start p-4 border rounded-lg">
-                    <div>
-                      <p className="font-medium">Champion of the First Global AI Drug Discovery Competition</p>
-                      <p className="text-sm text-muted-foreground">AI Drug Development Competition</p>
-                      <p className="text-xs text-muted-foreground mt-1">
-                        Recognized for innovative AI algorithms in pharmaceutical research
-                      </p>
-                    </div>
-                    <Badge variant="secondary">2024</Badge>
-                  </div>
+
 
                   <div className="flex justify-between items-start p-4 border rounded-lg">
                     <div>

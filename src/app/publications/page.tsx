@@ -99,7 +99,7 @@ export default function PublicationsPage() {
       id: 7,
       year: 2024,
       type: "journal",
-      title: "Innovative application of a novel di-d-fructofuranose 1, 2′: 2, 3′-dianhydride hydrolase (DFA-IIIase) from Duffyella gerundensis A4 to burdock root to improve nutrition",
+      title: "Innovative application of a novel di-d-fructofuranose 1, 2': 2, 3'-dianhydride hydrolase (DFA-IIIase) from Duffyella gerundensis A4 to burdock root to improve nutrition",
       authors: "Yu, S., Wang, Z., Li, Q., Wang, T., & Zhao, W.",
       journal: "Food & Function",
       volume: "15(2)",
@@ -178,7 +178,7 @@ export default function PublicationsPage() {
       id: 13,
       year: 2023,
       type: "journal",
-      title: "DSN-DDI: An accurate and generalized framework for drug–drug interaction prediction by dual-view representation learning",
+      title: "DSN-DDI: An accurate and generalized framework for drug-drug interaction prediction by dual-view representation learning",
       authors: "Li, Z., Zhu, S., Shao, B., Zeng, X., Wang, T., & Liu, T. Y.",
       journal: "Briefings in Bioinformatics",
       volume: "24(1)",
@@ -218,7 +218,7 @@ export default function PublicationsPage() {
       id: 16,
       year: 2022,
       type: "journal",
-      title: "Improved drug–target interaction prediction with intermolecular graph transformer",
+      title: "Improved drug-target interaction prediction with intermolecular graph transformer",
       authors: "Liu, S., Wang, Y., Deng, Y., He, L., Shao, B., Yin, J., Wang, T., & Liu, T. Y.",
       journal: "Briefings in Bioinformatics",
       volume: "23(5)",
@@ -310,7 +310,7 @@ export default function PublicationsPage() {
       id: 23,
       year: 2021,
       type: "journal",
-      title: "Exploring the regulatory function of the N‐terminal domain of SARS‐CoV‐2 Spike protein through molecular dynamics simulation",
+      title: "Exploring the regulatory function of the N-terminal domain of SARS-CoV-2 Spike protein through molecular dynamics simulation",
       authors: "Li, Y., Wang, T., Zhang, J., Shao, B., Gong, H., Wang, Y., Wang, Z., & Liu, T. Y.",
       journal: "Advanced Theory and Simulations",
       volume: "4(10)",
@@ -779,7 +779,7 @@ export default function PublicationsPage() {
                     View Complete Publication List
                   </Button>
                   <p className="text-sm text-muted-foreground mt-2">
-                    Showing first 10 publications • Total: {allPublications.length} publications (2013-2024)
+                    Showing first 10 publications - Total: {allPublications.length} publications (2013-2024)
                   </p>
                 </div>
               )}

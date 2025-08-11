@@ -216,19 +216,19 @@ export default function GraphNeuralNetworksPage() {
                   <div>
                     <h4 className="font-semibold mb-3">Accuracy Improvements</h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• 50% reduction in force prediction errors</li>
-                      <li>• 10x improvement in energy conservation</li>
-                      <li>• State-of-the-art on QM9 benchmark</li>
-                      <li>• Superior performance on MD17 dataset</li>
+                      <li>- 50% reduction in force prediction errors</li>
+                      <li>- 10x improvement in energy conservation</li>
+                      <li>- State-of-the-art on QM9 benchmark</li>
+                      <li>- Superior performance on MD17 dataset</li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-3">Computational Efficiency</h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• 100x faster than DFT calculations</li>
-                      <li>• Linear scaling with system size</li>
-                      <li>• GPU-optimized implementations</li>
-                      <li>• Distributed training capabilities</li>
+                      <li>- 100x faster than DFT calculations</li>
+                      <li>- Linear scaling with system size</li>
+                      <li>- GPU-optimized implementations</li>
+                      <li>- Distributed training capabilities</li>
                     </ul>
                   </div>
                 </div>
@@ -310,19 +310,19 @@ export default function GraphNeuralNetworksPage() {
                   <div>
                     <h4 className="font-semibold mb-2">Methodological Advances</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Quantum-classical hybrid models</li>
-                      <li>• Uncertainty quantification methods</li>
-                      <li>• Active learning strategies</li>
-                      <li>• Interpretable GNN architectures</li>
+                      <li>- Quantum-classical hybrid models</li>
+                      <li>- Uncertainty quantification methods</li>
+                      <li>- Active learning strategies</li>
+                      <li>- Interpretable GNN architectures</li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2">Application Expansion</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Protein design and engineering</li>
-                      <li>• Metabolic pathway modeling</li>
-                      <li>• Environmental chemistry</li>
-                      <li>• Quantum materials discovery</li>
+                      <li>- Protein design and engineering</li>
+                      <li>- Metabolic pathway modeling</li>
+                      <li>- Environmental chemistry</li>
+                      <li>- Quantum materials discovery</li>
                     </ul>
                   </div>
                 </div>

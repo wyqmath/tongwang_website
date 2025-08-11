@@ -208,19 +208,19 @@ export default function MolecularDynamicsPage() {
                   <div>
                     <h4 className="font-semibold mb-2">Drug Discovery</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Accurate binding affinity prediction</li>
-                      <li>• Drug-target interaction mechanisms</li>
-                      <li>• Allosteric drug design</li>
-                      <li>• ADMET property prediction</li>
+                      <li>- Accurate binding affinity prediction</li>
+                      <li>- Drug-target interaction mechanisms</li>
+                      <li>- Allosteric drug design</li>
+                      <li>- ADMET property prediction</li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2">Disease Understanding</h4>
                     <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• Protein misfolding diseases</li>
-                      <li>• Cancer-related mutations</li>
-                      <li>• Neurodegenerative disorders</li>
-                      <li>• Metabolic pathway disruptions</li>
+                      <li>- Protein misfolding diseases</li>
+                      <li>- Cancer-related mutations</li>
+                      <li>- Neurodegenerative disorders</li>
+                      <li>- Metabolic pathway disruptions</li>
                     </ul>
                   </div>
                 </div>

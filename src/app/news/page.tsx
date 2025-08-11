@@ -19,52 +19,7 @@ export default function NewsPage() {
         {/* Recent News */}
         <section className="mb-12">
           <div className="space-y-6">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex justify-between items-start">
-                  <div className="flex-1">
-                    <div className="flex items-center mb-2">
-                      <Badge variant="default" className="mr-2">Award</Badge>
-                      <Badge variant="secondary">AI Drug Discovery</Badge>
-                    </div>
-                    <CardTitle className="text-xl mb-2">
-                      Champion of the First Global AI Drug Discovery Competition
-                    </CardTitle>
-                    <CardDescription className="flex items-center">
-                      <Calendar className="h-4 w-4 mr-2" />
-                      2024
-                    </CardDescription>
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                {/* News Image */}
-                <div className="mb-4">
-                  <img
-                    src="https://www.microsoft.com/en-us/research/wp-content/uploads/2024/08/ai-drug-rd-algorithm-competition-1.jpg"
-                    alt="Champion of the First Global AI Drug Discovery Competition"
-                    className="w-full h-auto object-contain rounded-lg shadow-md"
-                  />
-                </div>
 
-                <p className="text-muted-foreground leading-relaxed">
-                  Recognized for innovative AI algorithms in pharmaceutical research
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline">AI Drug Discovery</Badge>
-                  <Badge variant="outline">Competition Winner</Badge>
-                  <Badge variant="outline">Microsoft Research</Badge>
-                </div>
-                <div className="flex gap-2 pt-2">
-                  <Link href="https://www.microsoft.com/en-us/research/articles/ai-drug-rd-algorithm-competition/" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" size="sm">
-                      <ExternalLink className="h-3 w-3 mr-1" />
-                      Read More
-                    </Button>
-                  </Link>
-                </div>
-              </CardContent>
-            </Card>
 
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>

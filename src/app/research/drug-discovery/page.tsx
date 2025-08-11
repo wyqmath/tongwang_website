@@ -245,21 +245,21 @@ export default function DrugDiscoveryPage() {
                   <div>
                     <h4 className="font-semibold mb-3">Data Integration</h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Chemical structure information</li>
-                      <li>• Biological activity data</li>
-                      <li>• Protein structure and dynamics</li>
-                      <li>• Clinical trial outcomes</li>
-                      <li>• Literature and patent data</li>
+                      <li>- Chemical structure information</li>
+                      <li>- Biological activity data</li>
+                      <li>- Protein structure and dynamics</li>
+                      <li>- Clinical trial outcomes</li>
+                      <li>- Literature and patent data</li>
                     </ul>
                   </div>
                   <div>
                     <h4 className="font-semibold mb-3">Model Fusion</h4>
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Ensemble learning strategies</li>
-                      <li>• Multi-task learning frameworks</li>
-                      <li>• Transfer learning approaches</li>
-                      <li>• Active learning protocols</li>
-                      <li>• Uncertainty quantification</li>
+                      <li>- Ensemble learning strategies</li>
+                      <li>- Multi-task learning frameworks</li>
+                      <li>- Transfer learning approaches</li>
+                      <li>- Active learning protocols</li>
+                      <li>- Uncertainty quantification</li>
                     </ul>
                   </div>
                 </div>
@@ -375,7 +375,7 @@ export default function DrugDiscoveryPage() {
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
                     <h4 className="font-semibold mb-2 text-lg">
-                      DSN-DDI: An accurate and generalized framework for drug–drug interaction prediction by dual-view representation learning
+                      DSN-DDI: An accurate and generalized framework for drug-drug interaction prediction by dual-view representation learning
                     </h4>
                     <p className="text-sm text-muted-foreground mb-3">
                       Li, Z., Zhu, S., Shao, B., Zeng, X., Wang, T., & Liu, T. Y.
@@ -400,7 +400,7 @@ export default function DrugDiscoveryPage() {
                 <div className="flex justify-between items-start">
                   <div className="flex-1">
                     <h4 className="font-semibold mb-2 text-lg">
-                      Improved drug–target interaction prediction with intermolecular graph transformer
+                      Improved drug-target interaction prediction with intermolecular graph transformer
                     </h4>
                     <p className="text-sm text-muted-foreground mb-3">
                       Liu, S., Wang, Y., Deng, Y., He, L., Shao, B., Yin, J., Wang, T., & Liu, T. Y.
