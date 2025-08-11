@@ -15,8 +15,8 @@ export default function Home() {
               Tong Wang Research Group
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Pioneering AI-driven biomolecular structure research to reveal life's dynamic
-              mechanisms and accelerate drug discovery through deep learning innovations.
+              Pioneering AI-driven biomolecular dynamics simulation with ab initio accuracy,
+              revolutionizing protein research through quantum-level precision at unprecedented scales.
             </p>
             <div className="flex gap-4 justify-center">
               <Button asChild size="lg">
@@ -43,22 +43,24 @@ export default function Home() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Design and application of AI-driven biomolecular dynamics simulation
-                      algorithms, including ab initio molecular dynamics with machine learning.
+                      Revolutionary AI2BMD system enabling ab initio accuracy for large biomolecules
+                      (&gt;10,000 atoms) with orders of magnitude speedup, bridging quantum chemistry
+                      and classical molecular dynamics.
                     </p>
                   </CardContent>
                 </Card>
               </Link>
 
-              <Link href="/research/graph-neural-networks">
+              <Link href="/research/molecular-structure-characterization">
                 <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
                   <CardHeader>
-                    <CardTitle>ML Force Fields</CardTitle>
+                    <CardTitle>Molecular Structure Characterization Learning and Property Prediction</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Development of graph neural networks, geometric deep learning algorithms
-                      and machine learning force fields for molecular systems and interactions.
+                      Equivariant geometry-enhanced graph neural networks and geometric transformers that elegantly
+                      extract geometric features and efficiently model molecular structures with low computational
+                      costs for drug discovery and molecular dynamics simulation.
                     </p>
                   </CardContent>
                 </Card>
@@ -71,8 +73,8 @@ export default function Home() {
                   </CardHeader>
                   <CardContent>
                     <p className="text-muted-foreground">
-                      Machine learning approaches for molecular property prediction,
-                      drug-target interaction, and accelerating pharmaceutical research.
+                      Computational approaches for viral protein dynamics, drug-target interactions,
+                      and structural insights into pathogen evolution and therapeutic target identification.
                     </p>
                   </CardContent>
                 </Card>
