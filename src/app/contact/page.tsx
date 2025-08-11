@@ -43,17 +43,29 @@ export default function ContactPage() {
                 <Phone className="h-5 w-5 text-muted-foreground" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-muted-foreground">Coming Soon</p>
+                  <p className="text-muted-foreground">010-62794752</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <MapPin className="h-5 w-5 text-muted-foreground" />
                 <div>
                   <p className="font-medium">Office Address</p>
                   <p className="text-muted-foreground">
-                    Room A216-1, Biomedical Building<br />
-                    School of Life Sciences, Tsinghua University<br />
+                    Room A216-A, Biomedical Building<br />
+                    Tsinghua University<br />
+                    Haidian District, Beijing, China
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-3">
+                <MapPin className="h-5 w-5 text-muted-foreground" />
+                <div>
+                  <p className="font-medium">Laboratory Address</p>
+                  <p className="text-muted-foreground">
+                    Room A208, Biomedical Building<br />
+                    Tsinghua University<br />
                     Haidian District, Beijing, China
                   </p>
                 </div>
