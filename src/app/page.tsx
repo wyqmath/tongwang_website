@@ -4,11 +4,58 @@ import Link from "next/link";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, ExternalLink } from "lucide-react";
-import { useState } from "react";
+import { Calendar, ExternalLink, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export default function Home() {
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  // 图片轮播数据
+  const carouselImages = [
+    {
+      src: "/Geoformer Architecture.png",
+      alt: "Geoformer Architecture",
+      title: "Geoformer Architecture",
+      description: "Advanced geometric transformer architecture for molecular structure analysis"
+    },
+    {
+      src: "/The overall architecture of ViSNet.webp",
+      alt: "ViSNet Architecture",
+      title: "ViSNet Architecture",
+      description: "The overall architecture of ViSNet for molecular property prediction"
+    },
+    {
+      src: "/The overall pipeline of AI2BMD.webp",
+      alt: "AI2BMD Pipeline",
+      title: "AI2BMD Pipeline",
+      description: "The overall pipeline of AI2BMD for biomolecular dynamics simulation"
+    }
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  // 自动轮播
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) =>
+        (prevIndex + 1) % carouselImages.length
+      );
+    }, 5000); // 每5秒切换一次
+
+    return () => clearInterval(interval);
+  }, [carouselImages.length]);
+
+  const goToPrevious = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? carouselImages.length - 1 : prevIndex - 1
+    );
+  };
+
+  const goToNext = () => {
+    setCurrentImageIndex((prevIndex) =>
+      (prevIndex + 1) % carouselImages.length
+    );
+  };
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -29,6 +76,75 @@ export default function Home() {
               <Button variant="outline" size="lg" asChild>
                 <Link href="/publications">View Publications</Link>
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Image Carousel */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Research Highlights</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Explore our cutting-edge research architectures and methodologies
+              </p>
+            </div>
+
+            <div className="relative max-w-4xl mx-auto">
+              <div className="relative aspect-[16/10] rounded-xl overflow-hidden shadow-2xl bg-gray-100">
+                <Image
+                  src={carouselImages[currentImageIndex].src}
+                  alt={carouselImages[currentImageIndex].alt}
+                  fill
+                  className="object-contain transition-opacity duration-500"
+                  priority
+                />
+
+                {/* 导航按钮 */}
+                <button
+                  onClick={goToPrevious}
+                  className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="h-6 w-6" />
+                </button>
+
+                <button
+                  onClick={goToNext}
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 rounded-full p-2 shadow-lg transition-all duration-200 hover:scale-110"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="h-6 w-6" />
+                </button>
+
+                {/* 指示器 */}
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                  {carouselImages.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentImageIndex(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                        index === currentImageIndex
+                          ? 'bg-blue-600 scale-110'
+                          : 'bg-white/60 hover:bg-white/80'
+                      }`}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* 图片描述 */}
+              <div className="mt-6 text-center">
+                <h3 className="text-xl font-semibold mb-2">
+                  {carouselImages[currentImageIndex].title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {carouselImages[currentImageIndex].description}
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -108,7 +224,7 @@ export default function Home() {
                   preload="metadata"
                 >
                   <source
-                    src="https://github.com/user-attachments/assets/912a3e5a-c465-4dc7-8c2d-9f7807cac2a7"
+                    src="/AI2BMD_demo.mp4"
                     type="video/mp4"
                   />
                   Your browser does not support the video tag.

@@ -3,9 +3,8 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 
-import { Search, Filter, Download, ExternalLink, Quote, Calendar, Users, BookOpen } from "lucide-react";
+import { Search, Filter, ExternalLink, Quote, Calendar, Users, BookOpen } from "lucide-react";
 import { useState, useMemo } from "react";
 
 export default function PublicationsPage() {
@@ -15,7 +14,7 @@ export default function PublicationsPage() {
   const [showAllPublications, setShowAllPublications] = useState(false);
 
   // Complete publications data
-  const allPublications = [
+  const allPublications = useMemo(() => [
     // 2024
     {
       id: 1,
@@ -372,7 +371,7 @@ export default function PublicationsPage() {
       badges: [],
       borderColor: "border-yellow-500"
     }
-  ];
+  ], []);
 
   // Filter publications based on search and filters
   const filteredPublications = useMemo(() => {
@@ -387,7 +386,7 @@ export default function PublicationsPage() {
 
       return matchesSearch && matchesYear && matchesType;
     });
-  }, [searchTerm, selectedYear, selectedType]);
+  }, [searchTerm, selectedYear, selectedType, allPublications]);
 
   // Get unique years for filter dropdown
   const availableYears = [...new Set(allPublications.map(pub => pub.year))].sort((a, b) => b - a);

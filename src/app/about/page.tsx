@@ -1,9 +1,8 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { ExternalLink } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -13,9 +12,11 @@ export default function AboutPage() {
         <div className="text-center mb-12">
           {/* Profile Photo */}
           <div className="mb-8">
-            <img
+            <Image
               src="https://life.tsinghua.edu.cn/__local/F/D2/87/2265FA369D1288DC194D3218CB2_BC23290E_1B676B.jpg"
               alt="Dr. Tong Wang"
+              width={192}
+              height={240}
               className="w-48 h-60 object-cover rounded-lg shadow-lg mx-auto mb-6"
             />
           </div>

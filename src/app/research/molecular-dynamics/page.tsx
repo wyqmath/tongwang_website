@@ -1,20 +1,16 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { 
-  Atom, 
-  Zap, 
-  Brain, 
-  TrendingUp, 
-  Users, 
-  BookOpen, 
+import {
+  Atom,
+  Zap,
+  Brain,
+  TrendingUp,
+  BookOpen,
   ExternalLink,
   CheckCircle,
-  ArrowRight,
   Microscope
 } from "lucide-react";
-import Link from "next/link";
 
 export default function MolecularDynamicsPage() {
   return (

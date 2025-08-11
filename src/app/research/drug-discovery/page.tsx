@@ -1,22 +1,18 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { 
-  Pill, 
-  Brain, 
-  Target, 
-  TrendingUp, 
-  Users, 
-  BookOpen, 
+import {
+  Pill,
+  Brain,
+  Target,
+  TrendingUp,
+  BookOpen,
   ExternalLink,
   CheckCircle,
-  ArrowRight,
   Zap,
   Microscope,
   FlaskConical
 } from "lucide-react";
-import Link from "next/link";
 
 export default function DrugDiscoveryPage() {
   return (

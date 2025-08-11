@@ -1,8 +1,9 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, ExternalLink, Award, Trophy } from "lucide-react";
+import { Calendar, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function NewsPage() {
   return (
@@ -42,9 +43,11 @@ export default function NewsPage() {
               <CardContent className="space-y-4">
                 {/* News Image */}
                 <div className="mb-4">
-                  <img
+                  <Image
                     src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-024-08127-z/MediaObjects/41586_2024_8127_Fig1_HTML.png?as=webp"
                     alt="Top 10 Advances in Chinese Bioinformatics for 2024"
+                    width={800}
+                    height={400}
                     className="w-full h-auto object-contain rounded-lg shadow-md"
                   />
                 </div>
