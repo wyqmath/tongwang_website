@@ -26,8 +26,7 @@ export default function PublicationsPage() {
       journal: "Nature",
       volume: "635",
       pages: "1019-1027",
-      impactFactor: "48.5",
-      badges: ["High Impact"],
+      badges: [],
       borderColor: "border-blue-500"
     },
     {
@@ -39,8 +38,7 @@ export default function PublicationsPage() {
       journal: "Nature Computational Science",
       volume: "4(3)",
       pages: "210-223",
-      impactFactor: "18.3",
-      badges: ["Breakthrough"],
+      badges: [],
       borderColor: "border-purple-500"
     },
     {
@@ -52,7 +50,6 @@ export default function PublicationsPage() {
       journal: "Nature Communications",
       volume: "15(1)",
       pages: "313",
-      impactFactor: "15.7",
       badges: ["Editors' Highlights"],
       borderColor: "border-green-500"
     },
@@ -62,10 +59,9 @@ export default function PublicationsPage() {
       type: "conference",
       title: "Long-short-range message-passing: A physics-informed framework to capture non-local interaction for scalable molecular dynamics simulation",
       authors: "Li, Y., Wang, Y., Huang, L., Yang, H., Wei, X., Zhang, J., Wang, T., Wang, Z., Shao, B., & Liu, T. Y.",
-      journal: "ICLR",
+      journal: "International Conference on Learning Representations (ICLR)",
       volume: "",
       pages: "",
-      impactFactor: "",
       badges: ["Top-tier ML"],
       borderColor: "border-indigo-500"
     },
@@ -78,7 +74,6 @@ export default function PublicationsPage() {
       journal: "Patent",
       volume: "",
       pages: "",
-      impactFactor: "",
       badges: ["Patent"],
       borderColor: "border-gray-500"
     },
@@ -91,7 +86,6 @@ export default function PublicationsPage() {
       journal: "Patent",
       volume: "",
       pages: "",
-      impactFactor: "",
       badges: ["Patent"],
       borderColor: "border-gray-500"
     },
@@ -104,7 +98,6 @@ export default function PublicationsPage() {
       journal: "Food & Function",
       volume: "15(2)",
       pages: "1021-1030",
-      impactFactor: "5.4",
       badges: [],
       borderColor: "border-yellow-500"
     },
@@ -115,10 +108,9 @@ export default function PublicationsPage() {
       type: "conference",
       title: "Efficiently incorporating quintuple interactions into geometric deep learning force fields",
       authors: "Wang, Z., Liu, G., Zhou, Y., Wang, T., & Shao, B.",
-      journal: "NeurIPS",
+      journal: "Conference on Neural Information Processing Systems (NeurIPS)",
       volume: "36",
       pages: "77043-77055",
-      impactFactor: "",
       badges: ["Top-tier ML"],
       borderColor: "border-purple-500"
     },
@@ -128,10 +120,9 @@ export default function PublicationsPage() {
       type: "conference",
       title: "Geometric transformer with interatomic positional encoding",
       authors: "Wang, Y., Li, S., Wang, T., Shao, B., Zheng, N., & Liu, T. Y.",
-      journal: "NeurIPS",
+      journal: "Conference on Neural Information Processing Systems (NeurIPS)",
       volume: "36",
       pages: "55981-55994",
-      impactFactor: "",
       badges: ["Top-tier ML"],
       borderColor: "border-blue-500"
     },
@@ -144,7 +135,6 @@ export default function PublicationsPage() {
       journal: "Scientific Data",
       volume: "10(1)",
       pages: "549",
-      impactFactor: "6.9",
       badges: [],
       borderColor: "border-green-500"
     },
@@ -157,7 +147,6 @@ export default function PublicationsPage() {
       journal: "Journal of Chemical Physics",
       volume: "159(3)",
       pages: "034102",
-      impactFactor: "3.1",
       badges: [],
       borderColor: "border-red-500"
     },
@@ -170,7 +159,6 @@ export default function PublicationsPage() {
       journal: "bioRxiv",
       volume: "2023-07",
       pages: "",
-      impactFactor: "",
       badges: ["Preprint"],
       borderColor: "border-gray-500"
     },
@@ -183,7 +171,6 @@ export default function PublicationsPage() {
       journal: "Briefings in Bioinformatics",
       volume: "24(1)",
       pages: "bbac597",
-      impactFactor: "7.7",
       badges: [],
       borderColor: "border-orange-500"
     },
@@ -192,12 +179,11 @@ export default function PublicationsPage() {
       id: 14,
       year: 2022,
       type: "preprint",
-      title: "An ensemble of VisNet, Transformer-M, and pretraining models for molecular property prediction in OGB Large-Scale Challenge@ NeurIPS 2022",
+      title: "An ensemble of VisNet, Transformer-M, and pretraining models for molecular property prediction in OGB Large-Scale Challenge@ Conference on Neural Information Processing Systems (NeurIPS) 2022",
       authors: "Wang, Y., Li, S., Wang, T., He, X., Shao, B., Liu, T. Y., & Wang, T.",
       journal: "arXiv",
       volume: "arXiv:2211.12791",
       pages: "",
-      impactFactor: "",
       badges: ["Preprint"],
       borderColor: "border-gray-500"
     },
@@ -210,7 +196,6 @@ export default function PublicationsPage() {
       journal: "The Journal of Physical Chemistry B",
       volume: "126(46)",
       pages: "9465-9475",
-      impactFactor: "3.3",
       badges: [],
       borderColor: "border-blue-500"
     },
@@ -223,7 +208,6 @@ export default function PublicationsPage() {
       journal: "Briefings in Bioinformatics",
       volume: "23(5)",
       pages: "bbac162",
-      impactFactor: "7.7",
       badges: [],
       borderColor: "border-green-500"
     },
@@ -236,7 +220,6 @@ export default function PublicationsPage() {
       journal: "arXiv",
       volume: "arXiv:2209.06158",
       pages: "",
-      impactFactor: "",
       badges: ["Preprint"],
       borderColor: "border-gray-500"
     },
@@ -249,8 +232,7 @@ export default function PublicationsPage() {
       journal: "Cell Research",
       volume: "32(3)",
       pages: "315-318",
-      impactFactor: "46.3",
-      badges: ["High Impact"],
+      badges: [],
       borderColor: "border-red-500"
     },
     {
@@ -262,7 +244,6 @@ export default function PublicationsPage() {
       journal: "arXiv",
       volume: "arXiv:2202.01356",
       pages: "",
-      impactFactor: "",
       badges: ["Preprint"],
       borderColor: "border-gray-500"
     },
@@ -275,8 +256,7 @@ export default function PublicationsPage() {
       journal: "Cell Research",
       volume: "32(6)",
       pages: "593-595",
-      impactFactor: "46.3",
-      badges: ["High Impact"],
+      badges: [],
       borderColor: "border-red-500"
     },
     {
@@ -288,7 +268,6 @@ export default function PublicationsPage() {
       journal: "arXiv",
       volume: "arXiv:2210.16518",
       pages: "",
-      impactFactor: "",
       badges: ["Preprint"],
       borderColor: "border-gray-500"
     },
@@ -302,7 +281,6 @@ export default function PublicationsPage() {
       journal: "Bioinformatics",
       volume: "37(22)",
       pages: "4075-4082",
-      impactFactor: "5.8",
       badges: [],
       borderColor: "border-blue-500"
     },
@@ -315,7 +293,6 @@ export default function PublicationsPage() {
       journal: "Advanced Theory and Simulations",
       volume: "4(10)",
       pages: "2100152",
-      impactFactor: "3.3",
       badges: [],
       borderColor: "border-purple-500"
     },
@@ -328,7 +305,6 @@ export default function PublicationsPage() {
       journal: "BMC Bioinformatics",
       volume: "22(1)",
       pages: "351",
-      impactFactor: "3.3",
       badges: [],
       borderColor: "border-green-500"
     },
@@ -342,7 +318,6 @@ export default function PublicationsPage() {
       journal: "arXiv",
       volume: "arXiv:1906.05785",
       pages: "",
-      impactFactor: "",
       badges: ["Preprint"],
       borderColor: "border-gray-500"
     },
@@ -355,8 +330,7 @@ export default function PublicationsPage() {
       journal: "Nature Machine Intelligence",
       volume: "1(8)",
       pages: "347-355",
-      impactFactor: "23.9",
-      badges: ["Breakthrough"],
+      badges: [],
       borderColor: "border-orange-500"
     },
     // 2018
@@ -369,7 +343,6 @@ export default function PublicationsPage() {
       journal: "BMC Bioinformatics",
       volume: "19(1)",
       pages: "146",
-      impactFactor: "3.3",
       badges: [],
       borderColor: "border-blue-500"
     },
@@ -383,7 +356,6 @@ export default function PublicationsPage() {
       journal: "Bioinformatics",
       volume: "33(5)",
       pages: "677-684",
-      impactFactor: "5.8",
       badges: [],
       borderColor: "border-green-500"
     },
@@ -397,7 +369,6 @@ export default function PublicationsPage() {
       journal: "Fish & Shellfish Immunology",
       volume: "35(2)",
       pages: "310-318",
-      impactFactor: "4.7",
       badges: [],
       borderColor: "border-yellow-500"
     }
@@ -499,8 +470,6 @@ export default function PublicationsPage() {
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <Badge variant="destructive" className="text-xs">High Impact</Badge>
-                      <span className="text-xs text-muted-foreground">IF: 48.5</span>
                     </div>
                     <Button variant="ghost" size="sm">
                       <ExternalLink className="h-3 w-3" />
@@ -525,7 +494,6 @@ export default function PublicationsPage() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
                       <Badge variant="destructive" className="text-xs">Editors' Highlights</Badge>
-                      <span className="text-xs text-muted-foreground">IF: 15.7</span>
                     </div>
                     <Button variant="ghost" size="sm">
                       <ExternalLink className="h-3 w-3" />
@@ -549,8 +517,6 @@ export default function PublicationsPage() {
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <Badge variant="secondary" className="text-xs">Breakthrough</Badge>
-                      <span className="text-xs text-muted-foreground">IF: 18.3</span>
                     </div>
                     <Button variant="ghost" size="sm">
                       <ExternalLink className="h-3 w-3" />
@@ -574,8 +540,6 @@ export default function PublicationsPage() {
                   </p>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center space-x-2">
-                      <Badge variant="secondary" className="text-xs">Breakthrough</Badge>
-                      <span className="text-xs text-muted-foreground">IF: 23.9</span>
                     </div>
                     <Button variant="ghost" size="sm">
                       <ExternalLink className="h-3 w-3" />
@@ -747,17 +711,20 @@ export default function PublicationsPage() {
                           </p>
                           <div className="flex items-center gap-2 mb-2">
                             <Badge variant="secondary">{pub.journal}</Badge>
-                            {pub.badges.map(badge => (
-                              <Badge
-                                key={badge}
-                                variant={badge === "Editors' Highlights" || badge === "High Impact" ? "destructive" : "outline"}
-                              >
-                                {badge}
-                              </Badge>
-                            ))}
-                            {pub.impactFactor && (
-                              <Badge variant="outline">IF: {pub.impactFactor}</Badge>
-                            )}
+                            {pub.badges.map(badge => {
+                              // Filter out Breakthrough and High Impact badges
+                              if (badge === "Breakthrough" || badge === "High Impact") {
+                                return null;
+                              }
+                              return (
+                                <Badge
+                                  key={badge}
+                                  variant={badge === "Editors' Highlights" ? "destructive" : "outline"}
+                                >
+                                  {badge}
+                                </Badge>
+                              );
+                            })}
                           </div>
                         </div>
                       ))}

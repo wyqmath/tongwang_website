@@ -353,6 +353,7 @@ export default function AboutPage() {
 
 
         {/* Committees/Professional Groups/Services */}
+        {/*
         <Card className="mb-8">
           <CardHeader>
             <CardTitle className="flex items-center">
@@ -398,6 +399,7 @@ export default function AboutPage() {
             </div>
           </CardContent>
         </Card>
+        */}
 
         {/* Honours/Awards/Prizes */}
         <Card className="mb-8">
