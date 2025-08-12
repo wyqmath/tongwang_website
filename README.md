@@ -32,10 +32,9 @@
 - **Icons | 图标**: Lucide React for modern iconography
 
 ### Backend | 后端
-- **Database | 数据库**: Supabase (PostgreSQL) with real-time capabilities
-- **Authentication | 认证**: Supabase Auth (ready for future admin features)
-- **File Storage | 文件存储**: Supabase Storage for documents and images
-- **API**: Automatic REST API generation from database schema
+- **Data | 数据**: Static content with hardcoded data
+- **Content Management | 内容管理**: File-based content management
+- **Future Ready | 未来扩展**: Ready for database integration when needed
 
 ### Deployment | 部署
 - **Platform | 平台**: Vercel for optimal Next.js performance
