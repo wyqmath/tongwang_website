@@ -48,7 +48,6 @@
 
 - **Node.js 18+** | Node.js 18以上版本
 - **npm or yarn** | npm或yarn包管理器
-- **Supabase account** | Supabase账户
 
 ### 📦 Installation | 安装步骤
 
@@ -63,57 +62,29 @@ cd tongwang-website
 npm install
 ```
 
-#### 3. Set up environment variables | 配置环境变量
-```bash
-cp .env.local.example .env.local
-```
-
-Edit `.env.local` with your Supabase credentials | 编辑`.env.local`文件，填入您的Supabase凭据:
-```env
-NEXT_PUBLIC_SUPABASE_URL=your_supabase_project_url
-NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-```
-
-#### 4. Set up Supabase database | 设置Supabase数据库
-- Create a new Supabase project | 创建新的Supabase项目
-- Run the SQL commands in `database-schema.sql` in your Supabase SQL editor | 在Supabase SQL编辑器中运行`database-schema.sql`中的SQL命令
-- Configure Row Level Security (RLS) policies as needed | 根据需要配置行级安全(RLS)策略
-
-#### 5. Run the development server | 运行开发服务器
+#### 3. Run the development server | 运行开发服务器
 ```bash
 npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) to view the website | 打开 [http://localhost:3000](http://localhost:3000) 查看网站
 
-## 🗄 Database Setup | 数据库设置
+## 📄 Content Management | 内容管理
 
-The website uses Supabase as the backend. The database schema includes | 网站使用Supabase作为后端，数据库架构包括:
+The website uses static content with hardcoded data for simplicity and performance | 网站使用静态内容和硬编码数据以确保简洁性和性能:
 
-### 📊 Core Tables | 核心表结构
-- **publications** | 学术发表: Research papers with full metadata | 包含完整元数据的研究论文
-- **news** | 新闻: News articles and announcements | 新闻文章和公告
-- **team_members** | 团队成员: Current and former team members | 当前和前任团队成员
-- **research_areas** | 研究领域: Research focus areas and topics | 研究重点领域和主题
+### 📊 Content Structure | 内容结构
+- **publications** | 学术发表: Defined in `src/app/publications/page.tsx` | 在`src/app/publications/page.tsx`中定义
+- **news** | 新闻: Defined in `src/app/news/page.tsx` | 在`src/app/news/page.tsx`中定义
+- **team_members** | 团队成员: Defined in `src/app/team/page.tsx` | 在`src/app/team/page.tsx`中定义
 
-### 🔧 Database Features | 数据库特性
-- **Relationships** | 关系: Proper foreign key relationships | 正确的外键关系
-- **Indexing** | 索引: Optimized for fast queries | 为快速查询优化
-- **Triggers** | 触发器: Automatic timestamp updates | 自动时间戳更新
-- **Sample Data** | 示例数据: Pre-populated with realistic content | 预填充真实内容
+### 🔧 Content Features | 内容特性
+- **Static Data** | 静态数据: Fast loading and reliable | 快速加载且可靠
+- **Easy Updates** | 简易更新: Direct file editing | 直接文件编辑
+- **Version Control** | 版本控制: All changes tracked in Git | 所有更改在Git中跟踪
+- **Future Ready** | 未来扩展: Ready for database integration when needed | 需要时可集成数据库
 
-Run the SQL commands in `database-schema.sql` to set up the database structure | 运行`database-schema.sql`中的SQL命令来设置数据库结构
-
-## Database Setup
-
-The website uses Supabase as the backend. The database schema includes:
-
-- **publications**: Research papers and publications
-- **news**: News articles and updates
-- **team_members**: Current and former team members
-- **research_areas**: Research focus areas
-
-Run the SQL commands in `database-schema.sql` to set up the database structure.
+To update content, edit the respective page files directly | 要更新内容，请直接编辑相应的页面文件
 
 ## 📁 Project Structure | 项目结构
 
@@ -133,12 +104,9 @@ src/
 │   ├── navigation.tsx    # Main navigation | 主导航
 │   └── footer.tsx        # Footer component | 页脚组件
 ├── lib/                  # Utility functions | 工具函数
-│   ├── utils.ts          # General utilities | 通用工具
-│   └── supabase.ts       # Supabase client and types | Supabase客户端和类型
+│   └── utils.ts          # General utilities | 通用工具
 └── Additional Files | 其他文件
-    ├── database-schema.sql    # Complete database setup | 完整数据库设置
-    ├── vercel.json           # Deployment configuration | 部署配置
-    └── .env.local.example    # Environment variables template | 环境变量模板
+    └── vercel.json           # Deployment configuration | 部署配置
 ```
 
 ## 🎨 Design Features | 设计特色
