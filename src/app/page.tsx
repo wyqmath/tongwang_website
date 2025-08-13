@@ -81,45 +81,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* AI2BMD Showcase */}
-      <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold mb-4">AI2BMD in Action</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Watch how our revolutionary AI2BMD system enables ab initio accuracy
-                for large biomolecules with unprecedented speed and precision
-              </p>
-            </div>
-
-            <div className="relative max-w-4xl mx-auto">
-              <div className="relative aspect-video rounded-xl overflow-hidden shadow-2xl bg-black">
-                <video
-                  className="w-full h-full object-contain"
-                  controls
-                  preload="metadata"
-                >
-                  <source
-                    src="/AI2BMD_demo.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-
-              {/* Video description */}
-              <div className="mt-6 text-center">
-                <p className="text-muted-foreground">
-                  This animation illustrates how AI2BMD bridges quantum chemistry and classical molecular dynamics,
-                  enabling ab initio accuracy for biomolecular systems with over 10,000 atoms.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Research Overview */}
       <section id="research-areas" className="py-16">
         <div className="container mx-auto px-4">

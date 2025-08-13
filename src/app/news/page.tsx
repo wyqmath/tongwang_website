@@ -44,7 +44,7 @@ export default function NewsPage() {
                 {/* News Image */}
                 <div className="mb-4">
                   <Image
-                    src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41586-024-08127-z/MediaObjects/41586_2024_8127_Fig1_HTML.png?as=webp"
+                    src="/The overall pipeline of AI2BMD.webp"
                     alt="Top 10 Advances in Chinese Bioinformatics for 2024"
                     width={800}
                     height={400}
