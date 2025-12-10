@@ -158,10 +158,10 @@ export default function PositionsPage() {
 
         {/* Application Process */}
         <section className="mb-12">
-          <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border-green-200">
+          <Card className="bg-gray-50 border-gray-200">
             <CardHeader>
               <CardTitle className="flex items-center text-2xl">
-                <Mail className="mr-2 text-green-600" />
+                <Mail className="mr-2 text-gray-600" />
                 How to Apply
               </CardTitle>
             </CardHeader>

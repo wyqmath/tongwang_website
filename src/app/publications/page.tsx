@@ -442,7 +442,7 @@ export default function PublicationsPage() {
         </div>
 
         {/* Featured Publications / Editors' Highlights */}
-        <Card className="mb-8 bg-gradient-to-r from-blue-50 to-indigo-50 border-primary/20">
+        <Card className="mb-8 bg-gray-50 border-primary/20">
           <CardHeader>
             <CardTitle className="flex items-center text-2xl">
               <span className="text-2xl mr-2">⭐</span>
@@ -455,10 +455,10 @@ export default function PublicationsPage() {
           <CardContent className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Nature Paper */}
-              <Card className="border-2 border-blue-200 hover:shadow-lg transition-shadow">
+              <Card className="border-2 border-primary/30 hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
                   <div className="flex items-start justify-between mb-3">
-                    <Badge variant="secondary" className="bg-blue-600 text-white">Nature</Badge>
+                    <Badge variant="secondary" className="bg-primary text-primary-foreground">Nature</Badge>
                     <Badge variant="outline">2024</Badge>
                   </div>
                   <h4 className="font-semibold text-sm mb-2 leading-tight">
@@ -478,10 +478,10 @@ export default function PublicationsPage() {
               </Card>
 
               {/* Nature Communications Paper */}
-              <Card className="border-2 border-green-200 hover:shadow-lg transition-shadow">
+              <Card className="border-2 border-primary/30 hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
                   <div className="flex items-start justify-between mb-3">
-                    <Badge variant="secondary" className="bg-green-600 text-white">Nature Communications</Badge>
+                    <Badge variant="secondary" className="bg-primary text-primary-foreground">Nature Communications</Badge>
                     <Badge variant="outline">2024</Badge>
                   </div>
                   <h4 className="font-semibold text-sm mb-2 leading-tight">
@@ -502,10 +502,10 @@ export default function PublicationsPage() {
               </Card>
 
               {/* Nature Computational Science Paper */}
-              <Card className="border-2 border-purple-200 hover:shadow-lg transition-shadow">
+              <Card className="border-2 border-primary/30 hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
                   <div className="flex items-start justify-between mb-3">
-                    <Badge variant="secondary" className="bg-purple-600 text-white">Nature Computational Science</Badge>
+                    <Badge variant="secondary" className="bg-primary text-primary-foreground">Nature Computational Science</Badge>
                     <Badge variant="outline">2024</Badge>
                   </div>
                   <h4 className="font-semibold text-sm mb-2 leading-tight">
@@ -525,10 +525,10 @@ export default function PublicationsPage() {
               </Card>
 
               {/* Nature Machine Intelligence Paper */}
-              <Card className="border-2 border-orange-200 hover:shadow-lg transition-shadow">
+              <Card className="border-2 border-primary/30 hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6">
                   <div className="flex items-start justify-between mb-3">
-                    <Badge variant="secondary" className="bg-orange-600 text-white">Nature Machine Intelligence</Badge>
+                    <Badge variant="secondary" className="bg-primary text-primary-foreground">Nature Machine Intelligence</Badge>
                     <Badge variant="outline">2019</Badge>
                   </div>
                   <h4 className="font-semibold text-sm mb-2 leading-tight">

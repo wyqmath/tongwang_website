@@ -112,7 +112,7 @@ export default function TeamPage() {
         </section>
 
         {/* Join Our Team Section */}
-        <section className="text-center bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-8">
+        <section className="text-center bg-gray-50 rounded-lg p-8">
           <h2 className="text-2xl font-bold mb-4">Join Our Team</h2>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
             We are always looking for motivated students and researchers to join our group. 

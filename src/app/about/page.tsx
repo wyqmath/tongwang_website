@@ -7,71 +7,140 @@ import Image from "next/image";
 export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          {/* Profile Photo */}
-          <div className="mb-8">
+      <div className="max-w-6xl mx-auto">
+        {/* Header Section - Left-Right Layout */}
+        <div className="grid grid-cols-1 md:grid-cols-[300px_1fr] gap-8 mb-12">
+          {/* Left Side - Profile Photo */}
+          <div className="flex justify-center md:justify-start">
             <Image
               src="https://life.tsinghua.edu.cn/__local/F/D2/87/2265FA369D1288DC194D3218CB2_BC23290E_1B676B.jpg"
               alt="Dr. Tong Wang"
-              width={192}
-              height={240}
-              className="w-48 h-60 object-cover rounded-lg shadow-lg mx-auto mb-6"
+              width={300}
+              height={375}
+              className="w-full max-w-[300px] h-auto object-cover rounded-lg shadow-lg"
             />
           </div>
 
-          <h1 className="text-4xl font-bold mb-4">Dr. Tong Wang</h1>
-          <p className="text-xl text-muted-foreground mb-4">
-            Assistant Professor
-          </p>
+          {/* Right Side - Information with Light Background */}
+          <div className="bg-gray-50 rounded-lg p-8 space-y-6">
+            {/* Name and Title */}
+            <div>
+              <h1 className="text-4xl font-bold mb-4">Tong Wang, PhD</h1>
 
-          {/* Contact Information */}
-          <div className="mb-6">
-            <a
-              href="mailto:tongwang@mail.tsinghua.edu.cn"
-              className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <span>tongwang@mail.tsinghua.edu.cn</span>
-            </a>
-          </div>
+              <div className="space-y-2 text-base leading-relaxed">
+                <p>
+                  Principal Investigator and Assistant Professor,{" "}
+                  <Link
+                    href="https://life.tsinghua.edu.cn/lifeen/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 underline"
+                  >
+                    School of Life Sciences, Tsinghua University
+                  </Link>
+                </p>
 
-          <div className="flex justify-center space-x-4">
-            <Badge variant="secondary">AI + Biomolecular Structure</Badge>
-            <Badge variant="secondary">Deep Learning</Badge>
-            <Badge variant="secondary">Molecular Dynamics</Badge>
+                <p>
+                  Principal Investigator,{" "}
+                  <Link
+                    href="http://www.cls.edu.cn/en/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 underline"
+                  >
+                    Tsinghua-Peking Center for Life Sciences
+                  </Link>
+                </p>
+
+                <p>
+                  Principal Investigator,{" "}
+                  <Link
+                    href="https://www.frcbs.tsinghua.edu.cn/en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 underline"
+                  >
+                    Beijing Frontier Research Center for Biological Structure
+                  </Link>
+                </p>
+
+                <p>
+                  Principal Investigator,{" "}
+                  <Link
+                    href="http://english.ioz.cas.cn/rh/rd/200907/t20090713_23064.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 underline"
+                  >
+                    State Key Laboratory of Membrane Biology
+                  </Link>
+                </p>
+              </div>
+            </div>
+
+            {/* Contact Information */}
+            <div className="space-y-2 text-sm">
+              <p>
+                <span className="font-semibold">Office Address: </span>
+                <span className="text-muted-foreground">Room A216-A, Biomedical Building, Tsinghua University, Haidian District, Beijing, China</span>
+              </p>
+
+              <p>
+                <span className="font-semibold">Lab Address: </span>
+                <span className="text-muted-foreground">Room A208, Biomedical Building, Tsinghua University, Haidian District, Beijing, China</span>
+              </p>
+
+              <p>
+                <span className="font-semibold">Phone: </span>
+                <span className="text-muted-foreground">010-62794752</span>
+              </p>
+
+              <div className="pt-2">
+                <Link
+                  href="https://life.tsinghua.edu.cn/lifeen/info/1034/1871.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm font-medium"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Full CV
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Brief Biosketch */}
+        {/* Brief Bio */}
         <Card className="mb-8">
           <CardHeader>
             <CardTitle className="flex items-center">
               <span className="text-2xl mr-2">🎓</span>
-              Brief Biosketch
+              Brief Bio
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
-              Dr. Tong Wang is an Assistant Professor at the School of Life Sciences, Tsinghua University,
-              and a researcher at the Tsinghua University-Peking University Center for Life Sciences and Beijing Frontier Research
-              Center for Biological Structure. His research focuses on "Artificial Intelligence + Biomolecular
-              Structure," utilizing deep learning for structural representation learning, property and interaction
-              prediction, dynamics simulation, and sequence design of biological macromolecules and drug molecules.
+              Dr. Wang Tong is the Principal Investigator (PI) of the School of Life Sciences, Tsinghua University,
+              Tsinghua University-Peking University Center for Life Sciences (CLS), Beijing Frontier Research Center
+              for Biological Structures, and State Key Laboratory of Membrane Biology. Prior to joining Tsinghua in 2025,
+              he was a Senior Researcher at Microsoft Research. He received his Ph.D. at Tsinghua University in 2019 and
+              worked as a visiting scholar at Harvard University from 2016 to 2017.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Dr. Wang received his Bachelor's degree from Shandong University (2010-2014) and his Ph.D. from
-              Tsinghua University (2014-2019). He served as a Senior Researcher at Microsoft Research (2019-2025)
-              before joining Tsinghua University as an Assistant Professor in 2025.
+              His main research directions include AI-driven biomolecular dynamics simulation system (Nature, 2024),
+              molecular structure modeling and prediction (Nat Commun, 2024), AI aided drug discovery (Breif Bioinform, 2023)
+              and biomechanism detection via simulations (Cell Res, 2022 a,b). Over the past five years, as first or
+              corresponding author, he has published more than 30 papers in journals such as Nature, Nat Mach Intell,
+              and top computer science conference, such as NeurlPS and ICLR. He also holds more than ten patents in China
+              and the United States. He has been working as Committee Member of Chinese Bioinformatics Society in protein
+              structure prediction and simulation since it launched.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              His research has been published in top-tier venues including Nature, Nature Communications,
-              ICLR, and NeurIPS. His work on AI-driven molecular dynamics simulation (AI2BMD) was published
-              in Nature in 2024, representing a significant breakthrough in ab initio characterization of
-              protein molecular dynamics using artificial intelligence.
+              Dr. Wang has received Capital Frontier Academic Achievement Award (2025), Top Ten Advances in Chinese
+              Bioinformatics Award (2024), Champion in First Global AI Drug Development Competition (2023), Top Downloaded
+              Article Award (2022) and honored reviewer in ACS journals (2022, 2023).
             </p>
 
             {/* Academic Links */}
@@ -82,7 +151,7 @@ export default function AboutPage() {
                   href="https://scholar.google.com/citations?hl=zh-CN&user=ETiIfc4AAAAJ"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 px-3 py-2 bg-blue-50 hover:bg-blue-100 rounded-md transition-colors"
+                  className="flex items-center space-x-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 1024 1024">
                     <path d="M512 822.24L0 405.334 512 0z" fill="#4285F4"/>
@@ -97,7 +166,7 @@ export default function AboutPage() {
                   href="https://openreview.net/profile?id=%7ETong_Wang2"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 px-3 py-2 bg-red-50 hover:bg-red-100 rounded-md transition-colors"
+                  className="flex items-center space-x-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 1024 1024">
                     <path d="M0 750.933333V273.066667a273.066667 273.066667 0 0 1 273.066667-273.066667h477.866666a273.066667 273.066667 0 0 1 273.066667 273.066667v477.866666a273.066667 273.066667 0 0 1-273.066667 273.066667H273.066667a273.066667 273.066667 0 0 1-273.066667-273.066667z" fill="#FFFFFF"/>
@@ -113,7 +182,7 @@ export default function AboutPage() {
                   href="https://orcid.org/0000-0002-9483-0050"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 px-3 py-2 bg-green-50 hover:bg-green-100 rounded-md transition-colors"
+                  className="flex items-center space-x-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 1024 1024">
                     <path d="M334.624 587.104a612.576 612.576 0 0 1-58.88-2.208v-216.224c11.232-0.768 24.8-1.152 41.856-1.28l25.216-0.096c73.568 0 114.976 37.92 114.976 106.24 0 69.216-47.008 113.536-123.136 113.536zM896.032 0h-768a128 128 0 0 0-128 128v768a128 128 0 0 0 128 128h768a128 128 0 0 0 128-128V128a128 128 0 0 0-128-128z m-249.6 888.8l-3.808 5.76c-10.752 4.896-27.872 7.84-44.288 7.84-52.48 0-96.672-20.224-126.24-55.808-35.2-40.576-87.52-118.144-136.704-205.824-28.32 0-38.912-0.224-52.608-0.896l-6.912-0.512v144.8c0 48.768 7.84 61.92 31.616 65.504l47.104 6.4 5.536 6.4v26.336l-6.656 6.4a3323.68 3323.68 0 0 0-115.712-2.688c-24.448 0-49.888 0.64-79.584 1.632l-29.792 1.12-6.56-6.4v-26.368l5.248-6.272 34.4-6.4c24.064-4.576 32-17.44 32-65.408V426.272c0-47.968-7.936-60.896-31.872-65.44l-34.464-6.432-5.504-6.176v-26.368l6.656-6.4c52.512 1.504 105.088 1.312 157.568-0.48 31.616-0.928 50.56-1.312 73.312-1.312 114.464 0 188.544 55.68 188.544 155.392 0 70.4-53.376 138.656-124.544 159.456 39.296 68.512 88.672 135.84 132.768 184.192 26.208 28.288 56.704 46.08 84.096 46.08l6.4 6.4z m223.616-586.464c0 19.36-0.352 28.576-1.44 38.816a172.384 172.384 0 0 1-5.76 30.688c-7.936 24.576-20.608 42.24-39.904 55.424-19.2 13.088-43.808 20.192-70.4 20.192-27.232 0-50.4-6.272-69.376-18.912-19.104-12.672-32.8-31.584-40.96-56.32a104.288 104.288 0 0 1-3.84-14.688 283.872 283.872 0 0 1-4.096-40.672 1036.544 1036.544 0 0 1 0-64.64c0.48-13.6 1.824-27.232 4.192-40.608a99.84 99.84 0 0 1 3.808-14.688c8.192-24.8 21.888-43.648 40.992-56.32 18.976-12.672 42.24-18.944 69.472-18.944 13.984 0 26.656 1.664 38.048 4.96 11.36 3.328 21.504 7.84 30.432 13.728s16.512 12.672 22.912 20.48c6.304 7.68 11.52 16 15.456 24.352 3.104 5.536 1.92 11.52-4.48 15.36l-32.416 13.28c-5.984 3.328-12.032 1.152-14.976-4.736-7.936-14.56-13.568-21.536-22.016-26.88a55.232 55.232 0 0 0-32.896-8.672c-14.72 0-21.504 2.272-32.384 9.952a53.504 53.504 0 0 0-21.152 28.704c-2.4 7.296-3.84 14.848-4.352 22.528a824.832 824.832 0 0 0 0 99.84c0.512 7.68 1.952 15.232 4.352 22.528 2.784 10.592 9.472 19.712 18.688 25.6a58.56 58.56 0 0 0 34.912 10.016c12.448 0.352 24.704-3.104 35.2-9.856 8.576-5.792 14.88-14.368 17.824-24.32l1.792-6.24c1.12-3.968 2.016-8.032 2.656-12.128 0.896-5.536 1.12-10.24 1.12-22.56h-49.376l-0.128-0.224c-6.528 0-10.88-4.352-10.88-10.88v-30.08c0-6.432 4.352-10.88 10.88-10.88h97.28c6.432 0 10.88 4.448 10.88 10.88z" fill="#A1C837"/>
@@ -125,7 +194,7 @@ export default function AboutPage() {
                   href="https://dblp.org/pid/51/6856-14.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 px-3 py-2 bg-blue-50 hover:bg-blue-100 rounded-md transition-colors"
+                  className="flex items-center space-x-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 1024 1024">
                     <path d="M908.798694 622.074333l-104.539656-390.798714s-6.399979-25.182917-30.718899-14.078954L534.606926 328.1343l36.699879 136.538551 46.493847 174.072427 0.415998 2.559991C620.366643 661.369203 600.715708 674.999159 600.715708 674.999159l-80.220736 37.119877 21.34293 80.636735 1.699994 4.255986c2.97599 7.263976 11.935961 25.599916 34.558886 38.814872L874.623807 1017.99803s29.022904 17.499942 22.174927-7.263976L812.323012 694.999093l79.356738-36.699879s23.899921-11.099963 17.054944-36.254881z m-321.682941 3.839987l-0.415999-2.559991L538.477913 443.299921l-28.158907-104.539656-28.573906-106.23765v-1.699995s-6.815978-25.182917-35.838882-42.653859L149.374193 6.00136S120.351289-11.498582 127.199266 13.268336L212.091987 329.830295l-79.772737 37.118877S108.416328 378.053136 115.268306 403.200053L219.803962 793.998767s6.815978 25.182917 30.718899 14.078954L569.228812 659.609209s22.174927-10.239966 17.918941-33.694889z" fill="#004F9F"/>
@@ -137,7 +206,7 @@ export default function AboutPage() {
                   href="https://www.researchgate.net/profile/Tong-Wang-144"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 px-3 py-2 bg-teal-50 hover:bg-teal-100 rounded-md transition-colors"
+                  className="flex items-center space-x-2 px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-md transition-colors"
                 >
                   <svg className="w-4 h-4" viewBox="0 0 1024 1024">
                     <path d="M334.624 587.104a612.576 612.576 0 0 1-58.88-2.208v-216.224c11.232-0.768 24.8-1.152 41.856-1.28l25.216-0.096c73.568 0 114.976 37.92 114.976 106.24 0 69.216-47.008 113.536-123.136 113.536zM896.032 0h-768a128 128 0 0 0-128 128v768a128 128 0 0 0 128 128h768a128 128 0 0 0 128-128V128a128 128 0 0 0-128-128z m-249.6 888.8l-3.808 5.76c-10.752 4.896-27.872 7.84-44.288 7.84-52.48 0-96.672-20.224-126.24-55.808-35.2-40.576-87.52-118.144-136.704-205.824-28.32 0-38.912-0.224-52.608-0.896l-6.912-0.512v144.8c0 48.768 7.84 61.92 31.616 65.504l47.104 6.4 5.536 6.4v26.336l-6.656 6.4a3323.68 3323.68 0 0 0-115.712-2.688c-24.448 0-49.888 0.64-79.584 1.632l-29.792 1.12-6.56-6.4v-26.368l5.248-6.272 34.4-6.4c24.064-4.576 32-17.44 32-65.408V426.272c0-47.968-7.936-60.896-31.872-65.44l-34.464-6.432-5.504-6.176v-26.368l6.656-6.4c52.512 1.504 105.088 1.312 157.568-0.48 31.616-0.928 50.56-1.312 73.312-1.312 114.464 0 188.544 55.68 188.544 155.392 0 70.4-53.376 138.656-124.544 159.456 39.296 68.512 88.672 135.84 132.768 184.192 26.208 28.288 56.704 46.08 84.096 46.08l6.4 6.4z m223.616-586.464c0 19.36-0.352 28.576-1.44 38.816a172.384 172.384 0 0 1-5.76 30.688c-7.936 24.576-20.608 42.24-39.904 55.424-19.2 13.088-43.808 20.192-70.4 20.192-27.232 0-50.4-6.272-69.376-18.912-19.104-12.672-32.8-31.584-40.96-56.32a104.288 104.288 0 0 1-3.84-14.688 283.872 283.872 0 0 1-4.096-40.672 1036.544 1036.544 0 0 1 0-64.64c0.48-13.6 1.824-27.232 4.192-40.608a99.84 99.84 0 0 1 3.808-14.688c8.192-24.8 21.888-43.648 40.992-56.32 18.976-12.672 42.24-18.944 69.472-18.944 13.984 0 26.656 1.664 38.048 4.96 11.36 3.328 21.504 7.84 30.432 13.728s16.512 12.672 22.912 20.48c6.304 7.68 11.52 16 15.456 24.352 3.104 5.536 1.92 11.52-4.48 15.36l-32.416 13.28c-5.984 3.328-12.032 1.152-14.976-4.736-7.936-14.56-13.568-21.536-22.016-26.88a55.232 55.232 0 0 0-32.896-8.672c-14.72 0-21.504 2.272-32.384 9.952a53.504 53.504 0 0 0-21.152 28.704c-2.4 7.296-3.84 14.848-4.352 22.528a824.832 824.832 0 0 0 0 99.84c0.512 7.68 1.952 15.232 4.352 22.528 2.784 10.592 9.472 19.712 18.688 25.6a58.56 58.56 0 0 0 34.912 10.016c12.448 0.352 24.704-3.104 35.2-9.856 8.576-5.792 14.88-14.368 17.824-24.32l1.792-6.24c1.12-3.968 2.016-8.032 2.656-12.128 0.896-5.536 1.12-10.24 1.12-22.56h-49.376l-0.128-0.224c-6.528 0-10.88-4.352-10.88-10.88v-30.08c0-6.432 4.352-10.88 10.88-10.88h97.28c6.432 0 10.88 4.448 10.88 10.88z" fill="#00CCBB"/>

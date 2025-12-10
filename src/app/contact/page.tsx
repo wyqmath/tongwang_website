@@ -10,7 +10,7 @@ import dynamic from "next/dynamic";
 const MapComponent = dynamic(() => import('./map-component'), {
   ssr: false,
   loading: () => <div className="bg-gray-100 h-[450px] rounded-lg flex items-center justify-center">
-    <p className="text-muted-foreground">Loading map...</p>
+    <p className="text-gray-600">Loading map...</p>
   </div>
 });
 
