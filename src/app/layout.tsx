@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   title: "Tong Wang Research Group",
   description: "Research group website for Professor Tong Wang",
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
 };
 
