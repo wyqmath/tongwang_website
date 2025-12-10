@@ -59,19 +59,20 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Banner with Background Image */}
-      <section className="relative h-[400px] overflow-hidden">
-        <div className="absolute inset-0">
+      <section className="relative w-full">
+        <div className="relative w-full">
           <Image
             src="/background.png"
             alt="Research Background"
-            fill
-            className="object-cover"
+            width={1920}
+            height={1080}
+            className="w-full h-auto object-contain"
             priority
           />
         </div>
 
         {/* Banner Text */}
-        <div className="relative h-full flex items-center justify-center">
+        <div className="absolute inset-0 flex items-center justify-center">
           <div className="container mx-auto px-4">
             <h2 className="text-4xl md:text-5xl font-bold text-white text-center max-w-4xl mx-auto leading-tight drop-shadow-lg">
               Empower Biological Structural Research by Artificial Intelligence
