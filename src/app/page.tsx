@@ -68,13 +68,14 @@ export default function Home() {
             height={1080}
             className="w-full h-auto object-contain"
             priority
+            style={{ width: '100%', height: 'auto' }}
           />
         </div>
 
         {/* Banner Text */}
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-white text-center max-w-4xl mx-auto leading-tight drop-shadow-lg">
+            <h2 className="font-bold text-white text-center max-w-4xl mx-auto leading-tight drop-shadow-lg" style={{ fontSize: '3.5vw' }}>
               Empower Biological Structural Research by Artificial Intelligence
             </h2>
           </div>
@@ -85,73 +86,83 @@ export default function Home() {
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6 text-left">
+            <h2 className="font-bold text-gray-900 mb-6 text-left" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.5rem)' }}>
               Welcome to the Wang Lab
             </h2>
-            <p className="text-xl text-gray-600 text-left leading-relaxed">
-              An interdisciplinary team of biologists, chemists, computer scientists, software engineers, and pharmacologists.
-              Advancing AI Structural Biology research for decoding life and designing molecules in a dynamic manner.
-            </p>
+            <ul className="text-gray-600 text-left leading-relaxed space-y-2 list-disc list-inside" style={{ fontSize: 'clamp(1rem, 1.5vw, 1.5rem)' }}>
+              <li>An interdisciplinary team of biologists, chemists, computer scientists, software engineers, and pharmacologists.</li>
+              <li>Advancing AI Structural Biology research for decoding life and designing molecules in a dynamic manner.</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Research Overview */}
-      <section id="research-areas" className="py-16">
+      {/* Research Interest */}
+      <section id="research-areas" className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-center mb-12">Research Areas</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Link href="/research/molecular-dynamics">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
-                  <CardHeader>
-                    <CardTitle>AI-Driven Molecular Dynamics</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Revolutionary AI2BMD system enabling ab initio accuracy for large biomolecules
-                      (&gt;10,000 atoms) with orders of magnitude speedup, bridging quantum chemistry
-                      and classical molecular dynamics.
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-3xl font-bold text-center mb-12">Research Interest</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* System */}
+              <div className="group cursor-pointer">
+                <div className="relative overflow-hidden rounded-lg shadow-lg">
+                  <Image
+                    src="/System.png"
+                    alt="System - AI driven biomolecular dynamics simulation"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <p className="text-white text-sm font-medium leading-relaxed">
+                      AI driven biomolecular dynamics simulation with accuracy, efficiency and generalizability
                     </p>
-                  </CardContent>
-                </Card>
-              </Link>
+                  </div>
+                </div>
+              </div>
 
-              <Link href="/research/molecular-structure-characterization">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
-                  <CardHeader>
-                    <CardTitle>Molecular Structure Characterization Learning and Property Prediction</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Equivariant geometry-enhanced graph neural networks and geometric transformers that elegantly
-                      extract geometric features and efficiently model molecular structures with low computational
-                      costs for drug discovery and molecular dynamics simulation.
+              {/* Modeling */}
+              <div className="group cursor-pointer">
+                <div className="relative overflow-hidden rounded-lg shadow-lg">
+                  <Image
+                    src="/Modeling.png"
+                    alt="Modeling - Biological structures encoding"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <p className="text-white text-sm font-medium leading-relaxed">
+                      Biological structures encoding by deep learning for modeling, prediction, simulation and design
                     </p>
-                  </CardContent>
-                </Card>
-              </Link>
+                  </div>
+                </div>
+              </div>
 
-              <Link href="/research/drug-discovery">
-                <Card className="hover:shadow-lg transition-shadow cursor-pointer h-full">
-                  <CardHeader>
-                    <CardTitle>AI-Assisted Drug Discovery</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Computational approaches for viral protein dynamics, drug-target interactions,
-                      and structural insights into pathogen evolution and therapeutic target identification.
+              {/* Application */}
+              <div className="group cursor-pointer">
+                <div className="relative overflow-hidden rounded-lg shadow-lg">
+                  <Image
+                    src="/Application.png"
+                    alt="Application - Biomechanism detection and drug design"
+                    width={400}
+                    height={300}
+                    className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
+                    <p className="text-white text-sm font-medium leading-relaxed">
+                      Biomechanism detection and drug design in a dynamic manner
                     </p>
-                  </CardContent>
-                </Card>
-              </Link>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Image Carousel */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
@@ -270,7 +281,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
