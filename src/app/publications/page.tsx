@@ -1,8 +1,5 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
-import { BookOpen, Quote, Users, Calendar } from "lucide-react";
-
 export default function PublicationsPage() {
 
   
@@ -16,51 +13,13 @@ export default function PublicationsPage() {
         </p>
       </div>
 
-      {/* Statistics Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
-        <Card>
-          <CardContent className="pt-6">
-            <div className="text-center">
-              <BookOpen className="h-8 w-8 mx-auto mb-2 text-primary" />
-              <div className="text-2xl font-bold">29</div>
-              <p className="text-xs text-muted-foreground">Total Publications</p>
-            </div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="pt-6">
-            <div className="text-center">
-              <Quote className="h-8 w-8 mx-auto mb-2 text-primary" />
-              <div className="text-2xl font-bold">861</div>
-              <p className="text-xs text-muted-foreground">Total Citations</p>
-            </div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="pt-6">
-            <div className="text-center">
-              <Users className="h-8 w-8 mx-auto mb-2 text-primary" />
-              <div className="text-2xl font-bold">17</div>
-              <p className="text-xs text-muted-foreground">H-Index</p>
-            </div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="pt-6">
-            <div className="text-center">
-              <Calendar className="h-8 w-8 mx-auto mb-2 text-primary" />
-              <div className="text-2xl font-bold">19</div>
-              <p className="text-xs text-muted-foreground">I10-Index</p>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
+      
 
       {/* Publications List */}
       <div className="space-y-6">
         {/* 2025 Publications */}
         <div className="mb-8">
-          <h2 className="text-3xl font-bold text-red-600 mb-6 flex items-center">
+          <h2 className="text-3xl font-bold mb-6 flex items-center" style={{ color: 'rgb(102, 8, 116)' }}>
             2025 Publications:
             <span className="ml-2 text-2xl">›</span>
           </h2>
@@ -91,43 +50,7 @@ export default function PublicationsPage() {
               </div>
             </div>
 
-            {/* Publication 27 */}
-            <div className="flex gap-4">
-              <div className="font-bold text-lg min-w-[3rem]">27.</div>
-              <div className="flex-1">
-                <p className="text-base leading-relaxed">
-                  Dong, S., An, S., Saiding, Q., Chen, Q., Liu, B., Kang, N., Chen, W., <u className="font-medium">Tao, W.*</u> (2025).
-                  "<a href="https://pubs.acs.org/doi/10.1021/acs.chemrev.4c00580" className="text-blue-600 hover:text-blue-800 hover:underline">Therapeutic Hydrogels: Properties and Biomedical Applications</a>".
-                  <i><b>Chem. Rev.</b></i>, 125(18): 8835–8920.
-                  <span className="font-bold text-purple-600">(<a href="#" className="text-purple-600 hover:text-purple-800 hover:underline">Invited Article</a>; <a href="#" className="text-purple-600 hover:text-purple-800 hover:underline">Cover Paper</a>)</span>
-                </p>
-              </div>
-            </div>
-
-            {/* Publication 26 */}
-            <div className="flex gap-4">
-              <div className="font-bold text-lg min-w-[3rem]">26.</div>
-              <div className="flex-1">
-                <p className="text-base leading-relaxed">
-                  Liu, C., Yaremenko, A., Li, X., Zhou, X., Liu, N., You, X., Chen, W., Kong, N., Xie, T., Gaiha, G., Longer, R., <u className="font-medium">Tao, W.*</u> (2025).
-                  "<a href="https://www.nature.com/articles/s41565-025-01987-2" className="text-blue-600 hover:text-blue-800 hover:underline">mRNA technology for the prevention and treatment of HIV-1 infection</a>".
-                  <i><b>Nat. Rev. Bioeng.</b></i>, 2025, doi: 10.1038/s44222-025-00387-2.
-                </p>
-              </div>
-            </div>
-
-            {/* Publication 25 */}
-            <div className="flex gap-4">
-              <div className="font-bold text-lg min-w-[3rem]">25.</div>
-              <div className="flex-1">
-                <p className="text-base leading-relaxed">
-                  Huang, X., Liu, C., Sharma, S., You, X., Chen, S., Li, Y., Liu, H., Liu, B., Saiding, Q., Chen, W., Lee, Y., Kong, N., Abdi, R., <u className="font-medium">Tao, W.*</u> (2025).
-                  "<a href="https://www.science.org/doi/10.1126/scitranslmed.adn1493" className="text-blue-600 hover:text-blue-800 hover:underline">Oral delivery of liquid mRNA therapeutics by an engineered capsule for treatment of preclinical intestinal disease</a>".
-                  <i><b>Sci. Transl. Med.</b></i>, 17(807): eadn1493.
-                  <span className="font-bold text-purple-600">(<a href="#" className="text-purple-600 hover:text-purple-800 hover:underline">Cover Paper</a>)</span>
-                </p>
-              </div>
-            </div>
+            
           </div>
         </div>
 
