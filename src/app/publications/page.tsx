@@ -31,7 +31,7 @@ export default function PublicationsPage() {
               <div className="flex-1">
                 <p className="text-base leading-relaxed">
                   Zhou, Y., <u className="font-medium">Wang, T.*</u> (2025).
-                  "<a href="#" className="text-blue-600 hover:text-blue-800 hover:underline">Dynamic insights into the structural evolution of ACE2–RBD interactions through molecular dynamics simulation, Markov state modeling, and large language model mutation prediction</a>".
+                  "<a href="https://pubs.aip.org/aip/jcp/article/163/19/195105/3373068/Dynamic-insights-into-the-structural-evolution-of" className="text-blue-600 hover:text-blue-800 hover:underline">Dynamic insights into the structural evolution of ACE2–RBD interactions through molecular dynamics simulation, Markov state modeling, and large language model mutation prediction</a>".
                   <i><b>J. Chem. Phys.</b></i>, 163(19).
                 </p>
               </div>
@@ -43,7 +43,7 @@ export default function PublicationsPage() {
               <div className="flex-1">
                 <p className="text-base leading-relaxed">
                   Cui, T., Zhou, Y., <u className="font-medium">Wang, T.*</u> (2025).
-                  "<a href="#" className="text-blue-600 hover:text-blue-800 hover:underline">Recent advances in artificial intelligence–driven biomolecular dynamics simulations based on machine learning force fields</a>".
+                  "<a href="https://www.sciencedirect.com/science/article/abs/pii/S0959440X2500209X" className="text-blue-600 hover:text-blue-800 hover:underline">Recent advances in artificial intelligence–driven biomolecular dynamics simulations based on machine learning force fields</a>".
                   <i><b>Curr. Opin. Struct. Biol.</b></i>, 95, 103191.
                   <span className="font-bold text-purple-600">(Invited Review)</span>
                 </p>

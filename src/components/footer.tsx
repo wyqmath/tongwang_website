@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, MapPin, Phone } from "lucide-react";
 import dynamic from "next/dynamic";
+import { usePathname } from "next/navigation";
 
 // 动态导入地图组件，禁用 SSR
 const FooterMap = dynamic(() => import('./footer-map'), {
@@ -14,6 +15,13 @@ const FooterMap = dynamic(() => import('./footer-map'), {
 });
 
 export function Footer() {
+  const pathname = usePathname();
+
+  // 如果是 contact 页面，不显示 footer
+  if (pathname === '/contact') {
+    return null;
+  }
+
   return (
     <footer className="border-t bg-white">
       <div className="container mx-auto px-4 py-12">

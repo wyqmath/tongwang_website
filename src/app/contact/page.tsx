@@ -126,13 +126,13 @@ export default function ContactPage() {
           <Card>
             <CardContent className="pt-6">
               <div className="text-center">
-                <h3 className="font-semibold mb-2">Latest Publications</h3>
+                <h3 className="font-semibold mb-2">Research Areas</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Explore our recent research contributions
+                  Learn about our research focus
                 </p>
-                <Link href="/publications">
+                <Link href="/#research-areas">
                   <Button variant="outline" size="sm">
-                    View Publications
+                    About Our Research
                   </Button>
                 </Link>
               </div>
@@ -142,13 +142,13 @@ export default function ContactPage() {
           <Card>
             <CardContent className="pt-6">
               <div className="text-center">
-                <h3 className="font-semibold mb-2">Research Areas</h3>
+                <h3 className="font-semibold mb-2">Latest Publications</h3>
                 <p className="text-sm text-muted-foreground mb-4">
-                  Learn about our research focus
+                  Explore our recent research contributions
                 </p>
-                <Link href="/#research-areas">
+                <Link href="/publications">
                   <Button variant="outline" size="sm">
-                    About Our Research
+                    View Publications
                   </Button>
                 </Link>
               </div>
