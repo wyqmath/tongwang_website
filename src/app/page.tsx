@@ -64,7 +64,44 @@ export default function Home() {
     }
   ];
 
+  // Lab News 数据 - 最新4条，其中1条为招聘信息
+  const labNews = [
+    {
+      id: 1,
+      title: "Prof. Wang Receives 2025 Capital Frontier Academic Achievement Award",
+      date: "December 6, 2025",
+      image: "/news/image14.jpeg",
+      isRecruiting: false,
+      link: "/news"
+    },
+    {
+      id: 2,
+      title: "Prof. Wang's Team Reviews Advances in AI-Driven Biomolecular Simulations",
+      date: "November 28, 2025",
+      image: "/news/image13.png",
+      isRecruiting: false,
+      link: "/news"
+    },
+    {
+      id: 3,
+      title: "Prof. Wang Presents at BIOHK2025 and AI Forum in Hong Kong",
+      date: "September 11, 2025",
+      image: "/news/image11.jpeg",
+      isRecruiting: false,
+      link: "/news"
+    },
+    {
+      id: 4,
+      title: "Join Our Team - Multiple Positions Available",
+      date: "Recruiting",
+      image: "/news/image1.jpeg",
+      isRecruiting: true,
+      link: "/positions"
+    }
+  ];
+
   const [currentPublicationIndex, setCurrentPublicationIndex] = useState(0);
+  const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
 
   // 自动轮播 - 出版物
   useEffect(() => {
@@ -76,6 +113,17 @@ export default function Home() {
 
     return () => clearInterval(interval);
   }, [recentPublications.length]);
+
+  // 自动轮播 - Lab News
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentNewsIndex((prevIndex) =>
+        (prevIndex + 1) % labNews.length
+      );
+    }, 3000); // 每3秒切换一次
+
+    return () => clearInterval(interval);
+  }, [labNews.length]);
 
   const goToPreviousPublication = () => {
     setCurrentPublicationIndex((prevIndex) =>
@@ -308,71 +356,70 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Latest News */}
+      {/* Lab News */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="flex justify-between items-center mb-8">
-              <h2 className="text-3xl font-bold">Latest News</h2>
+              <h2 className="text-3xl font-bold">Lab News</h2>
               <Button variant="outline" asChild>
                 <Link href="/news">View All News</Link>
               </Button>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-              <Card className="hover:shadow-lg transition-shadow">
-                <CardHeader>
-                  <div className="flex items-center mb-2">
-                    <Badge variant="default" className="mr-2">Recognition</Badge>
-                    <Badge variant="secondary">Bioinformatics</Badge>
-                  </div>
-                  <CardTitle className="text-lg">
-                    Top 10 Advances in Chinese Bioinformatics for 2024
-                  </CardTitle>
-                  <CardDescription className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    2024
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-muted-foreground">
-                    Outstanding contribution to bioinformatics research in China
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <Badge variant="outline">Chinese Society for Bioinformatics</Badge>
-                    <Badge variant="outline">Top 10 Advances</Badge>
-                    <Badge variant="outline">Bioinformatics</Badge>
-                  </div>
-                  <div className="flex gap-2 pt-2">
-                    <Link href="https://gpb.big.ac.cn/news/1022" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" size="sm">
-                        <ExternalLink className="h-3 w-3 mr-1" />
-                        Read More
-                      </Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
+            {/* News Carousel */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {labNews.map((news, index) => (
+                <Card
+                  key={news.id}
+                  className={`hover:shadow-lg transition-all duration-500 ${
+                    index === currentNewsIndex ? 'ring-2 ring-primary' : ''
+                  }`}
+                >
+                  <CardContent className="p-0">
+                    <div className="relative aspect-video overflow-hidden rounded-t-lg bg-gray-100">
+                      <Image
+                        src={news.image}
+                        alt={news.title}
+                        fill
+                        className="object-cover transition-transform duration-300 hover:scale-105"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-semibold text-sm line-clamp-2 mb-2 h-10 flex items-start">
+                        {news.title}
+                      </h3>
+                      <p className="text-xs text-muted-foreground mb-2">
+                        {news.date}
+                      </p>
+                      <Badge variant={news.isRecruiting ? "default" : "secondary"} className="text-xs">
+                        {news.isRecruiting ? "Recruiting" : "Lab News"}
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Carousel Indicators */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {labNews.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentNewsIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                    index === currentNewsIndex
+                      ? 'bg-primary w-8'
+                      : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                  aria-label={`Go to news ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Interested in our research or potential collaboration?
-              We'd love to hear from you.
-            </p>
-            <Button size="lg" asChild>
-              <Link href="/contact">Contact Us</Link>
-            </Button>
-          </div>
-        </div>
-      </section>
-    </div>
+      </div>
   );
 }

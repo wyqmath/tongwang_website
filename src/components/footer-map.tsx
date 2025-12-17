@@ -3,16 +3,15 @@
 import { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 
-export default function MapComponent() {
+export default function FooterMap() {
   const mapRef = useRef<HTMLDivElement>(null);
   const mapInstanceRef = useRef<L.Map | null>(null);
   const [isStylesLoaded, setIsStylesLoaded] = useState(false);
 
-  // Load Leaflet CSS and wait for it to be ready
+  // Load Leaflet CSS
   useEffect(() => {
     const loadLeafletStyles = () => {
       return new Promise<void>((resolve) => {
-        // Check if styles are already loaded
         const existingLink = document.querySelector('link[href*="leaflet"]');
         if (existingLink) {
           resolve();
@@ -23,7 +22,7 @@ export default function MapComponent() {
         link.rel = 'stylesheet';
         link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
         link.onload = () => resolve();
-        link.onerror = () => resolve(); // Continue even if CSS fails to load
+        link.onerror = () => resolve();
         document.head.appendChild(link);
       });
     };
@@ -33,9 +32,10 @@ export default function MapComponent() {
     });
   }, []);
 
+  // Initialize map
   useEffect(() => {
     if (typeof window !== 'undefined' && mapRef.current && !mapInstanceRef.current && isStylesLoaded) {
-      // Fix for default markers in Leaflet with webpack - do this after styles are loaded
+      // Fix for default markers in Leaflet
       delete (L.Icon.Default.prototype as unknown as { _getIconUrl?: unknown })._getIconUrl;
       L.Icon.Default.mergeOptions({
         iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
@@ -55,15 +55,12 @@ export default function MapComponent() {
 
       let markerAdded = false;
 
-      // Wait for tile layer to be ready before adding marker
+      // Add marker when tiles load
       tileLayer.on('load', () => {
         if (!markerAdded) {
-          // Add a marker on the map after tiles are loaded
           const marker = L.marker([40.005757, 116.314334]).addTo(map);
-          marker.bindPopup('<strong>Tsinghua University</strong><br/>Biomedical Building');
+          marker.bindPopup('<b>Tsinghua University</b><br>Biomedical Building');
           markerAdded = true;
-
-          // Small delay to ensure everything is rendered properly
           setTimeout(() => {
             marker.openPopup();
           }, 100);
@@ -72,18 +69,17 @@ export default function MapComponent() {
 
       tileLayer.addTo(map);
 
-      // Fallback: if tiles don't load within 3 seconds, still add the marker
+      // Fallback
       setTimeout(() => {
         if (mapInstanceRef.current && !markerAdded) {
           const marker = L.marker([40.005757, 116.314334]).addTo(map);
-          marker.bindPopup('<strong>Tsinghua University</strong><br/>Biomedical Building');
+          marker.bindPopup('<b>Tsinghua University</b><br>Biomedical Building');
           marker.openPopup();
           markerAdded = true;
         }
       }, 3000);
     }
 
-    // Cleanup function
     return () => {
       if (mapInstanceRef.current) {
         mapInstanceRef.current.remove();
@@ -95,8 +91,8 @@ export default function MapComponent() {
   return (
     <div
       ref={mapRef}
-      style={{ height: '450px', borderRadius: '8px' }}
-      className="w-full"
+      className="w-full h-full min-h-[280px] bg-gray-100 rounded-lg"
     />
   );
 }
+
