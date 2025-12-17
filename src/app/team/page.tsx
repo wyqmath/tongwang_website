@@ -1,128 +1,144 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Mail, ExternalLink, GraduationCap, Users, Briefcase } from "lucide-react";
+import { Mail, Briefcase } from "lucide-react";
 import Link from "next/link";
+
+// Team member data structure
+interface TeamMember {
+  name: string;
+  title?: string;
+  degree?: string;
+  photo: string;
+  intro: string;
+  email?: string;
+  photoWidth?: number;
+  photoHeight?: number;
+}
+
+// Sample data - replace with actual data
+const pi: TeamMember = {
+  name: "Tong Wang",
+  title: "Principal Investigator",
+  degree: "Ph.D.",
+  photo: "https://life.tsinghua.edu.cn/__local/F/D2/87/2265FA369D1288DC194D3218CB2_BC23290E_1B676B.jpg",
+  photoWidth: 300,
+  photoHeight: 375,
+  intro: "Dr. Wang Tong is the Principal Investigator (PI) of the School of Life Sciences, Tsinghua University, Tsinghua University-Peking University Center for Life Sciences (CLS), Beijing Frontier Research Center for Biological Structures, and State Key Laboratory of Membrane Biology. His main research directions include AI-driven biomolecular dynamics simulation system, molecular structure modeling and prediction, AI aided drug discovery and biomechanism detection via simulations.",
+  email: "tongwang@mail.tsinghua.edu.cn"
+};
+
+const labAdmin: TeamMember = {
+  name: "Zhuoxuan Yang",
+  degree: "Ph.D.",
+  photo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
+  photoWidth: 240,
+  photoHeight: 320,
+  intro: "Laboratory administrator responsible for managing lab operations, coordinating research activities, and supporting team members. Research focuses on AI-assisted biomolecular structure prediction and computational methods for protein-ligand interaction analysis.",
+  email: "yangzx@example.com"
+};
+
+const phdStudents: TeamMember[] = [
+  {
+    name: "Student Name 1",
+    degree: "Ph.D.",
+    photo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
+    photoWidth: 240,
+    photoHeight: 320,
+    intro: "Ph.D. student working on machine learning for drug discovery. Research focuses on developing graph neural networks for molecular property prediction and generative models for de novo molecule design.",
+    email: "student1@example.com"
+  },
+  {
+    name: "Student Name 2",
+    degree: "Ph.D.",
+    photo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
+    photoWidth: 240,
+    photoHeight: 320,
+    intro: "Ph.D. student specializing in molecular dynamics simulation and enhanced sampling methods. Research interests include applying deep learning to accelerate MD simulations and improve force field accuracy.",
+    email: "student2@example.com"
+  }
+];
+
+// Member component
+function MemberProfile({ member, isPI = false }: { member: TeamMember; isPI?: boolean }) {
+  return (
+    <div className="flex gap-8 mb-16">
+      {/* Photo */}
+      <div className="flex-shrink-0">
+        <div className="relative w-[240px] h-[320px] bg-gray-100 rounded-sm overflow-hidden">
+          <Image
+            src={member.photo}
+            alt={member.name}
+            width={member.photoWidth || 240}
+            height={member.photoHeight || 320}
+            className="object-cover w-full h-full"
+          />
+        </div>
+      </div>
+
+      {/* Info */}
+      <div className="flex-1">
+        <h3 className="text-2xl font-semibold mb-1">
+          {member.name}
+          {member.degree && <span className="font-normal">, {member.degree}</span>}
+        </h3>
+        {member.title && (
+          <p className="text-lg text-gray-600 mb-4">{member.title}</p>
+        )}
+        <div className="text-gray-700 leading-relaxed text-justify">
+          {member.intro}
+        </div>
+        {member.email && (
+          <div className="mt-4 flex items-center text-sm text-gray-600">
+            <Mail className="h-4 w-4 mr-2" />
+            <a href={`mailto:${member.email}`} className="hover:text-blue-600">
+              {member.email}
+            </a>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
 
 export default function TeamPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Our Team</h1>
-          <p className="text-xl text-muted-foreground">
-            Meet the researchers driving innovation in machine learning and AI
-          </p>
-        </div>
-        
+    <div className="container mx-auto px-4 py-12">
+      <div className="max-w-5xl mx-auto">
+
         {/* PI Section */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6 flex items-center">
-            <Users className="mr-2" />
-            Principal Investigator
-          </h2>
-          <Card className="border-2 border-primary/20">
-            <CardHeader>
-              <div className="flex items-start justify-between">
-                <div>
-                  <CardTitle className="text-2xl">Professor Tong Wang</CardTitle>
-                  <CardDescription className="text-lg mt-2">
-                    Principal Investigator & Research Group Leader
-                  </CardDescription>
-                </div>
-                <div className="flex flex-col space-y-2">
-                  <Badge variant="default">PI</Badge>
-                  <Badge variant="secondary">Professor</Badge>
-                </div>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-muted-foreground leading-relaxed">
-                Professor Tong Wang leads our research group with expertise in machine learning, 
-                artificial intelligence, and data science. His research focuses on developing 
-                novel algorithms and theoretical foundations for AI systems with real-world impact.
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Research Interests</h4>
-                  <div className="flex flex-wrap gap-1">
-                    <Badge variant="outline">AI + Biomolecular Structure</Badge>
-                    <Badge variant="outline">Molecular Dynamics</Badge>
-                    <Badge variant="outline">Graph Neural Networks</Badge>
-                    <Badge variant="outline">Drug Discovery</Badge>
-                  </div>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Contact</h4>
-                  <div className="space-y-1">
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Mail className="h-4 w-4 mr-2" />
-                      tongwang@mail.tsinghua.edu.cn
-                    </div>
-                    <div className="flex space-x-2 mt-2">
-                      <Button variant="outline" size="sm">
-                        <ExternalLink className="h-4 w-4 mr-1" />
-                        Profile
-                      </Button>
-                      <Button variant="outline" size="sm">
-                        <GraduationCap className="h-4 w-4 mr-1" />
-                        Google Scholar
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-10">Principal Investigator (PI)</h2>
+          <MemberProfile member={pi} isPI={true} />
         </section>
 
-        {/* Current Students */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-semibold mb-6 flex items-center">
-            <GraduationCap className="mr-2" />
-            Current Students
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Card className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div>
-                    <CardTitle>Zhuoxuan Yang</CardTitle>
-                    <CardDescription>Laboratory Administrator</CardDescription>
-                  </div>
-                  <Badge variant="secondary">Admin</Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <p className="text-sm text-muted-foreground">
-                  Laboratory administrator responsible for managing lab operations,
-                  coordinating research activities, and supporting team members.
-                </p>
-                <div>
-                  <h5 className="font-medium text-sm mb-1">Research Areas</h5>
-                  <div className="flex flex-wrap gap-1">
-                    <Badge variant="outline">AI + Biomolecular Structure</Badge>
-                    <Badge variant="outline">Molecular Dynamics</Badge>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+        {/* Lab Administrator Section */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-10">Lab Administrator</h2>
+          <MemberProfile member={labAdmin} />
+        </section>
+
+        {/* Ph.D. Students Section */}
+        <section className="mb-20">
+          <h2 className="text-3xl font-bold mb-10">Ph.D. Students</h2>
+          <div>
+            {phdStudents.map((student, index) => (
+              <MemberProfile key={index} member={student} />
+            ))}
           </div>
         </section>
 
         {/* Join Our Team Section */}
-        <section className="text-center bg-gray-50 rounded-lg p-8">
+        <section className="text-center bg-gray-50 rounded-lg p-12 mt-16">
           <h2 className="text-2xl font-bold mb-4">Join Our Team</h2>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            We are always looking for motivated students and researchers to join our group. 
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            We are always looking for motivated students and researchers to join our group.
             If you are passionate about machine learning and AI research, we would love to hear from you.
           </p>
           <div className="flex justify-center space-x-4">
             <Link href="/positions">
               <Button size="lg">
                 <Briefcase className="mr-2 h-4 w-4" />
-                Positions
+                Open Positions
               </Button>
             </Link>
             <Link href="/contact">

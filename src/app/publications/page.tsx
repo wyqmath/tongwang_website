@@ -1,760 +1,459 @@
 "use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-
-import { Search, Filter, ExternalLink, Quote, Calendar, Users, BookOpen } from "lucide-react";
-import { useState, useMemo } from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { BookOpen, Quote, Users, Calendar } from "lucide-react";
 
 export default function PublicationsPage() {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedYear, setSelectedYear] = useState("all");
-  const [selectedType, setSelectedType] = useState("all");
-  const [showAllPublications, setShowAllPublications] = useState(false);
 
-  // Complete publications data
-  const allPublications = useMemo(() => [
-    // 2024
-    {
-      id: 1,
-      year: 2024,
-      type: "journal",
-      title: "Ab initio characterization of protein molecular dynamics with AI2BMD",
-      authors: "Wang, T., He, X., Li, M., Li, Y., Bi, R., Wang, Y., Cheng, C., Shen, X., Meng, J., Zhang, H., Liu, H., Wang, Z., Li, S., Shao, B., & Liu, T. Y.",
-      journal: "Nature",
-      volume: "635",
-      pages: "1019-1027",
-      badges: [],
-      borderColor: "border-blue-500"
-    },
-    {
-      id: 2,
-      year: 2024,
-      type: "journal",
-      title: "Overcoming the barrier of orbital-free density functional theory for molecular systems using deep learning",
-      authors: "Zhang, H., Liu, S., You, J., Liu, C., Zheng, S., Lu, Z., Wang, T., Zheng, N., & Shao, B.",
-      journal: "Nature Computational Science",
-      volume: "4(3)",
-      pages: "210-223",
-      badges: [],
-      borderColor: "border-purple-500"
-    },
-    {
-      id: 3,
-      year: 2024,
-      type: "journal",
-      title: "Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing",
-      authors: "Wang, Y., Wang, T., Li, S., He, X., Li, M., Wang, Z., Zheng, N., Shao, B., & Liu, T. Y.",
-      journal: "Nature Communications",
-      volume: "15(1)",
-      pages: "313",
-      badges: ["Editors' Highlights"],
-      borderColor: "border-green-500"
-    },
-    {
-      id: 4,
-      year: 2024,
-      type: "conference",
-      title: "Long-short-range message-passing: A physics-informed framework to capture non-local interaction for scalable molecular dynamics simulation",
-      authors: "Li, Y., Wang, Y., Huang, L., Yang, H., Wei, X., Zhang, J., Wang, T., Wang, Z., Shao, B., & Liu, T. Y.",
-      journal: "International Conference on Learning Representations (ICLR)",
-      volume: "",
-      pages: "",
-      badges: ["Top-tier ML"],
-      borderColor: "border-indigo-500"
-    },
-    {
-      id: 5,
-      year: 2024,
-      type: "patent",
-      title: "U.S. Patent Application No. 18/687,404",
-      authors: "Wang, T., Shao, B., & Liu, T. Y.",
-      journal: "Patent",
-      volume: "",
-      pages: "",
-      badges: ["Patent"],
-      borderColor: "border-gray-500"
-    },
-    {
-      id: 6,
-      year: 2024,
-      type: "patent",
-      title: "U.S. Patent Application No. 18/037,682",
-      authors: "Wang, T., Shao, B., & Liu, T. Y.",
-      journal: "Patent",
-      volume: "",
-      pages: "",
-      badges: ["Patent"],
-      borderColor: "border-gray-500"
-    },
-    {
-      id: 7,
-      year: 2024,
-      type: "journal",
-      title: "Innovative application of a novel di-d-fructofuranose 1, 2': 2, 3'-dianhydride hydrolase (DFA-IIIase) from Duffyella gerundensis A4 to burdock root to improve nutrition",
-      authors: "Yu, S., Wang, Z., Li, Q., Wang, T., & Zhao, W.",
-      journal: "Food & Function",
-      volume: "15(2)",
-      pages: "1021-1030",
-      badges: [],
-      borderColor: "border-yellow-500"
-    },
-    // 2023
-    {
-      id: 8,
-      year: 2023,
-      type: "conference",
-      title: "Efficiently incorporating quintuple interactions into geometric deep learning force fields",
-      authors: "Wang, Z., Liu, G., Zhou, Y., Wang, T., & Shao, B.",
-      journal: "Conference on Neural Information Processing Systems (NeurIPS)",
-      volume: "36",
-      pages: "77043-77055",
-      badges: ["Top-tier ML"],
-      borderColor: "border-purple-500"
-    },
-    {
-      id: 9,
-      year: 2023,
-      type: "conference",
-      title: "Geometric transformer with interatomic positional encoding",
-      authors: "Wang, Y., Li, S., Wang, T., Shao, B., Zheng, N., & Liu, T. Y.",
-      journal: "Conference on Neural Information Processing Systems (NeurIPS)",
-      volume: "36",
-      pages: "55981-55994",
-      badges: ["Top-tier ML"],
-      borderColor: "border-blue-500"
-    },
-    {
-      id: 10,
-      year: 2023,
-      type: "journal",
-      title: "AIMD-Chig: Exploring the conformational space of a 166-atom protein Chignolin with ab initio molecular dynamics",
-      authors: "Wang, T., He, X., Li, M., Shao, B., & Liu, T. Y.",
-      journal: "Scientific Data",
-      volume: "10(1)",
-      pages: "549",
-      badges: [],
-      borderColor: "border-green-500"
-    },
-    {
-      id: 11,
-      year: 2023,
-      type: "journal",
-      title: "Improving machine learning force fields for molecular dynamics simulations with fine-grained force metrics",
-      authors: "Wang, Z., Wu, H., Sun, L., He, X., Liu, Z., Shao, B., Wang, T., & Liu, T. Y.",
-      journal: "Journal of Chemical Physics",
-      volume: "159(3)",
-      pages: "034102",
-      badges: [],
-      borderColor: "border-red-500"
-    },
-    {
-      id: 12,
-      year: 2023,
-      type: "preprint",
-      title: "AI2BMD: Efficient characterization of protein dynamics with ab initio accuracy",
-      authors: "Wang, T., He, X., Li, M., Wang, Y., Wang, Z., Li, S., Shao, B., & Liu, T. Y.",
-      journal: "bioRxiv",
-      volume: "2023-07",
-      pages: "",
-      badges: ["Preprint"],
-      borderColor: "border-gray-500"
-    },
-    {
-      id: 13,
-      year: 2023,
-      type: "journal",
-      title: "DSN-DDI: An accurate and generalized framework for drug-drug interaction prediction by dual-view representation learning",
-      authors: "Li, Z., Zhu, S., Shao, B., Zeng, X., Wang, T., & Liu, T. Y.",
-      journal: "Briefings in Bioinformatics",
-      volume: "24(1)",
-      pages: "bbac597",
-      badges: [],
-      borderColor: "border-orange-500"
-    },
-    // 2022
-    {
-      id: 14,
-      year: 2022,
-      type: "preprint",
-      title: "An ensemble of VisNet, Transformer-M, and pretraining models for molecular property prediction in OGB Large-Scale Challenge@ Conference on Neural Information Processing Systems (NeurIPS) 2022",
-      authors: "Wang, Y., Li, S., Wang, T., He, X., Shao, B., Liu, T. Y., & Wang, T.",
-      journal: "arXiv",
-      volume: "arXiv:2211.12791",
-      pages: "",
-      badges: ["Preprint"],
-      borderColor: "border-gray-500"
-    },
-    {
-      id: 15,
-      year: 2022,
-      type: "journal",
-      title: "Stochastic lag time parameterization for Markov state models of protein dynamics",
-      authors: "Gong, S., He, X., Meng, Q., Ma, Z., Shao, B., Wang, T., & Liu, T. Y.",
-      journal: "The Journal of Physical Chemistry B",
-      volume: "126(46)",
-      pages: "9465-9475",
-      badges: [],
-      borderColor: "border-blue-500"
-    },
-    {
-      id: 16,
-      year: 2022,
-      type: "journal",
-      title: "Improved drug-target interaction prediction with intermolecular graph transformer",
-      authors: "Liu, S., Wang, Y., Deng, Y., He, L., Shao, B., Yin, J., Wang, T., & Liu, T. Y.",
-      journal: "Briefings in Bioinformatics",
-      volume: "23(5)",
-      pages: "bbac162",
-      badges: [],
-      borderColor: "border-green-500"
-    },
-    {
-      id: 17,
-      year: 2022,
-      type: "preprint",
-      title: "Tailoring molecules for protein pockets: a transformer-based generative solution for structured-based drug design",
-      authors: "Wu, K., Xia, Y., Fan, Y., Deng, P., Liu, H., Wu, L., Xie, S., Wang, T., Qin, T., & Liu, T. Y.",
-      journal: "arXiv",
-      volume: "arXiv:2209.06158",
-      pages: "",
-      badges: ["Preprint"],
-      borderColor: "border-gray-500"
-    },
-    {
-      id: 18,
-      year: 2022,
-      type: "journal",
-      title: "Loss of Spike N370 glycosylation as an important evolutionary event for the enhanced infectivity of SARS-CoV-2",
-      authors: "Zhang, S., Liang, Q., He, X., Zhao, C., Ren, W., Yang, Z., Wang, Z., Ding, Q., Deng, H., Wang, T., Zhang, L., & Wang, X.",
-      journal: "Cell Research",
-      volume: "32(3)",
-      pages: "315-318",
-      badges: [],
-      borderColor: "border-red-500"
-    },
-    {
-      id: 19,
-      year: 2022,
-      type: "preprint",
-      title: "Direct molecular conformation generation",
-      authors: "Zhu, J., Xia, Y., Liu, C., Wu, L., Xie, S., Wang, Y., Wang, T., Qin, T., Zhou, W., Li, H., Liu, H., & Liu, T. Y.",
-      journal: "arXiv",
-      volume: "arXiv:2202.01356",
-      pages: "",
-      badges: ["Preprint"],
-      borderColor: "border-gray-500"
-    },
-    {
-      id: 20,
-      year: 2022,
-      type: "journal",
-      title: "Structural insights into the SARS-CoV-2 Omicron RBD-ACE2 interaction",
-      authors: "Lan, J., He, X., Ren, Y., Wang, Z., Zhou, H., Fan, S., Qi, C., Guo, A., Wang, L., Wang, T., & Wang, X.",
-      journal: "Cell Research",
-      volume: "32(6)",
-      pages: "593-595",
-      badges: [],
-      borderColor: "border-red-500"
-    },
-    {
-      id: 21,
-      year: 2022,
-      type: "preprint",
-      title: "ViSNet: a scalable and accurate geometric deep learning potential for molecular dynamics simulation",
-      authors: "Wang, Y., Li, S., He, X., Li, M., Wang, Z., Zheng, N., Shao, B., Wang, T., & Liu, T. Y.",
-      journal: "arXiv",
-      volume: "arXiv:2210.16518",
-      pages: "",
-      badges: ["Preprint"],
-      borderColor: "border-gray-500"
-    },
-    // 2021
-    {
-      id: 22,
-      year: 2021,
-      type: "journal",
-      title: "SAMF: a self-adaptive protein modeling framework",
-      authors: "Ding, W., Xu, Q., Liu, S., Wang, T., Shao, B., Gong, H., & Liu, T. Y.",
-      journal: "Bioinformatics",
-      volume: "37(22)",
-      pages: "4075-4082",
-      badges: [],
-      borderColor: "border-blue-500"
-    },
-    {
-      id: 23,
-      year: 2021,
-      type: "journal",
-      title: "Exploring the regulatory function of the N-terminal domain of SARS-CoV-2 Spike protein through molecular dynamics simulation",
-      authors: "Li, Y., Wang, T., Zhang, J., Shao, B., Gong, H., Wang, Y., Wang, Z., & Liu, T. Y.",
-      journal: "Advanced Theory and Simulations",
-      volume: "4(10)",
-      pages: "2100152",
-      badges: [],
-      borderColor: "border-purple-500"
-    },
-    {
-      id: 24,
-      year: 2021,
-      type: "journal",
-      title: "Complementing sequence-derived features with structural information extracted from fragment libraries for protein structure prediction",
-      authors: "Liu, S., Wang, T., Xu, Q., Shao, B., Yin, J., & Liu, T. Y.",
-      journal: "BMC Bioinformatics",
-      volume: "22(1)",
-      pages: "351",
-      badges: [],
-      borderColor: "border-green-500"
-    },
-    // 2019
-    {
-      id: 25,
-      year: 2019,
-      type: "preprint",
-      title: "Improved fragment-based movement with LRFragLib for all-atom ab initio protein folding",
-      authors: "Wang, T., Gong, H., & Shakhnovich, E. I.",
-      journal: "arXiv",
-      volume: "arXiv:1906.05785",
-      pages: "",
-      badges: ["Preprint"],
-      borderColor: "border-gray-500"
-    },
-    {
-      id: 26,
-      year: 2019,
-      type: "journal",
-      title: "Improved fragment sampling for ab initio protein structure prediction using deep neural networks",
-      authors: "Wang, T., Qiao, Y., Ding, W., Mao, W., Zhou, Y., & Gong, H.",
-      journal: "Nature Machine Intelligence",
-      volume: "1(8)",
-      pages: "347-355",
-      badges: [],
-      borderColor: "border-orange-500"
-    },
-    // 2018
-    {
-      id: 27,
-      year: 2018,
-      type: "journal",
-      title: "Identification of residue pairing in interacting β-strands from a predicted residue contact map",
-      authors: "Mao, W., Wang, T., Zhang, W., & Gong, H.",
-      journal: "BMC Bioinformatics",
-      volume: "19(1)",
-      pages: "146",
-      badges: [],
-      borderColor: "border-blue-500"
-    },
-    // 2017
-    {
-      id: 28,
-      year: 2017,
-      type: "journal",
-      title: "LRFragLib: an effective algorithm to identify fragments for de novo protein structure prediction",
-      authors: "Wang, T., Yang, Y., Zhou, Y., & Gong, H.",
-      journal: "Bioinformatics",
-      volume: "33(5)",
-      pages: "677-684",
-      badges: [],
-      borderColor: "border-green-500"
-    },
-    // 2013
-    {
-      id: 29,
-      year: 2013,
-      type: "journal",
-      title: "A single whey acidic protein domain containing protein (SWD) inhibits bacteria invasion and dissemination in shrimp Marsupenaeus japonicus",
-      authors: "Jiang, H. S., Sun, C., Wang, T., Zhao, X. F., & Wang, J. X.",
-      journal: "Fish & Shellfish Immunology",
-      volume: "35(2)",
-      pages: "310-318",
-      badges: [],
-      borderColor: "border-yellow-500"
-    }
-  ], []);
+  
+    return (
+    <div className="container mx-auto px-4 py-12 max-w-7xl">
+      {/* Header */}
+      <div className="mb-12">
+        <h1 className="text-4xl font-bold mb-4">Publications</h1>
+        <p className="text-xl text-muted-foreground">
+          Research contributions and scholarly publications from our group
+        </p>
+      </div>
 
-  // Filter publications based on search and filters
-  const filteredPublications = useMemo(() => {
-    return allPublications.filter(pub => {
-      const matchesSearch = searchTerm === "" ||
-        pub.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        pub.authors.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        pub.journal.toLowerCase().includes(searchTerm.toLowerCase());
-
-      const matchesYear = selectedYear === "all" || pub.year.toString() === selectedYear;
-      const matchesType = selectedType === "all" || pub.type === selectedType;
-
-      return matchesSearch && matchesYear && matchesType;
-    });
-  }, [searchTerm, selectedYear, selectedType, allPublications]);
-
-  // Get unique years for filter dropdown
-  const availableYears = [...new Set(allPublications.map(pub => pub.year))].sort((a, b) => b - a);
-  return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="max-w-6xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Publications</h1>
-          <p className="text-xl text-muted-foreground">
-            Research contributions and scholarly publications from our group
-          </p>
-        </div>
-        
-        {/* Statistics Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <BookOpen className="h-8 w-8 mx-auto mb-2 text-primary" />
-                <div className="text-2xl font-bold">29</div>
-                <p className="text-xs text-muted-foreground">Total Publications</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <Quote className="h-8 w-8 mx-auto mb-2 text-primary" />
-                <div className="text-2xl font-bold">861</div>
-                <p className="text-xs text-muted-foreground">Total Citations</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <Users className="h-8 w-8 mx-auto mb-2 text-primary" />
-                <div className="text-2xl font-bold">17</div>
-                <p className="text-xs text-muted-foreground">H-Index</p>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6">
-              <div className="text-center">
-                <Calendar className="h-8 w-8 mx-auto mb-2 text-primary" />
-                <div className="text-2xl font-bold">19</div>
-                <p className="text-xs text-muted-foreground">I10-Index</p>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
-        {/* Featured Publications / Editors' Highlights */}
-        <Card className="mb-8 bg-gray-50 border-primary/20">
-          <CardHeader>
-            <CardTitle className="flex items-center text-2xl">
-              <span className="text-2xl mr-2">⭐</span>
-              Featured Publications & Editors' Highlights
-            </CardTitle>
-            <CardDescription>
-              Selected high-impact publications and editor-highlighted works from our research group
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {/* Nature Paper */}
-              <Card className="border-2 border-primary/30 hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <Badge variant="secondary" className="bg-primary text-primary-foreground">Nature</Badge>
-                    <Badge variant="outline">2024</Badge>
-                  </div>
-                  <h4 className="font-semibold text-sm mb-2 leading-tight">
-                    Ab initio characterization of protein molecular dynamics with AI2BMD
-                  </h4>
-                  <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
-                    <strong>Wang, T.</strong>, He, X., Li, M., Li, Y., Bi, R., Wang, Y., Cheng, C., Shen, X., Meng, J., Zhang, H., Liu, H., Wang, Z., Li, S., Shao, B., & Liu, T. Y.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                    </div>
-                    <Button variant="ghost" size="sm">
-                      <ExternalLink className="h-3 w-3" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Nature Communications Paper */}
-              <Card className="border-2 border-primary/30 hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <Badge variant="secondary" className="bg-primary text-primary-foreground">Nature Communications</Badge>
-                    <Badge variant="outline">2024</Badge>
-                  </div>
-                  <h4 className="font-semibold text-sm mb-2 leading-tight">
-                    Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing
-                  </h4>
-                  <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
-                    Wang, Y., <strong>Wang, T.</strong>, Li, S., He, X., Li, M., Wang, Z., Zheng, N., Shao, B., & Liu, T. Y.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                      <Badge variant="destructive" className="text-xs">Editors' Highlights</Badge>
-                    </div>
-                    <Button variant="ghost" size="sm">
-                      <ExternalLink className="h-3 w-3" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Nature Computational Science Paper */}
-              <Card className="border-2 border-primary/30 hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <Badge variant="secondary" className="bg-primary text-primary-foreground">Nature Computational Science</Badge>
-                    <Badge variant="outline">2024</Badge>
-                  </div>
-                  <h4 className="font-semibold text-sm mb-2 leading-tight">
-                    Overcoming the barrier of orbital-free density functional theory for molecular systems using deep learning
-                  </h4>
-                  <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
-                    Zhang, H., Liu, S., You, J., Liu, C., Zheng, S., Lu, Z., <strong>Wang, T.</strong>, Zheng, N., & Shao, B.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                    </div>
-                    <Button variant="ghost" size="sm">
-                      <ExternalLink className="h-3 w-3" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Nature Machine Intelligence Paper */}
-              <Card className="border-2 border-primary/30 hover:shadow-lg transition-shadow">
-                <CardContent className="pt-6">
-                  <div className="flex items-start justify-between mb-3">
-                    <Badge variant="secondary" className="bg-primary text-primary-foreground">Nature Machine Intelligence</Badge>
-                    <Badge variant="outline">2019</Badge>
-                  </div>
-                  <h4 className="font-semibold text-sm mb-2 leading-tight">
-                    Improved fragment sampling for ab initio protein structure prediction using deep neural networks
-                  </h4>
-                  <p className="text-xs text-muted-foreground mb-3 line-clamp-2">
-                    <strong>Wang, T.</strong>, Qiao, Y., Ding, W., Mao, W., Zhou, Y., & Gong, H.
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center space-x-2">
-                    </div>
-                    <Button variant="ghost" size="sm">
-                      <ExternalLink className="h-3 w-3" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="mt-6 pt-4 border-t text-center">
-              <Button variant="outline">
-                <BookOpen className="h-4 w-4 mr-2" />
-                View All Publications Below
-              </Button>
+      {/* Statistics Overview */}
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12">
+        <Card>
+          <CardContent className="pt-6">
+            <div className="text-center">
+              <BookOpen className="h-8 w-8 mx-auto mb-2 text-primary" />
+              <div className="text-2xl font-bold">29</div>
+              <p className="text-xs text-muted-foreground">Total Publications</p>
             </div>
           </CardContent>
         </Card>
-
-        {/* Filter and Search Section */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <Filter className="mr-2 h-5 w-5" />
-              Filter & Search
-            </CardTitle>
-            <CardDescription>
-              Found {filteredPublications.length} publication{filteredPublications.length !== 1 ? 's' : ''}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <div className="flex flex-col sm:flex-row gap-4">
-                <div className="flex-1">
-                  <div className="relative">
-                    <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                    <input
-                      type="text"
-                      placeholder="Search publications by title, author, or journal..."
-                      value={searchTerm}
-                      onChange={(e) => setSearchTerm(e.target.value)}
-                      className="w-full pl-10 pr-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                    />
-                  </div>
-                </div>
-
-                <div className="flex gap-2">
-                  <select
-                    value={selectedYear}
-                    onChange={(e) => setSelectedYear(e.target.value)}
-                    className="px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  >
-                    <option value="all">All Years</option>
-                    {availableYears.map(year => (
-                      <option key={year} value={year.toString()}>{year}</option>
-                    ))}
-                  </select>
-
-                  <select
-                    value={selectedType}
-                    onChange={(e) => setSelectedType(e.target.value)}
-                    className="px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-                  >
-                    <option value="all">All Types</option>
-                    <option value="journal">Journal</option>
-                    <option value="conference">Conference</option>
-                    <option value="preprint">Preprint</option>
-                    <option value="patent">Patent</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="flex flex-wrap gap-2">
-                <span className="text-sm text-muted-foreground">Quick filters:</span>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setSearchTerm("Wang, T.")}
-                  className="h-7 text-xs"
-                >
-                  First Author
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setSelectedYear("2024")}
-                  className="h-7 text-xs"
-                >
-                  Recent (2024)
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => setSelectedType("journal")}
-                  className="h-7 text-xs"
-                >
-                  Journal Only
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={() => {
-                    setSearchTerm("");
-                    setSelectedYear("all");
-                    setSelectedType("all");
-                  }}
-                  className="h-7 text-xs"
-                >
-                  Clear All
-                </Button>
-              </div>
+        <Card>
+          <CardContent className="pt-6">
+            <div className="text-center">
+              <Quote className="h-8 w-8 mx-auto mb-2 text-primary" />
+              <div className="text-2xl font-bold">861</div>
+              <p className="text-xs text-muted-foreground">Total Citations</p>
             </div>
           </CardContent>
         </Card>
+        <Card>
+          <CardContent className="pt-6">
+            <div className="text-center">
+              <Users className="h-8 w-8 mx-auto mb-2 text-primary" />
+              <div className="text-2xl font-bold">17</div>
+              <p className="text-xs text-muted-foreground">H-Index</p>
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardContent className="pt-6">
+            <div className="text-center">
+              <Calendar className="h-8 w-8 mx-auto mb-2 text-primary" />
+              <div className="text-2xl font-bold">19</div>
+              <p className="text-xs text-muted-foreground">I10-Index</p>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
 
-        {/* Publications List */}
-        <div className="space-y-8">
-          {filteredPublications.length === 0 ? (
-            <Card className="text-center py-12">
-              <CardContent>
-                <BookOpen className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
-                <h3 className="text-lg font-semibold mb-2">No publications found</h3>
-                <p className="text-muted-foreground mb-4">
-                  Try adjusting your search terms or filters
+      {/* Publications List */}
+      <div className="space-y-6">
+        {/* 2025 Publications */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-red-600 mb-6 flex items-center">
+            2025 Publications:
+            <span className="ml-2 text-2xl">›</span>
+          </h2>
+
+          <div className="space-y-4">
+            {/* Publication 29 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">29.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Zhou, Y., <u className="font-medium">Wang, T.*</u> (2025).
+                  "<a href="#" className="text-blue-600 hover:text-blue-800 hover:underline">Dynamic insights into the structural evolution of ACE2–RBD interactions through molecular dynamics simulation, Markov state modeling, and large language model mutation prediction</a>".
+                  <i><b>J. Chem. Phys.</b></i>, 163(19).
                 </p>
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    setSearchTerm("");
-                    setSelectedYear("all");
-                    setSelectedType("all");
-                  }}
-                >
-                  Clear All Filters
-                </Button>
-              </CardContent>
-            </Card>
-          ) : (
-            <>
-              {/* Group publications by year */}
-              {(() => {
-                // Limit to first 10 publications if not showing all
-                const displayedPublications = showAllPublications ? filteredPublications : filteredPublications.slice(0, 10);
+              </div>
+            </div>
 
-                return availableYears.map(year => {
-                  const yearPublications = displayedPublications.filter(pub => pub.year === year);
-                  if (yearPublications.length === 0) return null;
+            {/* Publication 28 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">28.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Cui, T., Zhou, Y., <u className="font-medium">Wang, T.*</u> (2025).
+                  "<a href="#" className="text-blue-600 hover:text-blue-800 hover:underline">Recent advances in artificial intelligence–driven biomolecular dynamics simulations based on machine learning force fields</a>".
+                  <i><b>Curr. Opin. Struct. Biol.</b></i>, 95, 103191.
+                  <span className="font-bold text-purple-600">(Invited Review)</span>
+                </p>
+              </div>
+            </div>
 
-                return (
-                  <div key={year}>
-                    <h2 className="text-2xl font-semibold mb-6 flex items-center">
-                      <Calendar className="mr-2 h-5 w-5" />
-                      {year}
-                    </h2>
+            {/* Publication 27 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">27.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Dong, S., An, S., Saiding, Q., Chen, Q., Liu, B., Kang, N., Chen, W., <u className="font-medium">Tao, W.*</u> (2025).
+                  "<a href="https://pubs.acs.org/doi/10.1021/acs.chemrev.4c00580" className="text-blue-600 hover:text-blue-800 hover:underline">Therapeutic Hydrogels: Properties and Biomedical Applications</a>".
+                  <i><b>Chem. Rev.</b></i>, 125(18): 8835–8920.
+                  <span className="font-bold text-purple-600">(<a href="#" className="text-purple-600 hover:text-purple-800 hover:underline">Invited Article</a>; <a href="#" className="text-purple-600 hover:text-purple-800 hover:underline">Cover Paper</a>)</span>
+                </p>
+              </div>
+            </div>
 
-                    <div className="space-y-4">
-                      {yearPublications.map(pub => (
-                        <div key={pub.id} className={`border-l-4 ${pub.borderColor} pl-4 py-2`}>
-                          <h4 className="font-semibold text-base mb-1">
-                            {pub.title}
-                          </h4>
-                          <p className="text-sm text-muted-foreground mb-2">
-                            <span dangerouslySetInnerHTML={{
-                              __html: pub.authors.replace(/Wang, T\./g, '<strong>Wang, T.</strong>')
-                            }} />
-                            {pub.volume && ` (${pub.year}). `}
-                            <em>{pub.journal}</em>
-                            {pub.volume && `, ${pub.volume}`}
-                            {pub.pages && `, ${pub.pages}`}.
-                          </p>
-                          <div className="flex items-center gap-2 mb-2">
-                            <Badge variant="secondary">{pub.journal}</Badge>
-                            {pub.badges.map(badge => {
-                              // Filter out Breakthrough and High Impact badges
-                              if (badge === "Breakthrough" || badge === "High Impact") {
-                                return null;
-                              }
-                              return (
-                                <Badge
-                                  key={badge}
-                                  variant={badge === "Editors' Highlights" ? "destructive" : "outline"}
-                                >
-                                  {badge}
-                                </Badge>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  );
-                });
-              })()}
+            {/* Publication 26 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">26.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Liu, C., Yaremenko, A., Li, X., Zhou, X., Liu, N., You, X., Chen, W., Kong, N., Xie, T., Gaiha, G., Longer, R., <u className="font-medium">Tao, W.*</u> (2025).
+                  "<a href="https://www.nature.com/articles/s41565-025-01987-2" className="text-blue-600 hover:text-blue-800 hover:underline">mRNA technology for the prevention and treatment of HIV-1 infection</a>".
+                  <i><b>Nat. Rev. Bioeng.</b></i>, 2025, doi: 10.1038/s44222-025-00387-2.
+                </p>
+              </div>
+            </div>
 
-              {/* Show more button if not showing all publications */}
-              {!showAllPublications && filteredPublications.length > 10 && (
-                <div className="text-center mt-8">
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    onClick={() => setShowAllPublications(true)}
-                  >
-                    <BookOpen className="h-4 w-4 mr-2" />
-                    View Complete Publication List
-                  </Button>
-                  <p className="text-sm text-muted-foreground mt-2">
-                    Showing first 10 publications - Total: {allPublications.length} publications (2013-2024)
-                  </p>
-                </div>
-              )}
-            </>
-          )}
+            {/* Publication 25 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">25.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Huang, X., Liu, C., Sharma, S., You, X., Chen, S., Li, Y., Liu, H., Liu, B., Saiding, Q., Chen, W., Lee, Y., Kong, N., Abdi, R., <u className="font-medium">Tao, W.*</u> (2025).
+                  "<a href="https://www.science.org/doi/10.1126/scitranslmed.adn1493" className="text-blue-600 hover:text-blue-800 hover:underline">Oral delivery of liquid mRNA therapeutics by an engineered capsule for treatment of preclinical intestinal disease</a>".
+                  <i><b>Sci. Transl. Med.</b></i>, 17(807): eadn1493.
+                  <span className="font-bold text-purple-600">(<a href="#" className="text-purple-600 hover:text-purple-800 hover:underline">Cover Paper</a>)</span>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
+        {/* 2024 Publications */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold mb-6">2024</h2>
 
+          <div className="space-y-4">
+            {/* Publication 24 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">24.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  <u className="font-medium">Wang, T.*</u>, He, X., Li, M., Li, Y., Bi, R., Wang, Y., Cheng, C., Shen, X., Meng, J., Zhang, H., Liu, H., Wang, Z., Li, S., Shao, B., Liu, T. Y. (2024).
+                  "<a href="https://www.nature.com/articles/s41586-024-08127-z" className="text-blue-600 hover:text-blue-800 hover:underline">Ab initio characterization of protein molecular dynamics with AI2BMD</a>".
+                  <i><b>Nature</b></i>, 635: 1019–1027.
+                </p>
+              </div>
+            </div>
 
+            {/* Publication 23 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">23.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Zhang, H., Liu, S., You, J., Liu, C., Zheng, S., Lu, Z., <u className="font-medium">Wang, T.</u>, Zheng, N., Shao, B.* (2024).
+                  "<a href="https://www.nature.com/articles/s43588-024-00605-8" className="text-blue-600 hover:text-blue-800 hover:underline">Overcoming the barrier of orbital-free density functional theory for molecular systems using deep learning</a>".
+                  <i><b>Nat. Comput. Sci.</b></i>, 4(3): 210–223.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 22 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">22.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Wang, Y.<sup>#</sup>, <u className="font-medium">Wang, T.<sup>#</sup></u>, Li, S., He, X., Li, M., Wang, Z., Zheng, N., Shao, B.*, Liu, T. Y.* (2024).
+                  "<a href="https://www.nature.com/articles/s41467-023-43720-2" className="text-blue-600 hover:text-blue-800 hover:underline">Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing</a>".
+                  <i><b>Nat. Commun.</b></i>, 15(1): 313.
+                  <span className="font-bold text-purple-600">(<a href="#" className="text-purple-600 hover:text-purple-800 hover:underline">Editors&apos; Highlights</a>)</span>
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 21 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">21.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Li, Y., Wang, Y., Huang, L., Yang, H., Wei, X., Zhang, J., <u className="font-medium">Wang, T.</u>, Wang, Z., Shao, B.*, Liu, T. Y.* (2024).
+                  "<a href="https://openreview.net/forum?id=FKfDxREDl1" className="text-blue-600 hover:text-blue-800 hover:underline">Long-short-range message-passing: A physics-informed framework to capture non-local interaction for scalable molecular dynamics simulation</a>".
+                  <i><b>Proceedings of the 12th International Conference on Learning Representations (ICLR)</b></i>.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 20 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">20.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Yu, S., Wang, Z., Li, Q., <u className="font-medium">Wang, T.</u>, Zhao, W.* (2024).
+                  "<a href="https://pubs.rsc.org/en/content/articlelanding/2024/fo/d3fo04341e" className="text-blue-600 hover:text-blue-800 hover:underline">Innovative application of a novel di-d-fructofuranose 1,2&apos;:2,3&apos;-dianhydride hydrolase (DFA-IIIase) from Duffyella gerundensis A4 to burdock root to improve nutrition</a>".
+                  <i><b>Food Funct.</b></i>, 15(2): 1021–1030.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 2023 Publications */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold mb-6">2023</h2>
+
+          <div className="space-y-4">
+            {/* Publication 19 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">19.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Wang, Z., Liu, G., Zhou, Y., <u className="font-medium">Wang, T.*</u>, Shao, B.* (2023).
+                  "<a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/f10ec1d701c6ec0677763d7c90f50480-Abstract-Conference.html" className="text-blue-600 hover:text-blue-800 hover:underline">Efficiently incorporating quintuple interactions into geometric deep learning force fields</a>".
+                  <i><b>Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)</b></i>, 36: 77043–77055.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 18 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">18.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Wang, Y., Li, S., <u className="font-medium">Wang, T.</u>, Shao, B.*, Zheng, N.*, Liu, T. Y.* (2023).
+                  "<a href="https://proceedings.neurips.cc/paper_files/paper/2023/hash/b0b7c1209b5ab4590b39e8b268fc3f17-Abstract-Conference.html" className="text-blue-600 hover:text-blue-800 hover:underline">Geometric transformer with interatomic positional encoding</a>".
+                  <i><b>Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)</b></i>, 36: 55981–55994.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 17 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">17.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  <u className="font-medium">Wang, T.*</u>, He, X., Li, M., Shao, B.*, Liu, T. Y.* (2023).
+                  "<a href="https://www.nature.com/articles/s41597-023-02465-9" className="text-blue-600 hover:text-blue-800 hover:underline">AIMD-Chig: Exploring the conformational space of a 166-atom protein Chignolin with ab initio molecular dynamics</a>".
+                  <i><b>Sci. Data</b></i>, 10(1): 549.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 16 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">16.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Wang, Z., Wu, H., Sun, L., He, X., Liu, Z., Shao, B.*, <u className="font-medium">Wang, T.*</u>, Liu, T. Y.* (2023).
+                  "<a href="https://pubs.aip.org/aip/jcp/article/159/3/034102/2903029" className="text-blue-600 hover:text-blue-800 hover:underline">Improving machine learning force fields for molecular dynamics simulations with fine-grained force metrics</a>".
+                  <i><b>J. Chem. Phys.</b></i>, 159(3): 034102.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 15 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">15.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Li, Z., Zhu, S., Shao, B., Zeng, X., <u className="font-medium">Wang, T.</u>, Liu, T. Y.* (2023).
+                  "<a href="https://academic.oup.com/bib/article/24/1/bbac597/6967036" className="text-blue-600 hover:text-blue-800 hover:underline">DSN-DDI: an accurate and generalized framework for drug–drug interaction prediction by dual-view representation learning</a>".
+                  <i><b>Brief. Bioinform.</b></i>, 24(1): bbac597.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 2022 Publications */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold mb-6">2022</h2>
+
+          <div className="space-y-4">
+            {/* Publication 14 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">14.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Gong, S., He, X., Meng, Q., Ma, Z., Shao, B.*, <u className="font-medium">Wang, T.*</u>, Liu, T. Y.* (2022).
+                  "<a href="https://pubs.acs.org/doi/10.1021/acs.jpcb.2c04866" className="text-blue-600 hover:text-blue-800 hover:underline">Stochastic lag time parameterization for Markov state models of protein dynamics</a>".
+                  <i><b>J. Phys. Chem. B</b></i>, 126(46): 9465–9475.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 13 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">13.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Liu, S., Wang, Y., Deng, Y., He, L., Shao, B., Yin, J., <u className="font-medium">Wang, T.</u>, Liu, T. Y.* (2022).
+                  "<a href="https://academic.oup.com/bib/article/23/5/bbac162/6591682" className="text-blue-600 hover:text-blue-800 hover:underline">Improved drug–target interaction prediction with intermolecular graph transformer</a>".
+                  <i><b>Brief. Bioinform.</b></i>, 23(5): bbac162.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 12 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">12.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Zhang, S., Liang, Q., He, X., Zhao, C., Ren, W., Yang, Z., Wang, Z., Ding, Q., Deng, H., <u className="font-medium">Wang, T.</u>, Zhang, L.*, Wang, X.* (2022).
+                  "<a href="https://www.nature.com/articles/s41422-021-00614-4" className="text-blue-600 hover:text-blue-800 hover:underline">Loss of Spike N370 glycosylation as an important evolutionary event for the enhanced infectivity of SARS-CoV-2</a>".
+                  <i><b>Cell Res.</b></i>, 32(3): 315–318.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 11 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">11.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Lan, J., He, X., Ren, Y., Wang, Z., Zhou, H., Fan, S., Qi, C., Guo, A., Wang, L., <u className="font-medium">Wang, T.</u>, Wang, X.* (2022).
+                  "<a href="https://www.nature.com/articles/s41422-022-00644-8" className="text-blue-600 hover:text-blue-800 hover:underline">Structural insights into the SARS-CoV-2 Omicron RBD–ACE2 interaction</a>".
+                  <i><b>Cell Res.</b></i>, 32(6): 593–595.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 2021 Publications */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold mb-6">2021</h2>
+
+          <div className="space-y-4">
+            {/* Publication 10 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">10.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Ding, W., Xu, Q., Liu, S., <u className="font-medium">Wang, T.</u>, Shao, B., Gong, H.*, Liu, T. Y.* (2021).
+                  "<a href="https://academic.oup.com/bioinformatics/article/37/22/4075/6295877" className="text-blue-600 hover:text-blue-800 hover:underline">SAMF: a self-adaptive protein modeling framework</a>".
+                  <i><b>Bioinformatics</b></i>, 37(22): 4075–4082.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 9 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">9.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Li, Y., <u className="font-medium">Wang, T.</u>, Zhang, J., Shao, B., Gong, H., Wang, Y., Wang, Z., Liu, T. Y.* (2021).
+                  "<a href="https://onlinelibrary.wiley.com/doi/10.1002/adts.202100152" className="text-blue-600 hover:text-blue-800 hover:underline">Exploring the regulatory function of the N-terminal domain of SARS-CoV-2 Spike protein through molecular dynamics simulation</a>".
+                  <i><b>Adv. Theory Simul.</b></i>, 4(10): 2100152.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 8 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">8.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Liu, S., <u className="font-medium">Wang, T.</u>, Xu, Q., Shao, B., Yin, J., Liu, T. Y.* (2021).
+                  "<a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-021-04271-7" className="text-blue-600 hover:text-blue-800 hover:underline">Complementing sequence-derived features with structural information extracted from fragment libraries for protein structure prediction</a>".
+                  <i><b>BMC Bioinformatics</b></i>, 22(1): 351.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Prior to 2020 Publications */}
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold mb-6">Prior to 2020</h2>
+
+          <div className="space-y-4">
+            {/* Publication 7 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">7.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  <u className="font-medium">Wang, T.*</u>, Qiao, Y., Ding, W., Mao, W., Zhou, Y., Gong, H.* (2019).
+                  "<a href="https://www.nature.com/articles/s42256-019-0075-7" className="text-blue-600 hover:text-blue-800 hover:underline">Improved fragment sampling for ab initio protein structure prediction using deep neural networks</a>".
+                  <i><b>Nat. Mach. Intell.</b></i>, 1(8): 347–355.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 6 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">6.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Mao, W., <u className="font-medium">Wang, T.</u>, Zhang, W., Gong, H.* (2018).
+                  "<a href="https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-018-2166-8" className="text-blue-600 hover:text-blue-800 hover:underline">Identification of residue pairing in interacting β-strands from a predicted residue contact map</a>".
+                  <i><b>BMC Bioinformatics</b></i>, 19(1): 146.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 5 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">5.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  <u className="font-medium">Wang, T.*</u>, Yang, Y., Zhou, Y., Gong, H.* (2017).
+                  "<a href="https://academic.oup.com/bioinformatics/article/33/5/677/2608640" className="text-blue-600 hover:text-blue-800 hover:underline">LRFragLib: an effective algorithm to identify fragments for de novo protein structure prediction</a>".
+                  <i><b>Bioinformatics</b></i>, 33(5): 677–684.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 4 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">4.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  <u className="font-medium">Wang, T.</u>, Qin, Z. Y., Wang, J. X., Zhao, X. F.* (2015).
+                  "<a href="https://www.sciencedirect.com/science/article/pii/S1050464815002503" className="text-blue-600 hover:text-blue-800 hover:underline">A C-type lectin with a sweet tooth: its role in antibacterial response in the shrimp Marsupenaeus japonicus</a>".
+                  <i><b>Fish Shellfish Immunol.</b></i>, 47(1): 59–66.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 3 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">3.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  <u className="font-medium">Wang, T.</u>, Zhao, X. F., Wang, J. X.* (2014).
+                  "<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0089962" className="text-blue-600 hover:text-blue-800 hover:underline">Molecular characterization of a novel Kazal-type serine proteinase inhibitor from the shrimp Marsupenaeus japonicus and its transcriptional response to viral and bacterial infections</a>".
+                  <i><b>PLoS One</b></i>, 9(3): e89962.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 2 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">2.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Yang, Q., <u className="font-medium">Wang, T.</u>, Wang, J. X., Zhao, X. F.* (2013).
+                  "<a href="https://www.sciencedirect.com/science/article/pii/S1050464813001459" className="text-blue-600 hover:text-blue-800 hover:underline">A novel C-type lectin from the shrimp Marsupenaeus japonicus that enhances melanization</a>".
+                  <i><b>Fish Shellfish Immunol.</b></i>, 34(6): 1596–1603.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 1 */}
+            <div className="flex gap-4">
+              <div className="font-bold text-lg min-w-[3rem]">1.</div>
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  Jiang, H. S., Sun, C., <u className="font-medium">Wang, T.</u>, Zhao, X. F., Wang, J. X.* (2013).
+                  "<a href="https://www.sciencedirect.com/science/article/pii/S1050464813001666" className="text-blue-600 hover:text-blue-800 hover:underline">A single whey acidic protein domain containing protein (SWD) inhibits bacteria invasion and dissemination in shrimp Marsupenaeus japonicus</a>".
+                  <i><b>Fish Shellfish Immunol.</b></i>, 35(2): 310–318.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
