@@ -23,16 +23,6 @@ export default function Home() {
       link: "https://www.sciencedirect.com/science/article/abs/pii/S0959440X2500209X"
     },
     {
-      title: "Dynamic insights into the structural evolution of ACE2–RBD interactions through molecular dynamics simulation, Markov state modeling, and large language model mutation prediction",
-      authors: "Zhou, Y., & Wang, T.",
-      year: "2025",
-      journal: "The Journal of Chemical Physics",
-      volume: "163(19)",
-      pages: "",
-      image: "/2.png",
-      link: "https://pubs.aip.org/aip/jcp/article/163/19/195105/3373068/Dynamic-insights-into-the-structural-evolution-of"
-    },
-    {
       title: "Ab initio characterization of protein molecular dynamics with AI2BMD",
       authors: "Wang, T., He, X., Li, M., Li, Y., Bi, R., Wang, Y., ... & Liu, T. Y.",
       year: "2024",
@@ -182,10 +172,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Research Interest</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* System */}
-              <div className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-lg shadow-lg">
+              <div className="group">
+                <div className="relative overflow-hidden rounded-lg shadow-lg mb-4">
                   <Image
                     src="/System.png"
                     alt="System - AI driven biomolecular dynamics simulation"
@@ -193,17 +183,18 @@ export default function Home() {
                     height={300}
                     className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <p className="text-white text-sm font-medium leading-relaxed">
-                      AI driven biomolecular dynamics simulation with accuracy, efficiency and generalizability
-                    </p>
-                  </div>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-blue-600">System</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    AI driven biomolecular dynamics simulation with <span className="font-semibold text-blue-600">accuracy</span>, <span className="font-semibold text-blue-600">efficiency</span> and <span className="font-semibold text-blue-600">generalizability</span>
+                  </p>
                 </div>
               </div>
 
               {/* Modeling */}
-              <div className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-lg shadow-lg">
+              <div className="group">
+                <div className="relative overflow-hidden rounded-lg shadow-lg mb-4">
                   <Image
                     src="/Modeling.png"
                     alt="Modeling - Biological structures encoding"
@@ -211,17 +202,18 @@ export default function Home() {
                     height={300}
                     className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <p className="text-white text-sm font-medium leading-relaxed">
-                      Biological structures encoding by deep learning for modeling, prediction, simulation and design
-                    </p>
-                  </div>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-green-600">Modeling</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    Biological structures encoding by deep learning for <span className="font-semibold text-green-600">modeling</span>, <span className="font-semibold text-green-600">prediction</span>, <span className="font-semibold text-green-600">simulation</span> and <span className="font-semibold text-green-600">design</span>
+                  </p>
                 </div>
               </div>
 
               {/* Application */}
-              <div className="group cursor-pointer">
-                <div className="relative overflow-hidden rounded-lg shadow-lg">
+              <div className="group">
+                <div className="relative overflow-hidden rounded-lg shadow-lg mb-4">
                   <Image
                     src="/Application.png"
                     alt="Application - Biomechanism detection and drug design"
@@ -229,11 +221,12 @@ export default function Home() {
                     height={300}
                     className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-4">
-                    <p className="text-white text-sm font-medium leading-relaxed">
-                      Biomechanism detection and drug design in a dynamic manner
-                    </p>
-                  </div>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold text-purple-600">Application</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    <span className="font-semibold text-purple-600">Biomechanism detection</span> and <span className="font-semibold text-purple-600">drug design</span> in a dynamic manner
+                  </p>
                 </div>
               </div>
             </div>

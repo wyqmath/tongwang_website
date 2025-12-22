@@ -1,98 +1,18 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import L from 'leaflet';
+import Image from 'next/image';
 
 export default function FooterMap() {
-  const mapRef = useRef<HTMLDivElement>(null);
-  const mapInstanceRef = useRef<L.Map | null>(null);
-  const [isStylesLoaded, setIsStylesLoaded] = useState(false);
-
-  // Load Leaflet CSS
-  useEffect(() => {
-    const loadLeafletStyles = () => {
-      return new Promise<void>((resolve) => {
-        const existingLink = document.querySelector('link[href*="leaflet"]');
-        if (existingLink) {
-          resolve();
-          return;
-        }
-
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-        link.onload = () => resolve();
-        link.onerror = () => resolve();
-        document.head.appendChild(link);
-      });
-    };
-
-    loadLeafletStyles().then(() => {
-      setIsStylesLoaded(true);
-    });
-  }, []);
-
-  // Initialize map
-  useEffect(() => {
-    if (typeof window !== 'undefined' && mapRef.current && !mapInstanceRef.current && isStylesLoaded) {
-      // Fix for default markers in Leaflet
-      delete (L.Icon.Default.prototype as unknown as { _getIconUrl?: unknown })._getIconUrl;
-      L.Icon.Default.mergeOptions({
-        iconRetinaUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png',
-        iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon.png',
-        shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-shadow.png',
-      });
-
-      // Initialize map - 使用 OpenStreetMap 官网提供的精确坐标
-      // 坐标: 40.005757, 116.314334 (生物医学馆)
-      const map = L.map(mapRef.current).setView([40.005757, 116.314334], 19);
-      mapInstanceRef.current = map;
-
-      // Add OpenStreetMap tile layer
-      const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      });
-
-      let markerAdded = false;
-
-      // Add marker when tiles load
-      tileLayer.on('load', () => {
-        if (!markerAdded) {
-          const marker = L.marker([40.005757, 116.314334]).addTo(map);
-          marker.bindPopup('<b>Tsinghua University</b><br>Biomedical Building');
-          markerAdded = true;
-          setTimeout(() => {
-            marker.openPopup();
-          }, 100);
-        }
-      });
-
-      tileLayer.addTo(map);
-
-      // Fallback
-      setTimeout(() => {
-        if (mapInstanceRef.current && !markerAdded) {
-          const marker = L.marker([40.005757, 116.314334]).addTo(map);
-          marker.bindPopup('<b>Tsinghua University</b><br>Biomedical Building');
-          marker.openPopup();
-          markerAdded = true;
-        }
-      }, 3000);
-    }
-
-    return () => {
-      if (mapInstanceRef.current) {
-        mapInstanceRef.current.remove();
-        mapInstanceRef.current = null;
-      }
-    };
-  }, [isStylesLoaded]);
-
   return (
-    <div
-      ref={mapRef}
-      className="w-full h-full min-h-[280px] bg-gray-100 rounded-lg"
-    />
+    <div className="w-full h-full relative">
+      <Image
+        src="/map_screenshot.png"
+        alt="Tsinghua University Biomedical Building Location"
+        fill
+        className="object-cover rounded-lg"
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+      />
+    </div>
   );
 }
 

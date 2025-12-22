@@ -16,11 +16,11 @@ import {
 const navigationItems = [
   { name: "Home", href: "/" },
   { name: "About PI", href: "/about" },
-  { name: "People", href: "/team" },
+  { name: "People", href: "/people" },
   { name: "Publications", href: "/publications" },
   { name: "News", href: "/news" },
   { name: "Software", href: "/software" },
-  { name: "Openings", href: "/positions" },
+  { name: "Openings", href: "/openings" },
   { name: "Contact", href: "/contact" },
   ...(process.env.NODE_ENV === 'development' ? [{ name: "Admin", href: "/admin" }] : []),
 ];

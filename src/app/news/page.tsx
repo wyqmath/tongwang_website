@@ -218,42 +218,6 @@ export default function NewsPage() {
               </div>
             </article>
 
-            {/* Original News - 2024 */}
-            <article className="pb-16">
-              <div className="flex gap-8 items-start">
-                <div className="flex-1">
-                  <div className="text-sm text-muted-foreground mb-2">
-                    2024
-                  </div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 hover:underline cursor-pointer">
-                    Top 10 Advances in Chinese Bioinformatics for 2024
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Outstanding contribution to bioinformatics research in China
-                  </p>
-                  <Link href="https://gpb.big.ac.cn/news/1022" target="_blank" rel="noopener noreferrer">
-                    <Button variant="link" className="text-primary p-0 h-auto">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Read More
-                    </Button>
-                  </Link>
-                  <div className="mt-4 text-sm text-primary">
-                    Recognition
-                  </div>
-                </div>
-
-                <div className="w-64 flex-shrink-0">
-                  <Image
-                    src="/The overall pipeline of AI2BMD.webp"
-                    alt="Top 10 Advances in Chinese Bioinformatics for 2024"
-                    width={256}
-                    height={192}
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-              </div>
-            </article>
-
           </div>
         </section>
 
