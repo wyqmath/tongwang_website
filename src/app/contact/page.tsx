@@ -4,15 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-
-// Dynamically import the map component with no SSR
-const MapComponent = dynamic(() => import('./map-component'), {
-  ssr: false,
-  loading: () => <div className="bg-gray-100 h-[450px] rounded-lg flex items-center justify-center">
-    <p className="text-gray-600">Loading map...</p>
-  </div>
-});
+import Image from "next/image";
 
 export default function ContactPage() {
   return (
@@ -110,7 +102,15 @@ export default function ContactPage() {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <MapComponent />
+            <div className="w-full h-[450px] relative rounded-lg overflow-hidden">
+              <Image
+                src="/map_screenshot.png"
+                alt="Tsinghua University Biomedical Building Location"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
+              />
+            </div>
             <div className="mt-4">
               <p className="text-sm text-muted-foreground">
                 <strong>Directions:</strong> The Biomedical Building is located

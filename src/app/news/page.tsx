@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
+import ImageCarousel from "@/components/ImageCarousel";
 
 export default function NewsPage() {
   return (
@@ -18,9 +18,9 @@ export default function NewsPage() {
 
             {/* News 6 - December 2025 */}
             <article className="border-b border-gray-200 pb-16">
-              <div className="flex gap-8 items-start">
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
                 {/* Left side - Text content */}
-                <div className="flex-1">
+                <div className="flex-1 w-full lg:w-auto">
                   <div className="text-sm text-muted-foreground mb-2">
                     December 6, 2025
                   </div>
@@ -41,14 +41,11 @@ export default function NewsPage() {
                   </div>
                 </div>
 
-                {/* Right side - Image */}
-                <div className="w-64 flex-shrink-0">
-                  <Image
-                    src="/news/image14.jpeg"
+                {/* Right side - Image Carousel */}
+                <div className="w-full lg:w-80 flex-shrink-0">
+                  <ImageCarousel
+                    images={["/news/image14.jpeg", "/news/image15.jpeg"]}
                     alt="Prof. Wang Receives Award"
-                    width={256}
-                    height={192}
-                    className="w-full h-auto object-cover"
                   />
                 </div>
               </div>
@@ -56,8 +53,8 @@ export default function NewsPage() {
 
             {/* News 5 - November 2025 */}
             <article className="border-b border-gray-200 pb-16">
-              <div className="flex gap-8 items-start">
-                <div className="flex-1">
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
+                <div className="flex-1 w-full lg:w-auto">
                   <div className="text-sm text-muted-foreground mb-2">
                     November 28, 2025
                   </div>
@@ -86,13 +83,43 @@ export default function NewsPage() {
                   </div>
                 </div>
 
-                <div className="w-64 flex-shrink-0">
-                  <Image
-                    src="/news/image13.png"
+                <div className="w-full lg:w-80 flex-shrink-0">
+                  <ImageCarousel
+                    images={["/news/image13.png"]}
                     alt="Review Article"
-                    width={256}
-                    height={192}
-                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+            </article>
+
+            {/* News 5.5 - November 4, 2025 */}
+            <article className="border-b border-gray-200 pb-16">
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
+                <div className="flex-1 w-full lg:w-auto">
+                  <div className="text-sm text-muted-foreground mb-2">
+                    November 4, 2025
+                  </div>
+                  <h2 className="text-2xl font-bold text-primary mb-4 hover:underline cursor-pointer">
+                    Prof. Wang Featured in Interview with China Science Communication
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    On November 4, Prof. Wang was interviewed by China Science Communication, a leading platform for public science education. In the feature video, Prof. Wang introduced the fundamentals of molecular dynamics simulations to a general audience. He discussed the current challenges facing the field and explained how our laboratory is utilizing artificial intelligence to overcome these bottlenecks, making complex scientific concepts accessible to the public.
+                  </p>
+                  <Link href="https://www.163.com/v/video/VLCJH2499.html" target="_blank" rel="noopener noreferrer">
+                    <Button variant="link" className="text-primary p-0 h-auto">
+                      <ExternalLink className="h-4 w-4 mr-2" />
+                      Watch Interview (Chinese)
+                    </Button>
+                  </Link>
+                  <div className="mt-4 text-sm text-primary">
+                    Lab News
+                  </div>
+                </div>
+
+                <div className="w-full lg:w-80 flex-shrink-0">
+                  <ImageCarousel
+                    images={["/news/image12.png"]}
+                    alt="China Science Communication Interview"
                   />
                 </div>
               </div>
@@ -100,8 +127,8 @@ export default function NewsPage() {
 
             {/* News 4 - September 2025 */}
             <article className="border-b border-gray-200 pb-16">
-              <div className="flex gap-8 items-start">
-                <div className="flex-1">
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
+                <div className="flex-1 w-full lg:w-auto">
                   <div className="text-sm text-muted-foreground mb-2">
                     September 11, 2025
                   </div>
@@ -116,13 +143,10 @@ export default function NewsPage() {
                   </div>
                 </div>
 
-                <div className="w-64 flex-shrink-0">
-                  <Image
-                    src="/news/image11.jpeg"
+                <div className="w-full lg:w-80 flex-shrink-0">
+                  <ImageCarousel
+                    images={["/news/image10.jpeg", "/news/image11.jpeg"]}
                     alt="BIOHK2025 Conference"
-                    width={256}
-                    height={192}
-                    className="w-full h-auto object-cover"
                   />
                 </div>
               </div>
@@ -130,8 +154,8 @@ export default function NewsPage() {
 
             {/* News 3 - August 2025 */}
             <article className="border-b border-gray-200 pb-16">
-              <div className="flex gap-8 items-start">
-                <div className="flex-1">
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
+                <div className="flex-1 w-full lg:w-auto">
                   <div className="text-sm text-muted-foreground mb-2">
                     August 18, 2025
                   </div>
@@ -146,13 +170,10 @@ export default function NewsPage() {
                   </div>
                 </div>
 
-                <div className="w-64 flex-shrink-0">
-                  <Image
-                    src="/news/image8.jpeg"
+                <div className="w-full lg:w-80 flex-shrink-0">
+                  <ImageCarousel
+                    images={["/news/image8.jpeg", "/news/image9.jpeg"]}
                     alt="ACS Fall 2025"
-                    width={256}
-                    height={192}
-                    className="w-full h-auto object-cover"
                   />
                 </div>
               </div>
@@ -160,8 +181,8 @@ export default function NewsPage() {
 
             {/* News 2 - June 2025 Conferences */}
             <article className="border-b border-gray-200 pb-16">
-              <div className="flex gap-8 items-start">
-                <div className="flex-1">
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
+                <div className="flex-1 w-full lg:w-auto">
                   <div className="text-sm text-muted-foreground mb-2">
                     June 2025
                   </div>
@@ -176,13 +197,10 @@ export default function NewsPage() {
                   </div>
                 </div>
 
-                <div className="w-64 flex-shrink-0">
-                  <Image
-                    src="/news/image5.jpeg"
-                    alt="Conference Presentation"
-                    width={256}
-                    height={192}
-                    className="w-full h-auto object-cover"
+                <div className="w-full lg:w-80 flex-shrink-0">
+                  <ImageCarousel
+                    images={["/news/image5.jpeg", "/news/image6.jpeg", "/news/image7.jpeg"]}
+                    alt="Conference Presentations"
                   />
                 </div>
               </div>
@@ -190,8 +208,8 @@ export default function NewsPage() {
 
             {/* News 1 - Lab Launch */}
             <article className="border-b border-gray-200 pb-16">
-              <div className="flex gap-8 items-start">
-                <div className="flex-1">
+              <div className="flex flex-col lg:flex-row gap-8 items-start">
+                <div className="flex-1 w-full lg:w-auto">
                   <div className="text-sm text-muted-foreground mb-2">
                     June 9, 2025
                   </div>
@@ -206,13 +224,10 @@ export default function NewsPage() {
                   </div>
                 </div>
 
-                <div className="w-64 flex-shrink-0">
-                  <Image
-                    src="/news/image1.jpeg"
+                <div className="w-full lg:w-80 flex-shrink-0">
+                  <ImageCarousel
+                    images={["/news/image1.jpeg", "/news/image2.jpeg", "/news/image3.jpeg", "/news/image4.jpeg"]}
                     alt="Wang Lab Facilities"
-                    width={256}
-                    height={192}
-                    className="w-full h-auto object-cover"
                   />
                 </div>
               </div>
