@@ -31,8 +31,8 @@ export function Footer() {
             <h3 className="text-2xl font-bold mb-8 text-center">Contact Information</h3>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {/* Left: Contact Details - 高度与地图一致 */}
-              <div className="flex flex-col justify-between space-y-6 min-h-[280px]">
+              {/* Left: Contact Details */}
+              <div className="flex flex-col space-y-3">
                 <div className="flex items-start space-x-3">
                   <Mail className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
@@ -68,14 +68,14 @@ export function Footer() {
               </div>
 
               {/* Middle & Right: Map and Affiliations with matching height */}
-              <div className="lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="lg:col-span-2 grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                 {/* Middle: Map Screenshot */}
-                <div className="rounded-lg overflow-hidden shadow-lg min-h-[280px] h-full">
+                <div className="rounded-lg overflow-hidden shadow-lg h-full">
                   <FooterMap />
                 </div>
 
                 {/* Right: Affiliations */}
-                <div className="flex flex-col min-h-[280px] h-full">
+                <div className="flex flex-col h-full">
                   <h4 className="font-semibold mb-4">Affiliations</h4>
                   <div className="flex-1 flex flex-col justify-between space-y-3">
                     {/* 清华大学生命学院 */}
