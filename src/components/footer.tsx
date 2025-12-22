@@ -78,7 +78,7 @@ export function Footer() {
                 <div className="flex flex-col min-h-[280px] h-full">
                   <h4 className="font-semibold mb-4">Affiliations</h4>
                   <div className="flex-1 flex flex-col justify-between space-y-3">
-                    {/* 清华大学生命学院 - 调大 */}
+                    {/* 清华大学生命学院 */}
                     <Link
                       href="https://life.tsinghua.edu.cn/"
                       target="_blank"
@@ -86,8 +86,24 @@ export function Footer() {
                       className="transition-transform hover:scale-105 inline-block"
                     >
                       <Image
-                        src="/清华大学生命学院.jpg"
-                        alt="清华大学生命学院"
+                        src="/tsinghua-life-school.jpg"
+                        alt="School of Life Sciences, Tsinghua University"
+                        width={240}
+                        height={80}
+                        className="object-contain w-full"
+                      />
+                    </Link>
+
+                    {/* 结构中心 */}
+                    <Link
+                      href="https://www.frcbs.tsinghua.edu.cn/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition-transform hover:scale-105 inline-block"
+                    >
+                      <Image
+                        src="/frcbs.svg"
+                        alt="Beijing Frontier Research Center for Biological Structure"
                         width={240}
                         height={80}
                         className="object-contain w-full"
@@ -104,25 +120,9 @@ export function Footer() {
                       <Image
                         src="/cls.png"
                         alt="Center for Life Sciences"
-                        width={200}
-                        height={70}
-                        className="object-contain w-full"
-                      />
-                    </Link>
-
-                    {/* 结构中心 - 调大 */}
-                    <Link
-                      href="https://www.frcbs.tsinghua.edu.cn/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="transition-transform hover:scale-105 inline-block"
-                    >
-                      <Image
-                        src="/结构中心.svg"
-                        alt="Beijing Frontier Research Center for Biological Structure"
-                        width={240}
-                        height={80}
-                        className="object-contain w-full"
+                        width={160}
+                        height={56}
+                        className="object-contain max-w-[70%]"
                       />
                     </Link>
                   </div>

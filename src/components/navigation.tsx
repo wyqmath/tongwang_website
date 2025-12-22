@@ -51,7 +51,7 @@ export function Navigation() {
         <div className="container mx-auto flex h-16 items-center px-4">
           <div className="hidden md:flex flex-1 items-center">
             <Link href="/" className="flex items-center space-x-3">
-              <div className="relative h-10 w-28 flex-shrink-0">
+              <div className="relative h-8 w-20 flex-shrink-0">
                 <Image
                   src="/slider1-2.png"
                   alt="University"
@@ -65,7 +65,7 @@ export function Navigation() {
                 Wang Lab
               </span>
             </Link>
-            <nav className="ml-6 flex items-center space-x-6 text-sm font-medium">
+            <nav className="ml-6 flex items-center space-x-6 text-lg font-medium">
               {navigationItems.map((item) => (
                 <Link
                   key={item.href}
