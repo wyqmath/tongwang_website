@@ -129,26 +129,27 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Banner with Background Image */}
-      <section className="relative w-full">
-        <div className="relative w-full">
-          <Image
-            src="/background.png"
-            alt="Research Background"
-            width={1920}
-            height={1080}
-            className="w-full h-auto object-contain"
-            priority
-            style={{ width: '100%', height: 'auto' }}
-          />
-        </div>
+      <section className="relative w-full" style={{ height: '32.14vw', maxHeight: '650px', minHeight: '300px' }}>
+        <Image
+          src="/background.png"
+          alt="Research Background"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
 
-        {/* Banner Text */}
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="container mx-auto px-4">
-            <h2 className="font-bold text-white text-center max-w-4xl mx-auto leading-tight drop-shadow-lg" style={{ fontSize: '3.5vw' }}>
-              Empower Biological Structural Research by Artificial Intelligence
-            </h2>
-          </div>
+        {/* Banner Text Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center px-4 z-10">
+          <h2 className="font-bold text-white text-center leading-tight"
+              style={{
+                fontSize: 'clamp(1.8rem, 3.5vw, 3.5rem)',
+                textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 25px rgba(0,0,0,0.6), 1px 1px 3px rgba(0,0,0,0.9)',
+                lineHeight: '1.3',
+                maxWidth: '90%'
+              }}>
+            Empower Biological Structural Research<br />by Artificial Intelligence
+          </h2>
         </div>
       </section>
 
