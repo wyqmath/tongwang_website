@@ -9,7 +9,7 @@ export default function PublicationsPage() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold mb-4" style={{ color: 'rgb(102, 8, 116)' }}>Publications</h1>
         <p className="text-base text-gray-600 mt-2">
-          <sup>#</sup> 代表共同第一作者，<sup>*</sup> 代表通讯作者
+          <sup>#</sup> Co-first authors, <sup>*</sup> Corresponding authors
         </p>
       </div>
 
