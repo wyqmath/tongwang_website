@@ -136,6 +136,7 @@ export default function PublicationsPage() {
                   Wang, Z., Wu, H., Sun, L., He, X., Liu, Z., Shao, B.*, <u className="font-medium">Wang, T.*</u>, Liu, T. Y.* (2023).{' '}
                   <a href="https://pubs.aip.org/aip/jcp/article/159/3/034102/2903029" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>Improving machine learning force fields for molecular dynamics simulations with fine-grained force metrics</a>.{' '}
                   <i><b>J. Chem. Phys.</b></i>, 159(3): 034102.
+                  {' '}<a href="https://pubs.aip.org/jcp/collection/1137/2023-JCP-Emerging-Investigators-Special-Collection" target="_blank" rel="noopener noreferrer" className="font-bold text-purple-600 hover:underline">(2023 JCP Emerging Investigators Special Collection, Cover)</a>
                 </p>
               </div>
             </div>
@@ -147,6 +148,7 @@ export default function PublicationsPage() {
                   Li, Z., Zhu, S., Shao, B., Zeng, X., <u className="font-medium">Wang, T.</u>, Liu, T. Y.* (2023).{' '}
                   <a href="https://academic.oup.com/bib/article/24/1/bbac597/6967036" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>DSN-DDI: an accurate and generalized framework for drug–drug interaction prediction by dual-view representation learning</a>.{' '}
                   <i><b>Brief. Bioinform.</b></i>, 24(1): bbac597.
+                  {' '}<span className="font-bold text-purple-600">(ESI highly cited paper)</span>
                 </p>
               </div>
             </div>
@@ -158,6 +160,7 @@ export default function PublicationsPage() {
                   Gong, S., He, X., Meng, Q., Ma, Z., Shao, B.*, <u className="font-medium">Wang, T.*</u>, Liu, T. Y.* (2022).{' '}
                   <a href="https://pubs.acs.org/doi/10.1021/acs.jpcb.2c04866" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>Stochastic lag time parameterization for Markov state models of protein dynamics</a>.{' '}
                   <i><b>J. Phys. Chem. B</b></i>, 126(46): 9465–9475.
+                  {' '}<span className="font-bold text-purple-600">(Cover)</span>
                 </p>
               </div>
             </div>
@@ -213,6 +216,7 @@ export default function PublicationsPage() {
                   Li, Y., <u className="font-medium">Wang, T.</u>, Zhang, J., Shao, B., Gong, H., Wang, Y., Wang, Z., Liu, T. Y.* (2021).{' '}
                   <a href="https://onlinelibrary.wiley.com/doi/10.1002/adts.202100152" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>Exploring the regulatory function of the N-terminal domain of SARS-CoV-2 Spike protein through molecular dynamics simulation</a>.{' '}
                   <i><b>Adv. Theory Simul.</b></i>, 4(10): 2100152.
+                  {' '}(<a href="/Top_Download_Exploring.jpg" target="_blank" rel="noopener noreferrer" className="font-bold text-purple-600 hover:underline">Top Downloaded Article Award</a>, <span className="font-bold text-purple-600">Cover</span>)
                 </p>
               </div>
             </div>
@@ -235,6 +239,8 @@ export default function PublicationsPage() {
                   <u className="font-medium">Wang, T.*</u>, Qiao, Y., Ding, W., Mao, W., Zhou, Y., Gong, H.* (2019).{' '}
                   <a href="https://www.nature.com/articles/s42256-019-0075-7" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>Improved fragment sampling for ab initio protein structure prediction using deep neural networks</a>.{' '}
                   <i><b>Nat. Mach. Intell.</b></i>, 1(8): 347–355.
+                  {' '}<span className="font-bold text-purple-600">(Highlights)</span>
+                  {' '}<a href="https://www.nature.com/articles/s42256-019-0086-4" target="_blank" rel="noopener noreferrer" className="font-bold text-purple-600 hover:underline">(Nature Machine Intelligence News & Views)</a>
                 </p>
               </div>
             </div>
