@@ -50,7 +50,7 @@ export function Footer() {
                   <Phone className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold">Phone</p>
-                    <p className="text-sm text-muted-foreground">010-62794752</p>
+                    <p className="text-sm text-muted-foreground">+86-010-62794752</p>
                   </div>
                 </div>
 
@@ -88,9 +88,9 @@ export function Footer() {
                       <Image
                         src="/tsinghua-life-school.jpg"
                         alt="School of Life Sciences, Tsinghua University"
-                        width={240}
-                        height={80}
-                        className="object-contain w-full"
+                        width={190}
+                        height={27}
+                        className="object-contain w-full max-w-[80%]"
                       />
                     </Link>
 

@@ -174,19 +174,19 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12">Research Interest</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* System */}
+              {/* Simulation */}
               <div className="group">
                 <div className="relative overflow-hidden rounded-lg shadow-lg mb-4">
                   <Image
-                    src="/System.png"
-                    alt="System - AI driven biomolecular dynamics simulation"
+                    src="/Simulation.png"
+                    alt="Simulation - AI driven biomolecular dynamics simulation"
                     width={400}
                     height={300}
                     className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold text-blue-600">System</h3>
+                  <h3 className="text-xl font-bold text-blue-600">Simulation</h3>
                   <p className="text-gray-700 leading-relaxed">
                     AI driven biomolecular dynamics simulation with <span className="font-semibold text-blue-600">accuracy</span>, <span className="font-semibold text-blue-600">efficiency</span> and <span className="font-semibold text-blue-600">generalizability</span>
                   </p>
