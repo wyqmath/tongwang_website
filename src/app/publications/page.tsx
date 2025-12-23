@@ -8,6 +8,9 @@ export default function PublicationsPage() {
       {/* Header */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold mb-4" style={{ color: 'rgb(102, 8, 116)' }}>Publications</h1>
+        <p className="text-base text-gray-600 mt-2">
+          <sup>#</sup> 代表共同第一作者，<sup>*</sup> 代表通讯作者
+        </p>
       </div>
 
       {/* Publications List */}
@@ -169,6 +172,18 @@ export default function PublicationsPage() {
             <div className="flex gap-4">
               <div className="flex-1">
                 <p className="text-base leading-relaxed">
+                  Wang, Y., Li, S., Wang, Z., He, X., Shao, B., Liu, T. Y., <u className="font-medium">Wang, T.*</u> (2022).{' '}
+                  <a href="https://arxiv.org/abs/2211.12791" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>An ensemble of VisNet, Transformer-M, and pretraining models for molecular property prediction in OGB Large-Scale Challenge@ NeurIPS 2022</a>.{' '}
+                  <i><b>arXiv preprint</b></i> arXiv:2211.12791.
+                  {' '}<a href="https://ogb.stanford.edu/neurips2022/results/#winners_pcqm4mv2" target="_blank" rel="noopener noreferrer" className="font-bold text-purple-600 hover:underline">(2nd place in OGB-LSC@NeurIPS 2022)</a>
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 13b */}
+            <div className="flex gap-4">
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
                   Liu, S., Wang, Y., Deng, Y., He, L., Shao, B., Yin, J., <u className="font-medium">Wang, T.</u>, Liu, T. Y.* (2022).{' '}
                   <a href="https://academic.oup.com/bib/article/23/5/bbac162/6591682" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>Improved drug–target interaction prediction with intermolecular graph transformer</a>.{' '}
                   <i><b>Brief. Bioinform.</b></i>, 23(5): bbac162.
@@ -245,6 +260,17 @@ export default function PublicationsPage() {
               </div>
             </div>
 
+            {/* Publication 7b */}
+            <div className="flex gap-4">
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  <u className="font-medium">Wang, T.</u>, Gong, H., Shakhnovich, E. I.* (2019).{' '}
+                  <a href="https://arxiv.org/abs/1906.05785" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>Improved fragment-based movement with LRFragLib for all-atom Ab initio protein folding</a>.{' '}
+                  <i><b>arXiv preprint</b></i> arXiv:1906.05785.
+                </p>
+              </div>
+            </div>
+
             {/* Publication 6 */}
             <div className="flex gap-4">
               <div className="flex-1">
@@ -268,6 +294,17 @@ export default function PublicationsPage() {
             </div>
 
             {/* Publication 1 */}
+            <div className="flex gap-4">
+              <div className="flex-1">
+                <p className="text-base leading-relaxed">
+                  <u className="font-medium">Wang, T.</u>, Sui, L., Kang, C.* (2013).{' '}
+                  <a href="http://doi.org/10.13865/j.cnki.cjbmb.2013.12.010" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>Syntenin as a multifunctional cellular adaptor protein</a>.{' '}
+                  <i><b>Chin. J. Biochem. Mol. Biol.</b></i>, 12: 6–14.
+                </p>
+              </div>
+            </div>
+
+            {/* Publication 1b */}
             <div className="flex gap-4">
               <div className="flex-1">
                 <p className="text-base leading-relaxed">
