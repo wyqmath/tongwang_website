@@ -1,6 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -75,6 +72,10 @@ export default function AboutPage() {
                     State Key Laboratory of Membrane Biology
                   </Link>
                 </p>
+
+                <p>
+                  Principal Investigator, Center for Life Sciences and Artificial Intelligence, School of Life Sciences, Tsinghua University
+                </p>
               </div>
             </div>
 
@@ -99,18 +100,13 @@ export default function AboutPage() {
         </div>
 
         {/* Brief Bio */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <span className="text-2xl mr-2">🎓</span>
-              Brief Bio
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-4">
+        <div className="mb-8">
+          <h2 className="text-2xl font-bold mb-6">Brief Bio</h2>
+          <div className="space-y-4">
             <p className="text-muted-foreground leading-relaxed">
               Dr. Wang Tong is the Principal Investigator (PI) of the School of Life Sciences, Tsinghua University,
               Tsinghua University-Peking University Center for Life Sciences (CLS), Beijing Frontier Research Center
-              for Biological Structures, and State Key Laboratory of Membrane Biology. Prior to joining Tsinghua in 2025,
+              for Biological Structures, State Key Laboratory of Membrane Biology, and Center for Life Sciences and Artificial Intelligence. Prior to joining Tsinghua in 2025,
               he was a Senior Researcher at Microsoft Research. He received his Ph.D. at Tsinghua University in 2019 and
               worked as a visiting scholar at Harvard University from 2016 to 2017.
             </p>
@@ -128,84 +124,8 @@ export default function AboutPage() {
               Bioinformatics Award (2024), Champion in First Global AI Drug Development Competition (2023), Top Downloaded
               Article Award (2022) and honored reviewer in ACS journals (2022, 2023).
             </p>
-
-            
-          </CardContent>
-        </Card>
-
-        {/* Education and Career */}
-        <Card className="mb-8">
-          <CardHeader>
-            <CardTitle className="flex items-center">
-              <span className="text-2xl mr-2">🎓</span>
-              Education and Career
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold mb-4 flex items-center">
-                <Badge variant="secondary" className="mr-2">Career</Badge>
-                Professional Experience
-              </h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">Assistant Professor</p>
-                    <p className="text-sm text-muted-foreground">School of Life Sciences, Tsinghua University</p>
-                    <p className="text-sm text-muted-foreground">Tsinghua University-Peking University Center for Life Sciences</p>
-                    <p className="text-sm text-muted-foreground">Beijing Frontier Research Center for Biological Structure</p>
-                  </div>
-                  <Badge variant="outline">2025-Present</Badge>
-                </div>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">Senior Researcher</p>
-                    <p className="text-sm text-muted-foreground">Microsoft Research</p>
-                  </div>
-                  <Badge variant="outline">2019-2025</Badge>
-                </div>
-              </div>
-            </div>
-
-            <Separator />
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4 flex items-center">
-                <Badge variant="secondary" className="mr-2">Education</Badge>
-                Academic Background
-              </h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">Ph.D. in Life Sciences</p>
-                    <p className="text-sm text-muted-foreground">Tsinghua University</p>
-                  </div>
-                  <Badge variant="outline">2014-2019</Badge>
-                </div>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">Ph.D. in Computational Biology</p>
-                    <p className="text-sm text-muted-foreground">Harvard University</p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Work as visiting a PhD student<br />
-                      Research on protein 3D structure prediction in Nobel Prize lab
-                    </p>
-                  </div>
-                  <Badge variant="outline">2016-2017</Badge>
-                </div>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">Bachelor's Degree</p>
-                    <p className="text-sm text-muted-foreground">Shandong University</p>
-                  </div>
-                  <Badge variant="outline">2010-2014</Badge>
-                </div>
-              </div>
-            </div>
-
-
-          </CardContent>
-        </Card>
+          </div>
+        </div>
 
         
 
