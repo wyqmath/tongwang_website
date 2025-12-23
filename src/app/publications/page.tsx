@@ -45,6 +45,7 @@ export default function PublicationsPage() {
                   <u className="font-medium">Wang, T.*</u>, He, X., Li, M., Li, Y., Bi, R., Wang, Y., Cheng, C., Shen, X., Meng, J., Zhang, H., Liu, H., Wang, Z., Li, S., Shao, B., Liu, T. Y. (2024).{' '}
                   <a href="https://www.nature.com/articles/s41586-024-08127-z" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>Ab initio characterization of protein molecular dynamics with AI2BMD</a>.{' '}
                   <i><b>Nature</b></i>, 635: 1019–1027.
+                  {' '}<a href="https://gpb.big.ac.cn/news/1022" target="_blank" rel="noopener noreferrer" className="font-bold text-purple-600 hover:underline">(Top 10 Advances in Bioinformatics)</a>
                 </p>
               </div>
             </div>
@@ -255,39 +256,6 @@ export default function PublicationsPage() {
                   <u className="font-medium">Wang, T.*</u>, Yang, Y., Zhou, Y., Gong, H.* (2017).{' '}
                   <a href="https://academic.oup.com/bioinformatics/article/33/5/677/2608640" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>LRFragLib: an effective algorithm to identify fragments for de novo protein structure prediction</a>.{' '}
                   <i><b>Bioinformatics</b></i>, 33(5): 677–684.
-                </p>
-              </div>
-            </div>
-
-            {/* Publication 4 */}
-            <div className="flex gap-4">
-              <div className="flex-1">
-                <p className="text-base leading-relaxed">
-                  <u className="font-medium">Wang, T.</u>, Qin, Z. Y., Wang, J. X., Zhao, X. F.* (2015).{' '}
-                  <a href="https://www.sciencedirect.com/science/article/pii/S1050464815002503" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>A C-type lectin with a sweet tooth: its role in antibacterial response in the shrimp Marsupenaeus japonicus</a>.{' '}
-                  <i><b>Fish Shellfish Immunol.</b></i>, 47(1): 59–66.
-                </p>
-              </div>
-            </div>
-
-            {/* Publication 3 */}
-            <div className="flex gap-4">
-              <div className="flex-1">
-                <p className="text-base leading-relaxed">
-                  <u className="font-medium">Wang, T.</u>, Zhao, X. F., Wang, J. X.* (2014).{' '}
-                  <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0089962" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>Molecular characterization of a novel Kazal-type serine proteinase inhibitor from the shrimp Marsupenaeus japonicus and its transcriptional response to viral and bacterial infections</a>.{' '}
-                  <i><b>PLoS One</b></i>, 9(3): e89962.
-                </p>
-              </div>
-            </div>
-
-            {/* Publication 2 */}
-            <div className="flex gap-4">
-              <div className="flex-1">
-                <p className="text-base leading-relaxed">
-                  Yang, Q., <u className="font-medium">Wang, T.</u>, Wang, J. X., Zhao, X. F.* (2013).{' '}
-                  <a href="https://www.sciencedirect.com/science/article/pii/S1050464813001459" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>A novel C-type lectin from the shrimp Marsupenaeus japonicus that enhances melanization</a>.{' '}
-                  <i><b>Fish Shellfish Immunol.</b></i>, 34(6): 1596–1603.
                 </p>
               </div>
             </div>
