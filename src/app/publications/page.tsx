@@ -21,6 +21,7 @@ export default function PublicationsPage() {
                   Zhou, Y., <u className="font-medium">Wang, T.*</u> (2025).{' '}
                   <a href="https://pubs.aip.org/aip/jcp/article/163/19/195105/3373068/Dynamic-insights-into-the-structural-evolution-of" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>Dynamic insights into the structural evolution of ACE2–RBD interactions through molecular dynamics simulation, Markov state modeling, and large language model mutation prediction</a>.{' '}
                   <i><b>J. Chem. Phys.</b></i>, 163(19).
+                  {' '}<a href="https://pubs.aip.org/jcp/collection/595608/2025-JCP-Emerging-Investigators-Special-Collection" target="_blank" rel="noopener noreferrer" className="font-bold text-purple-600 hover:underline">(JCP 2025 JCP Emerging Investigators Special Collection)</a>
                 </p>
               </div>
             </div>
