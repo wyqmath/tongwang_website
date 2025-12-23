@@ -32,8 +32,8 @@ export function Navigation() {
     <>
       {/* Top Purple Banner with Tsinghua Logo */}
       <div className="bg-primary">
-        <div className="container mx-auto flex h-8 items-center px-4">
-          <div className="relative h-full w-32">
+        <div className="container mx-auto flex h-6 sm:h-8 items-center px-4 sm:px-6 md:px-8">
+          <div className="relative h-full w-24 sm:w-32">
             <Image
               src="/slider1-1.png"
               alt="Tsinghua University"
@@ -41,6 +41,7 @@ export function Navigation() {
               className="object-contain"
               style={{ objectPosition: "left" }}
               priority
+              sizes="(max-width: 640px) 96px, 128px"
             />
           </div>
         </div>
@@ -48,30 +49,31 @@ export function Navigation() {
 
       {/* Navigation Bar */}
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-        <div className="container mx-auto flex h-16 items-center px-4">
+        <div className="container mx-auto flex h-14 sm:h-16 items-center px-4 sm:px-6 md:px-8">
           <div className="hidden md:flex flex-1 items-center">
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="relative h-8 w-20 flex-shrink-0">
+            <Link href="/" className="flex items-center space-x-2 lg:space-x-3">
+              <div className="relative h-7 lg:h-8 w-16 lg:w-20 flex-shrink-0">
                 <Image
                   src="/slider1-2.png"
                   alt="University"
                   fill
                   className="object-contain"
                   style={{ objectPosition: "left" }}
+                  sizes="80px"
                 />
               </div>
-              <div className="h-10 w-px bg-primary"></div>
-              <span className="font-bold text-primary text-xl whitespace-nowrap">
+              <div className="h-8 lg:h-10 w-px bg-primary"></div>
+              <span className="font-bold text-primary text-lg lg:text-xl whitespace-nowrap">
                 Wang Lab
               </span>
             </Link>
-            <nav className="ml-6 flex items-center space-x-6 text-lg font-medium">
+            <nav className="ml-4 lg:ml-6 flex items-center space-x-3 lg:space-x-6 text-base lg:text-lg font-medium">
               {navigationItems.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    "transition-colors hover:text-primary/80",
+                    "transition-colors hover:text-primary/80 whitespace-nowrap",
                     pathname === item.href ? "text-primary" : "text-primary/60"
                   )}
                 >
@@ -83,23 +85,24 @@ export function Navigation() {
 
           {/* Mobile Navigation */}
           <div className="flex flex-1 items-center justify-between space-x-2 md:hidden">
-            <Link href="/" className="flex flex-1 items-center space-x-2">
-              <div className="relative h-7 w-24 flex-shrink-0">
+            <Link href="/" className="flex flex-1 items-center space-x-2 min-w-0">
+              <div className="relative h-6 w-20 flex-shrink-0">
                 <Image
                   src="/slider1-2.png"
                   alt="University"
                   fill
                   className="object-contain"
                   style={{ objectPosition: "left" }}
+                  sizes="80px"
                 />
               </div>
-              <div className="h-6 w-px bg-primary"></div>
-              <span className="font-bold text-primary text-sm">Wang Lab</span>
+              <div className="h-6 w-px bg-primary flex-shrink-0"></div>
+              <span className="font-bold text-primary text-sm truncate">Wang Lab</span>
             </Link>
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger>Menu</NavigationMenuTrigger>
+                  <NavigationMenuTrigger className="text-sm">Menu</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <div className="grid w-[200px] gap-3 p-4">
                       {navigationItems.map((item) => (

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navigation } from "@/components/navigation";
@@ -22,6 +22,13 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
     apple: '/favicon.ico',
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export default function RootLayout({
