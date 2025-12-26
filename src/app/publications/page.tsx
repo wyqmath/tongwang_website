@@ -253,8 +253,7 @@ export default function PublicationsPage() {
                   <u className="font-medium">Wang, T.</u>, Qiao, Y., Ding, W., Mao, W., Zhou, Y.*, Gong, H.* (2019).{' '}
                   <a href="https://www.nature.com/articles/s42256-019-0075-7" className="hover:underline" style={{ color: 'rgb(147, 51, 234)' }}>Improved fragment sampling for ab initio protein structure prediction using deep neural networks</a>.{' '}
                   <i><b>Nat. Mach. Intell.</b></i>, 1(8): 347–355.
-                  {' '}<span className="font-bold text-purple-600">(Highlights)</span>
-                  {' '}<a href="https://www.nature.com/articles/s42256-019-0086-4" target="_blank" rel="noopener noreferrer" className="font-bold text-purple-600 hover:underline">(Nature Machine Intelligence News & Views)</a>
+                  {' '}<span className="font-bold text-purple-600">(Editors&apos; Highlights: <a href="https://www.nature.com/articles/s42256-019-0086-4" target="_blank" rel="noopener noreferrer" className="text-purple-600 hover:underline">Protein structure prediction beyond AlphaFold</a>)</span>
                 </p>
               </div>
             </div>
