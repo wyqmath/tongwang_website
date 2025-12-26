@@ -59,8 +59,8 @@ export function Footer() {
                   <div>
                     <p className="font-semibold">Address</p>
                     <p className="text-sm text-muted-foreground">
-                      Office: Room A216-A, Biomedical Building<br />
-                      Lab: Room A208, Biomedical Building<br />
+                      Office: Room A216-A, Biomedical Hall<br />
+                      Lab: Room A208, Biomedical Hall<br />
                       Tsinghua University, Haidian District, Beijing, China
                     </p>
                   </div>

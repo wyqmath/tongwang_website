@@ -86,12 +86,12 @@ export default function AboutPage() {
             <div className="space-y-2 text-sm">
               <p>
                 <span className="font-semibold">Office Address: </span>
-                <span className="text-muted-foreground">Room A216-A, Biomedical Building, Tsinghua University, Haidian District, Beijing, China</span>
+                <span className="text-muted-foreground">Room A216-A, Biomedical Hall, Tsinghua University, Haidian District, Beijing, China</span>
               </p>
 
               <p>
                 <span className="font-semibold">Lab Address: </span>
-                <span className="text-muted-foreground">Room A208, Biomedical Building, Tsinghua University, Haidian District, Beijing, China</span>
+                <span className="text-muted-foreground">Room A208, Biomedical Hall, Tsinghua University, Haidian District, Beijing, China</span>
               </p>
 
               <p>
@@ -176,18 +176,14 @@ export default function AboutPage() {
                 </div>
                 <div className="flex justify-between items-start">
                   <div>
-                    <p className="font-medium">Ph.D. in Computational Biology</p>
+                    <p className="font-medium">Visiting PhD Student</p>
                     <p className="text-sm text-muted-foreground">Harvard University</p>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Work as visiting a PhD student<br />
-                      Research on protein 3D structure prediction in Nobel Prize lab
-                    </p>
                   </div>
                   <Badge variant="outline">2016-2017</Badge>
                 </div>
                 <div className="flex justify-between items-start">
                   <div>
-                    <p className="font-medium">Bachelor&apos;s Degree</p>
+                    <p className="font-medium">B.S. in Science</p>
                     <p className="text-sm text-muted-foreground">Shandong University</p>
                   </div>
                   <Badge variant="outline">2010-2014</Badge>
@@ -596,7 +592,10 @@ export default function AboutPage() {
             </h3>
             <div className="space-y-3">
               <div className="flex justify-between items-start">
-                <p className="text-sm text-muted-foreground">Molecular simulation of biomolecules</p>
+                <div className="flex-1">
+                  <p className="text-sm font-medium">Biomolecular Molecular Dynamics Simulation</p>
+                  <p className="text-xs text-muted-foreground mt-1">Co-taught with other faculty members</p>
+                </div>
                 <Badge variant="outline">2025 Fall</Badge>
               </div>
             </div>

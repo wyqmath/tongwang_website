@@ -33,14 +33,15 @@ export default function Home() {
       link: "https://www.nature.com/articles/s41586-024-08127-z"
     },
     {
-      title: "Overcoming the barrier of orbital-free density functional theory for molecular systems using deep learning",
-      authors: "Zhang, H., Liu, S., You, J., Liu, C., Zheng, S., Lu, Z., ... & Shao, B.",
-      year: "2024",
-      journal: "Nature Computational Science",
-      volume: "4(3)",
-      pages: "210-223",
-      image: "/4.webp",
-      link: "https://www.nature.com/articles/s43588-024-00605-8"
+      title: "Dynamic insights into the structural evolution of ACE2–RBD interactions through molecular dynamics simulation, Markov state modeling, and large language model mutation prediction",
+      authors: "Zhou, Y., Wang, T.",
+      year: "2025",
+      journal: "J. Chem. Phys.",
+      volume: "163(19)",
+      pages: "",
+      image: "/2.png",
+      link: "https://pubs.aip.org/aip/jcp/article/163/19/195101/3329563/Dynamic-insights-into-the-structural-evolution-of",
+      note: "JCP 2025 JCP Emerging Investigators Special Collection"
     },
     {
       title: "Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing",
@@ -283,6 +284,12 @@ export default function Home() {
                         <>, {recentPublications[currentPublicationIndex].pages}</>
                       )}
                     </div>
+
+                    {recentPublications[currentPublicationIndex].note && (
+                      <div className="text-xs sm:text-sm text-purple-600 font-bold mt-2">
+                        ({recentPublications[currentPublicationIndex].note})
+                      </div>
+                    )}
                   </div>
 
                   <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 mt-6">

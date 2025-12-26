@@ -44,7 +44,7 @@ export default function ContactPage() {
                 <div>
                   <p className="font-medium">Office Address</p>
                   <p className="text-muted-foreground">
-                    Room A216-A, Biomedical Building<br />
+                    Room A216-A, Biomedical Hall<br />
                     Tsinghua University<br />
                     Haidian District, Beijing, China
                   </p>
@@ -56,7 +56,7 @@ export default function ContactPage() {
                 <div>
                   <p className="font-medium">Laboratory Address</p>
                   <p className="text-muted-foreground">
-                    Room A208, Biomedical Building<br />
+                    Room A208, Biomedical Hall<br />
                     Tsinghua University<br />
                     Haidian District, Beijing, China
                   </p>
@@ -98,14 +98,14 @@ export default function ContactPage() {
           <CardHeader>
             <CardTitle>Location</CardTitle>
             <CardDescription>
-              Tsinghua University Biomedical Building
+              Tsinghua University Biomedical Hall
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="w-full h-[450px] relative rounded-lg overflow-hidden">
               <Image
                 src="/map_screenshot.png"
-                alt="Tsinghua University Biomedical Building Location"
+                alt="Tsinghua University Biomedical Hall Location"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1000px"
@@ -113,7 +113,7 @@ export default function ContactPage() {
             </div>
             <div className="mt-4">
               <p className="text-sm text-muted-foreground">
-                <strong>Directions:</strong> The Biomedical Building is located
+                <strong>Directions:</strong> The Biomedical Hall is located
                 in the heart of Tsinghua University campus, easily accessible by public transportation
                 and with visitor parking available nearby.
               </p>
