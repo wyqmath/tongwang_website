@@ -38,20 +38,18 @@ const labAdmin: TeamMember = {
 
 const phdStudents: TeamMember[] = [
   {
-    name: "Student Name 1",
+    name: "Coming Soon",
     photo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
     photoWidth: 240,
     photoHeight: 320,
-    intro: "Ph.D. student working on machine learning for drug discovery. Research focuses on developing graph neural networks for molecular property prediction and generative models for de novo molecule design.",
-    email: "student1@example.com"
+    intro: "Coming Soon"
   },
   {
-    name: "Student Name 2",
+    name: "Coming Soon",
     photo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
     photoWidth: 240,
     photoHeight: 320,
-    intro: "Ph.D. student specializing in molecular dynamics simulation and enhanced sampling methods. Research interests include applying deep learning to accelerate MD simulations and improve force field accuracy.",
-    email: "student2@example.com"
+    intro: "Coming Soon"
   }
 ];
 
