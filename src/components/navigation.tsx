@@ -22,7 +22,6 @@ const navigationItems = [
   { name: "Software", href: "/software" },
   { name: "Openings", href: "/openings" },
   { name: "Contact", href: "/contact" },
-  ...(process.env.NODE_ENV === 'development' ? [{ name: "Admin", href: "/admin" }] : []),
 ];
 
 export function Navigation() {
