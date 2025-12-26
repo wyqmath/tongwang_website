@@ -16,9 +16,6 @@ export default function PositionsPage() {
           <h1 className="text-5xl font-bold mb-6" style={{ color: 'oklch(0.3722 0.17 321.61)' }}>
             Open Positions
           </h1>
-          <p className="text-xl text-muted-foreground">
-            Dr. Tong Wang&apos;s &quot;AI + Computational Biology&quot; Research Group, Tsinghua University
-          </p>
         </div>
 
         {/* Postdoc Position */}
