@@ -54,7 +54,7 @@ const phdStudents: TeamMember[] = [
 ];
 
 // Member component
-function MemberProfile({ member, isPI = false }: { member: TeamMember; isPI?: boolean }) {
+function MemberProfile({ member }: { member: TeamMember }) {
   return (
     <div className="flex gap-8 mb-16">
       {/* Photo */}
@@ -103,7 +103,7 @@ export default function TeamPage() {
         {/* PI Section */}
         <section className="mb-20">
           <h2 className="text-3xl font-bold mb-10">Principal Investigator (PI)</h2>
-          <MemberProfile member={pi} isPI={true} />
+          <MemberProfile member={pi} />
         </section>
 
         {/* Lab Administrator Section */}
