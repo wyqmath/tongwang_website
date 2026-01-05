@@ -16,17 +16,6 @@ interface TeamMember {
 }
 
 // Sample data - replace with actual data
-const pi: TeamMember = {
-  name: "Tong Wang",
-  title: "Principal Investigator",
-  degree: "Ph.D.",
-  photo: "https://life.tsinghua.edu.cn/__local/F/D2/87/2265FA369D1288DC194D3218CB2_BC23290E_1B676B.jpg",
-  photoWidth: 300,
-  photoHeight: 375,
-  intro: "Dr. Wang Tong is the Principal Investigator (PI) of the School of Life Sciences, Tsinghua University, Tsinghua University-Peking University Center for Life Sciences (CLS), Beijing Frontier Research Center for Biological Structures, and State Key Laboratory of Membrane Biology. His main research directions include AI-driven biomolecular dynamics simulation system, molecular structure modeling and prediction, AI aided drug discovery and biomechanism detection via simulations.",
-  email: "tongwang@mail.tsinghua.edu.cn"
-};
-
 const labAdmin: TeamMember = {
   name: "Zhuoxuan Yang",
   photo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
@@ -99,12 +88,6 @@ export default function TeamPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-5xl mx-auto">
-
-        {/* PI Section */}
-        <section className="mb-20">
-          <h2 className="text-3xl font-bold mb-10">Principal Investigator (PI)</h2>
-          <MemberProfile member={pi} />
-        </section>
 
         {/* Lab Administrator Section */}
         <section className="mb-20">

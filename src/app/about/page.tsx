@@ -129,65 +129,46 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* Education and Career */}
+        {/* Education and Background */}
         <div className="mb-8">
-          <h2 className="text-2xl font-bold mb-6">Education and Career</h2>
-          <div className="space-y-6">
-            <div>
-              <h3 className="text-lg font-semibold mb-4 flex items-center">
-                <Badge variant="secondary" className="mr-2">Career</Badge>
-                Professional Experience
-              </h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">Assistant Professor</p>
-                    <p className="text-sm text-muted-foreground">School of Life Sciences, Tsinghua University</p>
-                    <p className="text-sm text-muted-foreground">Tsinghua University-Peking University Center for Life Sciences</p>
-                    <p className="text-sm text-muted-foreground">Beijing Frontier Research Center for Biological Structure</p>
-                  </div>
-                  <Badge variant="outline">2025-Present</Badge>
-                </div>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">Senior Researcher</p>
-                    <p className="text-sm text-muted-foreground">Microsoft Research</p>
-                  </div>
-                  <Badge variant="outline">2019-2025</Badge>
-                </div>
+          <h2 className="text-2xl font-bold mb-6">Education and Background</h2>
+          <div className="space-y-3">
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="font-medium">Assistant Professor</p>
+                <p className="text-sm text-muted-foreground">School of Life Sciences, Tsinghua University</p>
+                <p className="text-sm text-muted-foreground">Tsinghua University-Peking University Center for Life Sciences</p>
+                <p className="text-sm text-muted-foreground">Beijing Frontier Research Center for Biological Structure</p>
               </div>
+              <Badge variant="outline">2025-Present</Badge>
             </div>
-
-            <Separator />
-
-            <div>
-              <h3 className="text-lg font-semibold mb-4 flex items-center">
-                <Badge variant="secondary" className="mr-2">Education</Badge>
-                Academic Background
-              </h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">Ph.D. in Life Sciences</p>
-                    <p className="text-sm text-muted-foreground">Tsinghua University</p>
-                  </div>
-                  <Badge variant="outline">2014-2019</Badge>
-                </div>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">Visiting PhD Student</p>
-                    <p className="text-sm text-muted-foreground">Harvard University</p>
-                  </div>
-                  <Badge variant="outline">2016-2017</Badge>
-                </div>
-                <div className="flex justify-between items-start">
-                  <div>
-                    <p className="font-medium">B.S. in Science</p>
-                    <p className="text-sm text-muted-foreground">Shandong University</p>
-                  </div>
-                  <Badge variant="outline">2010-2014</Badge>
-                </div>
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="font-medium">Senior Researcher</p>
+                <p className="text-sm text-muted-foreground">Microsoft Research</p>
               </div>
+              <Badge variant="outline">2019-2025</Badge>
+            </div>
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="font-medium">Ph.D.</p>
+                <p className="text-sm text-muted-foreground">Tsinghua University</p>
+              </div>
+              <Badge variant="outline">2014-2019</Badge>
+            </div>
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="font-medium">Visiting PhD Student</p>
+                <p className="text-sm text-muted-foreground">Harvard University</p>
+              </div>
+              <Badge variant="outline">2016-2017</Badge>
+            </div>
+            <div className="flex justify-between items-start">
+              <div>
+                <p className="font-medium">B.S. in Science</p>
+                <p className="text-sm text-muted-foreground">Shandong University</p>
+              </div>
+              <Badge variant="outline">2010-2014</Badge>
             </div>
           </div>
         </div>
@@ -195,115 +176,25 @@ export default function AboutPage() {
         {/* Honors, Rewards and Grants */}
         <div className="mb-8">
           <h2 className="text-2xl font-bold mb-6">Honors, Rewards and Grants</h2>
-          <div className="space-y-3">
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Capital Frontier Academic Achievement Award</p>
-              </div>
-              <Badge variant="outline">2025</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">National Key R&D Program of China</p>
-              </div>
-              <Badge variant="outline">2025</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">AI+Life Science Interdisciplinary Research Program, School of Life Sciences, Tsinghua</p>
-              </div>
-              <Badge variant="outline">2025</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Start-up of scientific research for new PI by Tsinghua University</p>
-              </div>
-              <Badge variant="outline">2025</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Top Ten Advances in Chinese Bioinformatics (1st rank of teamwork)</p>
-              </div>
-              <Badge variant="outline">2024</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Champion in the First Global AI Drug Development Competition</p>
-              </div>
-              <Badge variant="outline">2023</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Certificate of Recognition and Appreciation of ACS Publication Peer Reviewers</p>
-              </div>
-              <Badge variant="outline">2023</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Runner-up of OGB Large Scale Challenge @NeurIPS2022 competition</p>
-              </div>
-              <Badge variant="outline">2022</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Top Downloaded Article Award by Wiley Press (1st rank of teamwork)</p>
-              </div>
-              <Badge variant="outline">2022</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Certificate of Recognition and Appreciation of ACS Publication Peer Reviewers</p>
-              </div>
-              <Badge variant="outline">2022</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">National Scholarship for Doctoral Students</p>
-              </div>
-              <Badge variant="outline">2018</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">First Prize of RONG Scholarship by Tsinghua University</p>
-              </div>
-              <Badge variant="outline">2018</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Tang Lixin Scholarship by Tsinghua University</p>
-              </div>
-              <Badge variant="outline">2017</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Innovation Scholarship by Beijing Advanced Innovation Center of Structural Biology</p>
-              </div>
-              <Badge variant="outline">2017</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Distinguished Study Abroad Scholarship by Tsinghua University</p>
-              </div>
-              <Badge variant="outline">2016</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Distinguished Graduation Award of Shandong Province</p>
-              </div>
-              <Badge variant="outline">2014</Badge>
-            </div>
-            <div className="flex justify-between items-start border-b pb-3">
-              <div>
-                <p className="text-sm text-muted-foreground">Distinguished Graduation Award by Shandong University</p>
-              </div>
-              <Badge variant="outline">2014</Badge>
-            </div>
-            <div className="flex justify-between items-start">
-              <div>
-                <p className="text-sm text-muted-foreground">First-class Scholarship by Shandong University</p>
-              </div>
-              <Badge variant="outline">2013</Badge>
-            </div>
+          <div className="space-y-1 leading-tight">
+            <p className="text-sm text-muted-foreground">Capital Frontier Academic Achievement Award</p>
+            <p className="text-sm text-muted-foreground">National Key R&D Program of China</p>
+            <p className="text-sm text-muted-foreground">AI+Life Science Interdisciplinary Research Program, School of Life Sciences, Tsinghua</p>
+            <p className="text-sm text-muted-foreground">Start-up of scientific research for new PI by Tsinghua University</p>
+            <p className="text-sm text-muted-foreground">Top Ten Advances in Chinese Bioinformatics (1st rank of teamwork)</p>
+            <p className="text-sm text-muted-foreground">Champion in the First Global AI Drug Development Competition</p>
+            <p className="text-sm text-muted-foreground">Certificate of Recognition and Appreciation of ACS Publication Peer Reviewers</p>
+            <p className="text-sm text-muted-foreground">Runner-up of OGB Large Scale Challenge @NeurIPS2022 competition</p>
+            <p className="text-sm text-muted-foreground">Top Downloaded Article Award by Wiley Press (1st rank of teamwork)</p>
+            <p className="text-sm text-muted-foreground">Certificate of Recognition and Appreciation of ACS Publication Peer Reviewers</p>
+            <p className="text-sm text-muted-foreground">National Scholarship for Doctoral Students</p>
+            <p className="text-sm text-muted-foreground">First Prize of RONG Scholarship by Tsinghua University</p>
+            <p className="text-sm text-muted-foreground">Tang Lixin Scholarship by Tsinghua University</p>
+            <p className="text-sm text-muted-foreground">Innovation Scholarship by Beijing Advanced Innovation Center of Structural Biology</p>
+            <p className="text-sm text-muted-foreground">Distinguished Study Abroad Scholarship by Tsinghua University</p>
+            <p className="text-sm text-muted-foreground">Distinguished Graduation Award of Shandong Province</p>
+            <p className="text-sm text-muted-foreground">Distinguished Graduation Award by Shandong University</p>
+            <p className="text-sm text-muted-foreground">First-class Scholarship by Shandong University</p>
           </div>
         </div>
 
@@ -313,10 +204,7 @@ export default function AboutPage() {
 
           {/* A) Invited Presentations at Conferences */}
           <div className="mb-6">
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Badge variant="secondary" className="mr-2">Conferences</Badge>
-              Invited Presentations at Conferences
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Invited Presentations at Conferences</h3>
             <div className="space-y-4">
               <div className="border-b pb-3">
                 <div className="flex justify-between items-start mb-2">
@@ -448,10 +336,7 @@ export default function AboutPage() {
 
           {/* B) Invited Lectures at Institutions */}
           <div className="mb-6">
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Badge variant="secondary" className="mr-2">Lectures</Badge>
-              Invited Lectures at Institutions
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Invited Lectures at Institutions</h3>
             <div className="space-y-4">
               <div className="border-b pb-3">
                 <div className="flex justify-between items-start mb-2">
@@ -585,14 +470,11 @@ export default function AboutPage() {
 
           {/* C) Teaching */}
           <div className="mb-6">
-            <h3 className="text-lg font-semibold mb-4 flex items-center">
-              <Badge variant="secondary" className="mr-2">Teaching</Badge>
-              Courses
-            </h3>
+            <h3 className="text-lg font-semibold mb-4">Courses</h3>
             <div className="space-y-3">
               <div className="flex justify-between items-start">
                 <div className="flex-1">
-                  <p className="text-sm font-medium">Biomolecular Molecular Dynamics Simulation</p>
+                  <p className="text-sm font-medium">AI-driven Biomacromolecule Simulation and Computing</p>
                   <p className="text-xs text-muted-foreground mt-1">Co-taught with other faculty members</p>
                 </div>
                 <Badge variant="outline">2025 Fall</Badge>
