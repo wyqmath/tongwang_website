@@ -23,16 +23,6 @@ export default function Home() {
       link: "https://www.sciencedirect.com/science/article/abs/pii/S0959440X2500209X"
     },
     {
-      title: "Ab initio characterization of protein molecular dynamics with AI2BMD",
-      authors: "Wang, T., He, X., Li, M., Li, Y., Bi, R., Wang, Y., ... & Liu, T. Y.",
-      year: "2024",
-      journal: "Nature",
-      volume: "635(8040)",
-      pages: "1019-1027",
-      image: "/The overall pipeline of AI2BMD.webp",
-      link: "https://www.nature.com/articles/s41586-024-08127-z"
-    },
-    {
       title: "Dynamic insights into the structural evolution of ACE2–RBD interactions through molecular dynamics simulation, Markov state modeling, and large language model mutation prediction",
       authors: "Zhou, Y., Wang, T.",
       year: "2025",
@@ -42,6 +32,16 @@ export default function Home() {
       image: "/2.png",
       link: "https://pubs.aip.org/aip/jcp/article/163/19/195101/3329563/Dynamic-insights-into-the-structural-evolution-of",
       note: "JCP 2025 JCP Emerging Investigators Special Collection"
+    },
+    {
+      title: "Ab initio characterization of protein molecular dynamics with AI2BMD",
+      authors: "Wang, T., He, X., Li, M., Li, Y., Bi, R., Wang, Y., ... & Liu, T. Y.",
+      year: "2024",
+      journal: "Nature",
+      volume: "635(8040)",
+      pages: "1019-1027",
+      image: "/The overall pipeline of AI2BMD.webp",
+      link: "https://www.nature.com/articles/s41586-024-08127-z"
     },
     {
       title: "Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing",
@@ -155,10 +155,10 @@ export default function Home() {
       {/* Welcome Section */}
       <section className="bg-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 md:px-8">
-          <h2 className="font-bold text-gray-900 mb-4 md:mb-6 text-left text-2xl sm:text-3xl md:text-4xl">
+          <h2 className="font-bold text-gray-900 mb-4 md:mb-6 text-left text-3xl sm:text-4xl md:text-5xl">
             Welcome to the Wang Lab
           </h2>
-          <ul className="text-gray-600 text-left leading-relaxed space-y-2 md:space-y-3 list-disc list-inside text-base sm:text-lg md:text-xl lg:text-2xl">
+          <ul className="text-gray-600 text-left leading-relaxed space-y-2 md:space-y-3 list-disc list-inside text-lg sm:text-xl md:text-2xl lg:text-3xl">
             <li className="pl-2">An interdisciplinary team of biologists, chemists, computer scientists, software engineers, and pharmacologists.</li>
             <li className="pl-2">Advancing AI Structural Biology research for decoding life and designing molecules in a dynamic manner.</li>
           </ul>
@@ -168,7 +168,7 @@ export default function Home() {
       {/* Research Interest */}
       <section id="research-areas" className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-8">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Research Interest</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12">Research Interest</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
               {/* Simulation */}
               <div className="group">
@@ -182,8 +182,8 @@ export default function Home() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-lg sm:text-xl font-bold text-blue-600">Simulation</h3>
-                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl font-bold text-blue-600">Simulation</h3>
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                     AI driven biomolecular dynamics simulation with <span className="font-semibold text-blue-600">accuracy</span>, <span className="font-semibold text-blue-600">efficiency</span> and <span className="font-semibold text-blue-600">generalizability</span>
                   </p>
                 </div>
@@ -201,8 +201,8 @@ export default function Home() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-lg sm:text-xl font-bold text-green-600">Modeling</h3>
-                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl font-bold text-green-600">Modeling</h3>
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                     Biological structures encoding by deep learning for <span className="font-semibold text-green-600">modeling</span>, <span className="font-semibold text-green-600">prediction</span>, <span className="font-semibold text-green-600">simulation</span> and <span className="font-semibold text-green-600">design</span>
                   </p>
                 </div>
@@ -220,8 +220,8 @@ export default function Home() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-lg sm:text-xl font-bold text-purple-600">Application</h3>
-                  <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                  <h3 className="text-xl sm:text-2xl font-bold text-purple-600">Application</h3>
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
                     <span className="font-semibold text-purple-600">Biomechanism detection</span> and <span className="font-semibold text-purple-600">drug design</span> in a dynamic manner
                   </p>
                 </div>
@@ -234,8 +234,8 @@ export default function Home() {
       <section className="py-12 md:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 md:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Recent Publications</h2>
-            <Button variant="outline" asChild className="w-full sm:w-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">Recent Publications</h2>
+            <Button variant="outline" asChild className="w-full sm:w-auto text-base">
               <Link href="/publications">
                 <BookOpen className="h-4 w-4 mr-2" />
                 View All Publications
@@ -263,19 +263,19 @@ export default function Home() {
                 <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-between">
                   <div className="space-y-3 md:space-y-4">
                     <div className="flex flex-wrap items-center gap-2">
-                      <Badge variant="default" className="text-xs sm:text-sm">{recentPublications[currentPublicationIndex].year}</Badge>
-                      <Badge variant="secondary" className="text-xs sm:text-sm">{recentPublications[currentPublicationIndex].journal}</Badge>
+                      <Badge variant="default" className="text-sm sm:text-base">{recentPublications[currentPublicationIndex].year}</Badge>
+                      <Badge variant="secondary" className="text-sm sm:text-base">{recentPublications[currentPublicationIndex].journal}</Badge>
                     </div>
 
-                    <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 leading-tight line-clamp-3">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 leading-tight line-clamp-3">
                       {recentPublications[currentPublicationIndex].title}
                     </h3>
 
-                    <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">
+                    <p className="text-sm sm:text-base md:text-lg text-gray-600 line-clamp-2">
                       {recentPublications[currentPublicationIndex].authors}
                     </p>
 
-                    <div className="text-xs sm:text-sm text-gray-500">
+                    <div className="text-sm sm:text-base md:text-lg text-gray-500">
                       <span className="font-semibold">{recentPublications[currentPublicationIndex].journal}</span>
                       {recentPublications[currentPublicationIndex].volume && (
                         <>, {recentPublications[currentPublicationIndex].volume}</>
@@ -286,7 +286,7 @@ export default function Home() {
                     </div>
 
                     {recentPublications[currentPublicationIndex].note && (
-                      <div className="text-xs sm:text-sm text-purple-600 font-bold mt-2">
+                      <div className="text-sm sm:text-base md:text-lg text-purple-600 font-bold mt-2">
                         ({recentPublications[currentPublicationIndex].note})
                       </div>
                     )}
@@ -355,8 +355,8 @@ export default function Home() {
       <section className="bg-white py-12 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 md:px-8">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-8">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold">Lab News</h2>
-            <Button variant="outline" asChild className="w-full sm:w-auto">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">Lab News</h2>
+            <Button variant="outline" asChild className="w-full sm:w-auto text-base">
               <Link href="/news">View All News</Link>
             </Button>
           </div>
@@ -381,10 +381,10 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-3 sm:p-4">
-                    <h3 className="font-semibold text-xs sm:text-sm line-clamp-2 mb-2 min-h-[2.5rem] sm:min-h-[2.5rem] flex items-start">
+                    <h3 className="font-semibold text-sm sm:text-base line-clamp-2 mb-2 min-h-[2.5rem] sm:min-h-[2.5rem] flex items-start">
                       {news.title}
                     </h3>
-                    <p className="text-xs text-muted-foreground mb-2">
+                    <p className="text-sm text-muted-foreground mb-2">
                       {news.date}
                     </p>
                     <Badge variant={news.isRecruiting ? "default" : "secondary"} className="text-xs">
