@@ -5,94 +5,42 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink, ChevronLeft, ChevronRight, BookOpen } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import { getHomepageData } from "@/lib/data";
+import { FloatingEditButton, useAdmin } from "@/components/admin";
+import { HeroEditor, WelcomeEditor, ResearchInterestEditor, PublicationItemEditor, LabNewsEditor } from "@/components/admin/editors/HomepageEditors";
+import type { ResearchInterest, RecentPublication, LabNewsItem } from "@/types";
 
 export default function Home() {
-
-  // 最新出版物数据
-  const recentPublications = [
-    {
-      title: "Recent advances in artificial intelligence–driven biomolecular dynamics simulations based on machine learning force fields",
-      authors: "Cui, T., Zhou, Y., & Wang, T.",
-      year: "2025",
-      journal: "Current Opinion in Structural Biology",
-      volume: "95",
-      pages: "103191",
-      image: "/1.png",
-      link: "https://www.sciencedirect.com/science/article/abs/pii/S0959440X2500209X"
-    },
-    {
-      title: "Dynamic insights into the structural evolution of ACE2–RBD interactions through molecular dynamics simulation, Markov state modeling, and large language model mutation prediction",
-      authors: "Zhou, Y., Wang, T.",
-      year: "2025",
-      journal: "J. Chem. Phys.",
-      volume: "163(19)",
-      pages: "",
-      image: "/2.png",
-      link: "https://pubs.aip.org/aip/jcp/article/163/19/195101/3329563/Dynamic-insights-into-the-structural-evolution-of",
-      note: "JCP 2025 JCP Emerging Investigators Special Collection"
-    },
-    {
-      title: "Ab initio characterization of protein molecular dynamics with AI2BMD",
-      authors: "Wang, T., He, X., Li, M., Li, Y., Bi, R., Wang, Y., ... & Liu, T. Y.",
-      year: "2024",
-      journal: "Nature",
-      volume: "635(8040)",
-      pages: "1019-1027",
-      image: "/The overall pipeline of AI2BMD.webp",
-      link: "https://www.nature.com/articles/s41586-024-08127-z"
-    },
-    {
-      title: "Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing",
-      authors: "Wang, Y., Wang, T., Li, S., He, X., Li, M., Wang, Z., ... & Liu, T. Y.",
-      year: "2024",
-      journal: "Nature Communications",
-      volume: "15(1)",
-      pages: "313",
-      image: "/The overall architecture of ViSNet.webp",
-      link: "https://www.nature.com/articles/s41467-023-43720-2"
-    }
-  ];
-
-  // Lab News 数据 - 最新4条，其中1条为招聘信息
-  const labNews = [
-    {
-      id: 1,
-      title: "Prof. Wang Receives 2025 Capital Frontier Academic Achievement Award",
-      date: "December 6, 2025",
-      image: "/news/image14.jpeg",
-      isRecruiting: false,
-      link: "/news"
-    },
-    {
-      id: 2,
-      title: "Prof. Wang's Team Reviews Advances in AI-Driven Biomolecular Simulations",
-      date: "November 28, 2025",
-      image: "/news/image13.png",
-      isRecruiting: false,
-      link: "/news"
-    },
-    {
-      id: 3,
-      title: "Prof. Wang Presents at BIOHK2025 and AI Forum in Hong Kong",
-      date: "September 11, 2025",
-      image: "/news/image11.jpeg",
-      isRecruiting: false,
-      link: "/news"
-    },
-    {
-      id: 4,
-      title: "Join Our Team - Multiple Positions Available",
-      date: "Recruiting",
-      image: "/news/image1.jpeg",
-      isRecruiting: true,
-      link: "/positions"
-    }
-  ];
+  // 从 JSON 读取数据 - 使用 state 来支持刷新
+  const [homepageData, setHomepageData] = useState(getHomepageData());
+  const {
+    backgroundImage,
+    heroTitle,
+    welcomeTitle,
+    welcomePoints,
+    researchInterests,
+    recentPublications,
+    labNews
+  } = homepageData;
 
   const [currentPublicationIndex, setCurrentPublicationIndex] = useState(0);
   const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
+
+  // 编辑状态
+  const { isDevMode } = useAdmin();
+  const [editingHero, setEditingHero] = useState(false);
+  const [editingWelcome, setEditingWelcome] = useState(false);
+  const [editingResearchInterest, setEditingResearchInterest] = useState<ResearchInterest | null>(null);
+  const [editingPublication, setEditingPublication] = useState<RecentPublication | null>(null);
+  const [editingLabNews, setEditingLabNews] = useState<LabNewsItem | null>(null);
+
+  // 刷新数据
+  const refreshData = useCallback(() => {
+    // 重新加载页面以获取最新数据
+    window.location.reload();
+  }, []);
 
   // 自动轮播 - 出版物
   useEffect(() => {
@@ -127,12 +75,20 @@ export default function Home() {
       (prevIndex + 1) % recentPublications.length
     );
   };
+  // 颜色映射
+  const colorMap = {
+    blue: { title: 'text-blue-600', highlight: 'text-blue-600' },
+    green: { title: 'text-green-600', highlight: 'text-green-600' },
+    purple: { title: 'text-purple-600', highlight: 'text-purple-600' }
+  };
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Banner with Background Image */}
       <section className="relative w-full h-[50vh] min-h-[300px] max-h-[650px] md:h-[32.14vw]">
+        <FloatingEditButton onClick={() => setEditingHero(true)} position="top-right" />
         <Image
-          src="/background.png"
+          src={backgroundImage}
           alt="Research Background"
           fill
           className="object-cover"
@@ -146,21 +102,23 @@ export default function Home() {
               style={{
                 textShadow: '2px 2px 8px rgba(0,0,0,0.8), 0 0 25px rgba(0,0,0,0.6), 1px 1px 3px rgba(0,0,0,0.9)',
                 lineHeight: '1.3'
-              }}>
-            Empower Biological Structural Research<br />by Artificial Intelligence
-          </h2>
+              }}
+              dangerouslySetInnerHTML={{ __html: heroTitle.replace(/\n/g, '<br />') }}
+          />
         </div>
       </section>
 
       {/* Welcome Section */}
-      <section className="bg-white py-12 md:py-16">
+      <section className="bg-white py-12 md:py-16 relative">
+        <FloatingEditButton onClick={() => setEditingWelcome(true)} position="top-right" />
         <div className="container mx-auto px-4 sm:px-6 md:px-8">
           <h2 className="font-bold text-gray-900 mb-4 md:mb-6 text-left text-3xl sm:text-4xl md:text-5xl">
-            Welcome to the Wang Lab
+            {welcomeTitle}
           </h2>
           <ul className="text-gray-600 text-left leading-relaxed space-y-2 md:space-y-3 list-disc list-inside text-lg sm:text-xl md:text-2xl lg:text-3xl">
-            <li className="pl-2">An interdisciplinary team of biologists, chemists, computer scientists, software engineers, and pharmacologists.</li>
-            <li className="pl-2">Advancing AI Structural Biology research for decoding life and designing molecules in a dynamic manner.</li>
+            {welcomePoints.map((point, index) => (
+              <li key={index} className="pl-2">{point}</li>
+            ))}
           </ul>
         </div>
       </section>
@@ -170,63 +128,29 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 md:px-8">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8 md:mb-12">Research Interest</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12">
-              {/* Simulation */}
-              <div className="group">
+            {researchInterests.map((interest) => (
+              <div key={interest.id} className="group relative">
+                <FloatingEditButton onClick={() => setEditingResearchInterest(interest)} position="top-right" />
                 <div className="relative overflow-hidden rounded-lg shadow-lg mb-4 aspect-[4/3]">
                   <Image
-                    src="/Simulation.png"
-                    alt="Simulation - AI driven biomolecular dynamics simulation"
+                    src={interest.image}
+                    alt={`${interest.title} - ${interest.description}`}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
                   />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-blue-600">Simulation</h3>
+                  <h3 className={`text-xl sm:text-2xl font-bold ${colorMap[interest.color].title}`}>
+                    {interest.title}
+                  </h3>
                   <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                    AI driven biomolecular dynamics simulation with <span className="font-semibold text-blue-600">accuracy</span>, <span className="font-semibold text-blue-600">efficiency</span> and <span className="font-semibold text-blue-600">generalizability</span>
+                    {interest.description}
                   </p>
                 </div>
               </div>
-
-              {/* Modeling */}
-              <div className="group">
-                <div className="relative overflow-hidden rounded-lg shadow-lg mb-4 aspect-[4/3]">
-                  <Image
-                    src="/Modeling.png"
-                    alt="Modeling - Biological structures encoding"
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-green-600">Modeling</h3>
-                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                    Biological structures encoding by deep learning for <span className="font-semibold text-green-600">modeling</span>, <span className="font-semibold text-green-600">prediction</span>, <span className="font-semibold text-green-600">simulation</span> and <span className="font-semibold text-green-600">design</span>
-                  </p>
-                </div>
-              </div>
-
-              {/* Application */}
-              <div className="group">
-                <div className="relative overflow-hidden rounded-lg shadow-lg mb-4 aspect-[4/3]">
-                  <Image
-                    src="/Application.png"
-                    alt="Application - Biomechanism detection and drug design"
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-purple-600">Application</h3>
-                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
-                    <span className="font-semibold text-purple-600">Biomechanism detection</span> and <span className="font-semibold text-purple-600">drug design</span> in a dynamic manner
-                  </p>
-                </div>
-              </div>
-            </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -244,6 +168,10 @@ export default function Home() {
           </div>
 
           <div className="relative">
+            <FloatingEditButton
+              onClick={() => setEditingPublication(recentPublications[currentPublicationIndex])}
+              position="top-right"
+            />
             {/* 出版物卡片轮播 */}
             <div className="overflow-hidden rounded-xl shadow-xl bg-white">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
@@ -364,35 +292,37 @@ export default function Home() {
           {/* News Carousel */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
             {labNews.map((news, index) => (
-              <Card
-                key={news.id}
-                className={`hover:shadow-lg transition-all duration-500 ${
-                  index === currentNewsIndex ? 'ring-2 ring-primary' : ''
-                }`}
-              >
-                <CardContent className="p-0">
-                  <div className="relative aspect-video overflow-hidden rounded-t-lg bg-gray-100">
-                    <Image
-                      src={news.image}
-                      alt={news.title}
-                      fill
-                      className="object-cover transition-transform duration-300 hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    />
-                  </div>
-                  <div className="p-3 sm:p-4">
-                    <h3 className="font-semibold text-sm sm:text-base line-clamp-2 mb-2 min-h-[2.5rem] sm:min-h-[2.5rem] flex items-start">
-                      {news.title}
-                    </h3>
-                    <p className="text-sm text-muted-foreground mb-2">
-                      {news.date}
-                    </p>
-                    <Badge variant={news.isRecruiting ? "default" : "secondary"} className="text-xs">
-                      {news.isRecruiting ? "Recruiting" : "Lab News"}
-                    </Badge>
-                  </div>
-                </CardContent>
-              </Card>
+              <div key={news.id} className="relative">
+                <FloatingEditButton onClick={() => setEditingLabNews(news)} position="top-right" />
+                <Card
+                  className={`hover:shadow-lg transition-all duration-500 ${
+                    index === currentNewsIndex ? 'ring-2 ring-primary' : ''
+                  }`}
+                >
+                  <CardContent className="p-0">
+                    <div className="relative aspect-video overflow-hidden rounded-t-lg bg-gray-100">
+                      <Image
+                        src={news.image}
+                        alt={news.title}
+                        fill
+                        className="object-cover transition-transform duration-300 hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                      />
+                    </div>
+                    <div className="p-3 sm:p-4">
+                      <h3 className="font-semibold text-sm sm:text-base line-clamp-2 mb-2 min-h-[2.5rem] sm:min-h-[2.5rem] flex items-start">
+                        {news.title}
+                      </h3>
+                      <p className="text-sm text-muted-foreground mb-2">
+                        {news.date}
+                      </p>
+                      <Badge variant={news.isRecruiting ? "default" : "secondary"} className="text-xs">
+                        {news.isRecruiting ? "Recruiting" : "Lab News"}
+                      </Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             ))}
           </div>
 
@@ -414,6 +344,51 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Editor Modals */}
+      {editingHero && (
+        <HeroEditor
+          isOpen={editingHero}
+          onClose={() => setEditingHero(false)}
+          initialData={{ heroTitle, backgroundImage }}
+          onSave={refreshData}
+        />
+      )}
+
+      {editingWelcome && (
+        <WelcomeEditor
+          isOpen={editingWelcome}
+          onClose={() => setEditingWelcome(false)}
+          initialData={{ welcomeTitle, welcomePoints }}
+          onSave={refreshData}
+        />
+      )}
+
+      {editingResearchInterest && (
+        <ResearchInterestEditor
+          isOpen={!!editingResearchInterest}
+          onClose={() => setEditingResearchInterest(null)}
+          initialData={editingResearchInterest}
+          onSave={refreshData}
+        />
+      )}
+
+      {editingPublication && (
+        <PublicationItemEditor
+          isOpen={!!editingPublication}
+          onClose={() => setEditingPublication(null)}
+          initialData={editingPublication}
+          onSave={refreshData}
+        />
+      )}
+
+      {editingLabNews && (
+        <LabNewsEditor
+          isOpen={!!editingLabNews}
+          onClose={() => setEditingLabNews(null)}
+          initialData={editingLabNews}
+          onSave={refreshData}
+        />
+      )}
       </div>
   );
 }

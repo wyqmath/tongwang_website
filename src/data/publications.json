@@ -1,0 +1,292 @@
+{
+  "legend": {
+    "coFirst": "# Co-first authors",
+    "corresponding": "* Corresponding authors"
+  },
+  "publications": [
+    {
+      "id": "pub-29",
+      "authors": "Zhou, Y., <u>Wang, T.*</u>",
+      "title": "Dynamic insights into the structural evolution of ACE2–RBD interactions through molecular dynamics simulation, Markov state modeling, and large language model mutation prediction",
+      "journal": "J. Chem. Phys.",
+      "year": 2025,
+      "volume": "163(19)",
+      "link": "https://pubs.aip.org/aip/jcp/article/163/19/195105/3373068/Dynamic-insights-into-the-structural-evolution-of",
+      "note": "JCP 2025 JCP Emerging Investigators Special Collection",
+      "noteLinks": [{"text": "JCP 2025 JCP Emerging Investigators Special Collection", "url": "https://pubs.aip.org/jcp/collection/595608/2025-JCP-Emerging-Investigators-Special-Collection"}]
+    },
+    {
+      "id": "pub-28",
+      "authors": "Cui, T.<sup>#</sup>, Zhou, Y.<sup>#</sup>, <u>Wang, T.*</u>",
+      "title": "Recent advances in artificial intelligence–driven biomolecular dynamics simulations based on machine learning force fields",
+      "journal": "Curr. Opin. Struct. Biol.",
+      "year": 2025,
+      "volume": "95",
+      "pages": "103191",
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/S0959440X2500209X",
+      "note": "Invited Review"
+    },
+    {
+      "id": "pub-24",
+      "authors": "<u>Wang, T.<sup>#*</sup></u>, He, X.<sup>#</sup>, Li, M.<sup>#</sup>, Li, Y.<sup>#</sup>, Bi, R., Wang, Y., Cheng, C., Shen, X., Meng, J., Zhang, H., Liu, H., Wang, Z., Li, S., Shao, B.*, Liu, T. Y.",
+      "title": "Ab initio characterization of protein molecular dynamics with AI2BMD",
+      "journal": "Nature",
+      "year": 2024,
+      "volume": "635",
+      "pages": "1019–1027",
+      "link": "https://www.nature.com/articles/s41586-024-08127-z",
+      "note": "Top 10 Advances in Bioinformatics",
+      "noteLinks": [{"text": "Top 10 Advances in Bioinformatics", "url": "https://gpb.big.ac.cn/news/1022"}],
+      "isHighlighted": true
+    },
+    {
+      "id": "pub-23",
+      "authors": "Zhang, H.<sup>#</sup>, Liu, S.<sup>#</sup>, You, J., Liu, C.*, Zheng, S.*, Lu, Z., <u>Wang, T.</u>, Zheng, N., Shao, B.*",
+      "title": "Overcoming the barrier of orbital-free density functional theory for molecular systems using deep learning",
+      "journal": "Nat. Comput. Sci.",
+      "year": 2024,
+      "volume": "4(3)",
+      "pages": "210–223",
+      "link": "https://www.nature.com/articles/s43588-024-00605-8"
+    },
+    {
+      "id": "pub-22",
+      "authors": "Wang, Y.<sup>#</sup>, <u>Wang, T.<sup>#*</sup></u>, Li, S.<sup>#</sup>, He, X., Li, M., Wang, Z., Zheng, N., Shao, B.*, Liu, T. Y.",
+      "title": "Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing",
+      "journal": "Nat. Commun.",
+      "year": 2024,
+      "volume": "15(1)",
+      "pages": "313",
+      "link": "https://www.nature.com/articles/s41467-023-43720-2",
+      "note": "Editors' Highlights: AI and machine learning, Biotechnology and methods",
+      "noteLinks": [
+        {"text": "AI and machine learning", "url": "https://www.nature.com/collections/ceiajcdbeb"},
+        {"text": "Biotechnology and methods", "url": "https://www.nature.com/collections/idhhgedgig"}
+      ]
+    },
+    {
+      "id": "pub-21",
+      "authors": "Li, Y.<sup>#</sup>, Wang, Y.<sup>#</sup>, Huang, L.*, Yang, H., Wei, X., Zhang, J.*, <u>Wang, T.*</u>, Wang, Z., Shao, B., Liu, T. Y.",
+      "title": "Long-short-range message-passing: A physics-informed framework to capture non-local interaction for scalable molecular dynamics simulation",
+      "journal": "Proceedings of the 12th International Conference on Learning Representations (ICLR)",
+      "year": 2024,
+      "link": "https://openreview.net/forum?id=rvDQtdMnOl"
+    },
+    {
+      "id": "pub-20",
+      "authors": "Yu, S.*, Wang, Z., Li, Q., <u>Wang, T.</u>, Zhao, W.",
+      "title": "Innovative application of a novel di-d-fructofuranose 1,2':2,3'-dianhydride hydrolase (DFA-IIIase) from Duffyella gerundensis A4 to burdock root to improve nutrition",
+      "journal": "Food Funct.",
+      "year": 2024,
+      "volume": "15(2)",
+      "pages": "1021–1030",
+      "link": "https://pubs.rsc.org/en/content/articlelanding/2024/fo/d3fo03277a"
+    },
+    {
+      "id": "pub-19",
+      "authors": "<u>Wang, Z.*</u>, Liu, G., Zhou, Y., Wang, T., Shao, B.*",
+      "title": "Efficiently incorporating quintuple interactions into geometric deep learning force fields",
+      "journal": "Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)",
+      "year": 2023,
+      "volume": "36",
+      "pages": "77043–77055",
+      "link": "https://openreview.net/forum?id=bPJmu1PbZD"
+    },
+    {
+      "id": "pub-18",
+      "authors": "Wang, Y.<sup>#</sup>, Li, S.<sup>#</sup>, <u>Wang, T.*</u>, Shao, B., Zheng, N., Liu, T. Y.",
+      "title": "Geometric transformer with interatomic positional encoding",
+      "journal": "Proceedings of the 37th Conference on Neural Information Processing Systems (NeurIPS)",
+      "year": 2023,
+      "volume": "36",
+      "pages": "55981–55994",
+      "link": "https://openreview.net/forum?id=9o6KQrklrE&noteId=Eeq0xGNxLw"
+    },
+    {
+      "id": "pub-17",
+      "authors": "<u>Wang, T.<sup>#*</sup></u>, He, X.<sup>#</sup>, Li, M.<sup>#</sup>, Shao, B.*, Liu, T. Y.",
+      "title": "AIMD-Chig: Exploring the conformational space of a 166-atom protein Chignolin with ab initio molecular dynamics",
+      "journal": "Sci. Data",
+      "year": 2023,
+      "volume": "10(1)",
+      "pages": "549",
+      "link": "https://www.nature.com/articles/s41597-023-02465-9"
+    },
+    {
+      "id": "pub-16",
+      "authors": "<u>Wang, Z.*</u>, <u>Wu, H.*</u>, Sun, L., He, X., Liu, Z., Shao, B., Wang, T., Liu, T. Y.",
+      "title": "Improving machine learning force fields for molecular dynamics simulations with fine-grained force metrics",
+      "journal": "J. Chem. Phys.",
+      "year": 2023,
+      "volume": "159(3)",
+      "pages": "034102",
+      "link": "https://pubs.aip.org/aip/jcp/article-abstract/159/3/035101/2902663/Improving-machine-learning-force-fields-for",
+      "note": "2023 JCP Emerging Investigators Special Collection, Cover",
+      "noteLinks": [
+        {"text": "2023 JCP Emerging Investigators Special Collection", "url": "https://pubs.aip.org/jcp/collection/1137/2023-JCP-Emerging-Investigators-Special-Collection"},
+        {"text": "Cover", "url": "https://pubs.aip.org/aip/jcp/issue/159/3"}
+      ]
+    },
+    {
+      "id": "pub-15",
+      "authors": "Li, Z.<sup>#</sup>, Zhu, S.<sup>#</sup>, Shao, B.*, Zeng, X.*, <u>Wang, T.*</u>, Liu, T. Y.",
+      "title": "DSN-DDI: an accurate and generalized framework for drug–drug interaction prediction by dual-view representation learning",
+      "journal": "Brief. Bioinform.",
+      "year": 2023,
+      "volume": "24(1)",
+      "pages": "bbac597",
+      "link": "https://academic.oup.com/bib/article/24/1/bbac597/6967036",
+      "note": "ESI highly cited paper"
+    },
+    {
+      "id": "pub-14",
+      "authors": "Gong, S.<sup>#</sup>, He, X.<sup>#</sup>, Meng, Q., Ma, Z., Shao, B.*, <u>Wang, T.*</u>, Liu, T. Y.",
+      "title": "Stochastic lag time parameterization for Markov state models of protein dynamics",
+      "journal": "J. Phys. Chem. B",
+      "year": 2022,
+      "volume": "126(46)",
+      "pages": "9465–9475",
+      "link": "https://pubs.acs.org/doi/10.1021/acs.jpcb.2c03711",
+      "note": "Cover Article",
+      "noteLinks": [{"text": "Cover Article", "url": "https://pubs.acs.org/toc/jpcbfk/126/46?ref=breadcrumb"}]
+    },
+    {
+      "id": "pub-13",
+      "authors": "Wang, Y., Li, S., Wang, Z., He, X., Shao, B., Liu, T. Y., <u>Wang, T.*</u>",
+      "title": "An ensemble of VisNet, Transformer-M, and pretraining models for molecular property prediction in OGB Large-Scale Challenge@ NeurIPS 2022",
+      "journal": "arXiv preprint",
+      "year": 2022,
+      "volume": "arXiv:2211.12791",
+      "link": "https://arxiv.org/abs/2211.12791",
+      "note": "2nd place in OGB-LSC@NeurIPS 2022",
+      "noteLinks": [{"text": "2nd place in OGB-LSC@NeurIPS 2022", "url": "https://ogb.stanford.edu/neurips2022/results/#winners_pcqm4mv2"}]
+    },
+    {
+      "id": "pub-13b",
+      "authors": "Liu, S.<sup>#</sup>, Wang, Y.<sup>#</sup>, Deng, Y., He, L., Shao, B., Yin, J., Zheng, N., Liu, T. Y., <u>Wang, T.*</u>",
+      "title": "Improved drug–target interaction prediction with intermolecular graph transformer",
+      "journal": "Brief. Bioinform.",
+      "year": 2022,
+      "volume": "23(5)",
+      "pages": "bbac162",
+      "link": "https://academic.oup.com/bib/article/23/5/bbac162/6591682"
+    },
+    {
+      "id": "pub-12",
+      "authors": "Zhang, S.<sup>#</sup>, Liang, Q.<sup>#</sup>, He, X., Zhao, C., Ren, W., Yang, Z., Wang, Z., Ding, Q., Deng, H., <u>Wang, T.*</u>, Zhang, L.*, Wang, X.*",
+      "title": "Loss of Spike N370 glycosylation as an important evolutionary event for the enhanced infectivity of SARS-CoV-2",
+      "journal": "Cell Res.",
+      "year": 2022,
+      "volume": "32(3)",
+      "pages": "315–318",
+      "link": "https://www.nature.com/articles/s41422-021-00600-y"
+    },
+    {
+      "id": "pub-11",
+      "authors": "Lan, J.<sup>#</sup>, He, X.<sup>#</sup>, Ren, Y.<sup>#</sup>, Wang, Z.<sup>#</sup>, Zhou, H., Fan, S., Zhu, C., Liu, D., Shao, B., Liu, T. Y., Wang, Q., Zhang, L.*, Ge, J.*, <u>Wang, T.*</u>, Wang, X.*",
+      "title": "Structural insights into the SARS-CoV-2 Omicron RBD–ACE2 interaction",
+      "journal": "Cell Res.",
+      "year": 2022,
+      "volume": "32(6)",
+      "pages": "593–595",
+      "link": "https://www.nature.com/articles/s41422-022-00644-8"
+    },
+    {
+      "id": "pub-10",
+      "authors": "Ding, W.<sup>#</sup>, Xu, Q.<sup>#</sup>, Liu, S., <u>Wang, T.*</u>, Shao, B., Gong, H., Liu, T. Y.",
+      "title": "SAMF: a self-adaptive protein modeling framework",
+      "journal": "Bioinformatics",
+      "year": 2021,
+      "volume": "37(22)",
+      "pages": "4075–4082",
+      "link": "https://academic.oup.com/bioinformatics/article/37/22/4075/6295877"
+    },
+    {
+      "id": "pub-9",
+      "authors": "Li, Y.<sup>#</sup>, <u>Wang, T.<sup>#*</sup></u>, Zhang, J.<sup>#</sup>, Shao, B., Gong, H.*, Wang, Y., He, X., Liu, S., Liu, T. Y.",
+      "title": "Exploring the regulatory function of the N-terminal domain of SARS-CoV-2 Spike protein through molecular dynamics simulation",
+      "journal": "Adv. Theory Simul.",
+      "year": 2021,
+      "volume": "4(10)",
+      "pages": "2100152",
+      "link": "https://onlinelibrary.wiley.com/doi/10.1002/adts.202100152",
+      "note": "Top Downloaded Article Award, Cover",
+      "noteLinks": [
+        {"text": "Top Downloaded Article Award", "url": "/Top_Download_Exploring.jpg"},
+        {"text": "Cover", "url": "https://advanced.onlinelibrary.wiley.com/toc/25130390/2021/4/10"}
+      ]
+    },
+    {
+      "id": "pub-8",
+      "authors": "Liu, S., <u>Wang, T.*</u>, Xu, Q., Shao, B., Yin, J., Liu, T. Y.",
+      "title": "Complementing sequence-derived features with structural information extracted from fragment libraries for protein structure prediction",
+      "journal": "BMC Bioinformatics",
+      "year": 2021,
+      "volume": "22(1)",
+      "pages": "351",
+      "link": "https://link.springer.com/article/10.1186/s12859-021-04258-6"
+    },
+    {
+      "id": "pub-7",
+      "authors": "<u>Wang, T.</u>, Qiao, Y., Ding, W., Mao, W., Zhou, Y.*, Gong, H.*",
+      "title": "Improved fragment sampling for ab initio protein structure prediction using deep neural networks",
+      "journal": "Nat. Mach. Intell.",
+      "year": 2019,
+      "volume": "1(8)",
+      "pages": "347–355",
+      "link": "https://www.nature.com/articles/s42256-019-0075-7",
+      "note": "Editors' Highlights: Protein structure prediction beyond AlphaFold",
+      "noteLinks": [{"text": "Protein structure prediction beyond AlphaFold", "url": "https://www.nature.com/articles/s42256-019-0086-4"}]
+    },
+    {
+      "id": "pub-7b",
+      "authors": "<u>Wang, T.</u>, Gong, H.*, Shakhnovich, E. I.*",
+      "title": "Improved fragment-based movement with LRFragLib for all-atom Ab initio protein folding",
+      "journal": "arXiv preprint",
+      "year": 2019,
+      "volume": "arXiv:1906.05785",
+      "link": "https://arxiv.org/abs/1906.05785"
+    },
+    {
+      "id": "pub-6",
+      "authors": "Mao, W., <u>Wang, T.</u>, Zhang, W., Gong, H.*",
+      "title": "Identification of residue pairing in interacting β-strands from a predicted residue contact map",
+      "journal": "BMC Bioinformatics",
+      "year": 2018,
+      "volume": "19(1)",
+      "pages": "146",
+      "link": "https://link.springer.com/article/10.1186/s12859-018-2150-1"
+    },
+    {
+      "id": "pub-5",
+      "authors": "<u>Wang, T.</u>, Yang, Y., Zhou, Y., Gong, H.*",
+      "title": "LRFragLib: an effective algorithm to identify fragments for de novo protein structure prediction",
+      "journal": "Bioinformatics",
+      "year": 2017,
+      "volume": "33(5)",
+      "pages": "677–684",
+      "link": "https://academic.oup.com/bioinformatics/article/33/5/677/2608640"
+    },
+    {
+      "id": "pub-1",
+      "authors": "<u>Wang, T.</u>, Sui, L., Kang, C.*",
+      "title": "Syntenin as a multifunctional cellular adaptor protein",
+      "journal": "Chin. J. Biochem. Mol. Biol.",
+      "year": 2013,
+      "volume": "12",
+      "pages": "6–14",
+      "link": "http://doi.org/10.13865/j.cnki.cjbmb.2013.12.010"
+    },
+    {
+      "id": "pub-1b",
+      "authors": "Jiang, H. S., Sun, C., <u>Wang, T.</u>, Zhao, X. F., Wang, J. X.*",
+      "title": "A single whey acidic protein domain containing protein (SWD) inhibits bacteria invasion and dissemination in shrimp Marsupenaeus japonicus",
+      "journal": "Fish Shellfish Immunol.",
+      "year": 2013,
+      "volume": "35(2)",
+      "pages": "310–318",
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/S1050464813005378"
+    }
+  ]
+}
+

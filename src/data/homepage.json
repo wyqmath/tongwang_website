@@ -1,0 +1,114 @@
+{
+  "backgroundImage": "/background.png",
+  "heroTitle": "Empower Biological Structural Research by Artificial Intelligence",
+  "heroSubtitle": "",
+  "welcomeTitle": "Welcome to the Wang Lab",
+  "welcomePoints": [
+    "An interdisciplinary team of biologists, chemists, computer scientists, software engineers, and pharmacologists.",
+    "Advancing AI Structural Biology research for decoding life and designing molecules in a dynamic manner."
+  ],
+  "researchInterests": [
+    {
+      "id": "simulation",
+      "title": "Simulation",
+      "description": "AI driven biomolecular dynamics simulation with accuracy, efficiency and generalizability",
+      "image": "/Simulation.png",
+      "color": "blue"
+    },
+    {
+      "id": "modeling",
+      "title": "Modeling",
+      "description": "Biological structures encoding by deep learning for modeling, prediction, simulation and design",
+      "image": "/Modeling.png",
+      "color": "blue"
+    },
+    {
+      "id": "application",
+      "title": "Application",
+      "description": "Biomechanism detection and drug design in a dynamic manner",
+      "image": "/Application.png",
+      "color": "purple"
+    }
+  ],
+  "recentPublications": [
+    {
+      "id": "pub-1",
+      "title": "Recent advances in artificial intelligence–driven biomolecular dynamics simulations based on machine learning force fields",
+      "authors": "Cui, T., Zhou, Y., & Wang, T.",
+      "year": "2025",
+      "journal": "Current Opinion in Structural Biology",
+      "volume": "95",
+      "pages": "103191",
+      "image": "/1.png",
+      "link": "https://www.sciencedirect.com/science/article/abs/pii/S0959440X2500209X"
+    },
+    {
+      "id": "pub-2",
+      "title": "Dynamic insights into the structural evolution of ACE2–RBD interactions through molecular dynamics simulation, Markov state modeling, and large language model mutation prediction",
+      "authors": "Zhou, Y., Wang, T.",
+      "year": "2025",
+      "journal": "J. Chem. Phys.",
+      "volume": "163(19)",
+      "pages": "",
+      "image": "/2.png",
+      "link": "https://pubs.aip.org/aip/jcp/article/163/19/195101/3329563/Dynamic-insights-into-the-structural-evolution-of",
+      "note": "JCP 2025 JCP Emerging Investigators Special Collection"
+    },
+    {
+      "id": "pub-3",
+      "title": "Ab initio characterization of protein molecular dynamics with AI2BMD",
+      "authors": "Wang, T., He, X., Li, M., Li, Y., Bi, R., Wang, Y., ... & Liu, T. Y.",
+      "year": "2024",
+      "journal": "Nature",
+      "volume": "635(8040)",
+      "pages": "1019-1027",
+      "image": "/The overall pipeline of AI2BMD.webp",
+      "link": "https://www.nature.com/articles/s41586-024-08127-z"
+    },
+    {
+      "id": "pub-4",
+      "title": "Enhancing geometric representations for molecules with equivariant vector-scalar interactive message passing",
+      "authors": "Wang, Y., Wang, T., Li, S., He, X., Li, M., Wang, Z., ... & Liu, T. Y.",
+      "year": "2024",
+      "journal": "Nature Communications",
+      "volume": "15(1)",
+      "pages": "313",
+      "image": "/The overall architecture of ViSNet.webp",
+      "link": "https://www.nature.com/articles/s41467-023-43720-2"
+    }
+  ],
+  "labNews": [
+    {
+      "id": "news-1",
+      "title": "Prof. Wang Receives 2025 Capital Frontier Academic Achievement Award",
+      "date": "December 6, 2025",
+      "image": "/news/image14.jpeg",
+      "isRecruiting": false,
+      "link": "/news"
+    },
+    {
+      "id": "news-2",
+      "title": "Prof. Wang's Team Reviews Advances in AI-Driven Biomolecular Simulations",
+      "date": "November 28, 2025",
+      "image": "/news/image13.png",
+      "isRecruiting": false,
+      "link": "/news"
+    },
+    {
+      "id": "news-3",
+      "title": "Prof. Wang Presents at BIOHK2025 and AI Forum in Hong Kong",
+      "date": "September 11, 2025",
+      "image": "/news/image11.jpeg",
+      "isRecruiting": false,
+      "link": "/news"
+    },
+    {
+      "id": "news-4",
+      "title": "Join Our Team - Multiple Positions Available",
+      "date": "Recruiting",
+      "image": "/news/image1.jpeg",
+      "isRecruiting": true,
+      "link": "/openings"
+    }
+  ]
+}

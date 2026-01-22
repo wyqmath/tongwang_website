@@ -1,0 +1,33 @@
+{
+  "members": [
+    {
+      "id": "admin-1",
+      "name": "Zhuoxuan Yang",
+      "category": "admin",
+      "photo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
+      "intro": "Laboratory administrator responsible for managing lab operations, coordinating research activities, and supporting team members. Research focuses on AI-assisted biomolecular structure prediction and computational methods for protein-ligand interaction analysis.",
+      "email": "yangzx@example.com"
+    },
+    {
+      "id": "phd-1",
+      "name": "Coming Soon",
+      "category": "phd",
+      "photo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
+      "intro": "Coming Soon"
+    },
+    {
+      "id": "phd-2",
+      "name": "Coming Soon",
+      "category": "phd",
+      "photo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
+      "intro": "Coming Soon"
+    }
+  ],
+  "joinTeam": {
+    "title": "Join Our Team",
+    "description": "We are always looking for motivated students and researchers to join our group. If you are passionate about machine learning and AI research, we would love to hear from you.",
+    "buttonText": "Open Positions",
+    "buttonLink": "/openings"
+  }
+}
+

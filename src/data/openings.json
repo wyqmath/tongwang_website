@@ -1,0 +1,142 @@
+{
+  "pageTitle": "Open Positions",
+  "positions": [
+    {
+      "id": "postdoc",
+      "type": "postdoc",
+      "title": "Postdoctoral Fellows",
+      "subtitle": "Computational Chemistry, Computational Biology, Computer Science, etc.",
+      "badge": "Postdoctoral Fellow",
+      "location": "Beijing, China",
+      "workType": "On-site",
+      "isActive": true,
+      "responsibilities": [
+        "Lead and conduct independent research projects as core team members in the following aspects: MD simulations for biomolecules; Deep learning model design for biological structures; Distributed simulation system design, development and acceleration",
+        "Assist in supervising students and technical staff",
+        "Actively participate in team activities"
+      ],
+      "qualifications": [
+        "PhD degree required. Candidates with backgrounds in Computational Chemistry, Computational Biology, Biomolecular Dynamics Simulation, Quantum Simulation, Computer Science, Software Engineering, or related interdisciplinary fields are preferred.",
+        "Publication record as a first author in high-impact journals or top-tier computer science conferences; strong English reading, writing, and communication skills.",
+        "Ability to conduct independent research; proficiency in programming (e.g., C++ or Python) and deep learning model development (e.g., PyTorch).",
+        "Priority consideration for candidates familiar with: Biomolecular dynamics simulation (e.g., Amber, Gromacs); Quantum simulation (e.g., ORCA, Gaussian); Density Functional Theory (DFT); Extensive experience in deep learning research",
+        "Strong belief in the impact of AI on biological research; rigorous work ethic, strong self-motivation, collaborative spirit, and academic integrity."
+      ],
+      "benefits": [
+        "Standard postdoctoral benefits of Tsinghua University and the State. Support for applying to various funding programs.",
+        "Candidates may also apply to become lecturers at the School of Life Sciences through the 'Excellence in Teaching' program.",
+        "A collaborative research environment using state-of-the-art methods, with opportunities to work on cross-sector collaborations."
+      ],
+      "howToApply": {
+        "email": "wanglab@life.tsinghua.edu.cn",
+        "subjectLine": "Postdoc Application + Name + Institution",
+        "requiredMaterials": [
+          "Personal CV (including publication list, educational background, research experience, honors and awards)",
+          "Representative publications",
+          "Research statement (2–3 pages)",
+          "Contact information for at least three references"
+        ]
+      }
+    },
+    {
+      "id": "phd",
+      "type": "phd",
+      "title": "PhD Students",
+      "subtitle": "Computational Biology, Bioinformatics, etc.",
+      "badge": "PhD Student",
+      "location": "Beijing, China",
+      "workType": "On-site",
+      "isActive": true,
+      "responsibilities": [
+        "The research group is recruiting students pursuing a direct-entry PhD degree program."
+      ],
+      "qualifications": [
+        "The research group will participate in the 2026 Biomedical Sciences PhD program admissions.",
+        "The lab currently supervises students jointly with Prof. Bo Shao from Microsoft Research and Prof. Jianzhu Ma."
+      ],
+      "benefits": [
+        "Standard PhD student benefits of Tsinghua University",
+        "Additional stipend support from the research group",
+        "Access to cutting-edge computational resources"
+      ],
+      "howToApply": {
+        "email": "wanglab@life.tsinghua.edu.cn",
+        "subjectLine": "PhD Application + Name + Institution",
+        "requiredMaterials": [
+          "Personal CV",
+          "Transcripts",
+          "Research experience summary"
+        ]
+      }
+    },
+    {
+      "id": "research-assistant",
+      "type": "research-assistant",
+      "title": "Research Assistants",
+      "subtitle": "Software Development, Research Support",
+      "badge": "Research Assistant",
+      "location": "Beijing, China",
+      "workType": "On-site",
+      "isActive": true,
+      "responsibilities": [
+        "Develop and maintain research software infrastructure",
+        "Manage and process large-scale simulation data",
+        "Maintain GPU clusters and HPC systems",
+        "Support day-to-day research operations"
+      ],
+      "qualifications": [
+        "Bachelor's or Master's degree in Computer Science, Software Engineering, or related fields",
+        "Proficiency in Python, C++, and Linux systems",
+        "Experience with HPC and GPU computing is a plus"
+      ],
+      "benefits": [
+        "Competitive salary based on qualifications and experience",
+        "Standard benefits of Tsinghua University staff"
+      ],
+      "howToApply": {
+        "email": "wanglab@life.tsinghua.edu.cn",
+        "subjectLine": "RA Application + Name",
+        "requiredMaterials": [
+          "Personal CV",
+          "Brief description of technical skills and experience"
+        ]
+      }
+    },
+    {
+      "id": "intern",
+      "type": "intern",
+      "title": "Interns",
+      "subtitle": "Research Internship Opportunities",
+      "badge": "Intern",
+      "location": "Beijing, China",
+      "workType": "On-site / Remote",
+      "isActive": true,
+      "responsibilities": [
+        "Participate in ongoing research projects under supervision",
+        "Conduct literature reviews and data analysis",
+        "Develop and test computational methods"
+      ],
+      "qualifications": [
+        "Current undergraduate or graduate students in relevant fields",
+        "Minimum commitment of 3 months, 20+ hours per week",
+        "Basic programming skills in Python"
+      ],
+      "benefits": [
+        "Hands-on research experience in cutting-edge AI for biology",
+        "Mentorship from experienced researchers",
+        "Possibility of co-authorship on publications"
+      ],
+      "howToApply": {
+        "email": "wanglab@life.tsinghua.edu.cn",
+        "subjectLine": "Intern Application + Name + University",
+        "requiredMaterials": [
+          "Personal CV",
+          "Expected internship period",
+          "Brief statement of research interests"
+        ]
+      }
+    }
+  ],
+  "footerNote": "We welcome applications from candidates of all backgrounds. Tsinghua University is an equal opportunity employer."
+}
+

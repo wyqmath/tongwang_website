@@ -1,17 +1,19 @@
-'use client';
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { getContactData } from "@/lib/data";
 
 export default function ContactPage() {
+  const data = getContactData();
+  const { office, lab } = data.address;
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-4xl font-bold mb-8">Contact Us</h1>
-        
+        <h1 className="text-4xl font-bold mb-8">{data.pageTitle}</h1>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Contact Information */}
           <Card>
@@ -27,15 +29,15 @@ export default function ContactPage() {
                 <Mail className="h-5 w-5 text-muted-foreground" />
                 <div>
                   <p className="font-medium">Email</p>
-                  <p className="text-muted-foreground">tongwang@mail.tsinghua.edu.cn</p>
+                  <p className="text-muted-foreground">{data.email}</p>
                 </div>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-muted-foreground" />
                 <div>
                   <p className="font-medium">Phone</p>
-                  <p className="text-muted-foreground">+86-010-62794752</p>
+                  <p className="text-muted-foreground">{data.phone}</p>
                 </div>
               </div>
 
@@ -44,9 +46,9 @@ export default function ContactPage() {
                 <div>
                   <p className="font-medium">Office Address</p>
                   <p className="text-muted-foreground">
-                    Room A216-A, Biomedical Hall<br />
-                    Tsinghua University<br />
-                    Haidian District, Beijing, China
+                    {office.room}, {office.building}<br />
+                    {office.university}<br />
+                    {office.district}, {office.city}, {office.country}
                   </p>
                 </div>
               </div>
@@ -56,13 +58,12 @@ export default function ContactPage() {
                 <div>
                   <p className="font-medium">Laboratory Address</p>
                   <p className="text-muted-foreground">
-                    Room A208, Biomedical Hall<br />
-                    Tsinghua University<br />
-                    Haidian District, Beijing, China
+                    {lab.room}, {lab.building}<br />
+                    {lab.university}<br />
+                    {lab.district}, {lab.city}, {lab.country}
                   </p>
                 </div>
               </div>
-              
 
             </CardContent>
           </Card>

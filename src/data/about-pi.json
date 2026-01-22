@@ -1,0 +1,270 @@
+{
+  "photo": "https://life.tsinghua.edu.cn/__local/F/D2/87/2265FA369D1288DC194D3218CB2_BC23290E_1B676B.jpg",
+  "name": "Tong Wang, PhD",
+  "affiliations": [
+    {
+      "role": "Principal Investigator and Assistant Professor",
+      "institution": "School of Life Sciences, Tsinghua University",
+      "link": "https://life.tsinghua.edu.cn/lifeen/"
+    },
+    {
+      "role": "Principal Investigator",
+      "institution": "Tsinghua-Peking Center for Life Sciences",
+      "link": "http://www.cls.edu.cn/en/"
+    },
+    {
+      "role": "Principal Investigator",
+      "institution": "Beijing Frontier Research Center for Biological Structure",
+      "link": "https://www.frcbs.tsinghua.edu.cn/en"
+    },
+    {
+      "role": "Principal Investigator",
+      "institution": "State Key Laboratory of Membrane Biology",
+      "link": "https://www.biomembrane.tsinghua.edu.cn/yanjiurenyuan/1613.html"
+    },
+    {
+      "role": "Principal Investigator",
+      "institution": "Center for Life Sciences and Artificial Intelligence, School of Life Sciences, Tsinghua University"
+    }
+  ],
+  "contact": {
+    "officeAddress": "Room A216-A, Biomedical Hall, Tsinghua University, Haidian District, Beijing, China",
+    "labAddress": "Room A208, Biomedical Hall, Tsinghua University, Haidian District, Beijing, China",
+    "phone": "010-62794752"
+  },
+  "briefBio": [
+    "Dr. Wang Tong is the Principal Investigator (PI) of the School of Life Sciences, Tsinghua University, Tsinghua University-Peking University Center for Life Sciences (CLS), Beijing Frontier Research Center for Biological Structures, State Key Laboratory of Membrane Biology, and Center for Life Sciences and Artificial Intelligence. Prior to joining Tsinghua in 2025, he was a Senior Researcher at Microsoft Research. He received his Ph.D. at Tsinghua University in 2019 and worked as a visiting scholar at Harvard University from 2016 to 2017.",
+    "His main research directions include AI-driven biomolecular dynamics simulation system (Nature, 2024), molecular structure modeling and prediction (Nat Commun, 2024), AI aided drug discovery (Brief Bioinform, 2023) and biomechanism detection via simulations (Cell Res, 2022 a,b). Over the past five years, as first or corresponding author, he has published more than 30 papers in journals such as Nature, Nat Mach Intell, and top computer science conference, such as NeurlPS and ICLR. He also holds more than ten patents in China and the United States. He has been working as Committee Member of Chinese Bioinformatics Society in protein structure prediction and simulation since it launched.",
+    "Dr. Wang has received Capital Frontier Academic Achievement Award (2025), Top Ten Advances in Chinese Bioinformatics Award (2024), Champion in First Global AI Drug Development Competition (2023), Top Downloaded Article Award (2022) and honored reviewer in ACS journals (2022, 2023)."
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "period": "2025-Present",
+      "position": "Assistant Professor",
+      "institution": "School of Life Sciences, Tsinghua University",
+      "details": ["Tsinghua University-Peking University Center for Life Sciences", "Beijing Frontier Research Center for Biological Structure"]
+    },
+    {
+      "id": "edu-2",
+      "period": "2019-2025",
+      "position": "Senior Researcher",
+      "institution": "Microsoft Research"
+    },
+    {
+      "id": "edu-3",
+      "period": "2014-2019",
+      "position": "Ph.D.",
+      "institution": "Tsinghua University"
+    },
+    {
+      "id": "edu-4",
+      "period": "2016-2017",
+      "position": "Visiting PhD Student",
+      "institution": "Harvard University"
+    },
+    {
+      "id": "edu-5",
+      "period": "2010-2014",
+      "position": "B.S. in Science",
+      "institution": "Shandong University"
+    }
+  ],
+  "honors": [
+    "Capital Frontier Academic Achievement Award",
+    "National Key R&D Program of China",
+    "AI+Life Science Interdisciplinary Research Program, School of Life Sciences, Tsinghua",
+    "Start-up of scientific research for new PI by Tsinghua University",
+    "Top Ten Advances in Chinese Bioinformatics (1st rank of teamwork)",
+    "Champion in the First Global AI Drug Development Competition",
+    "Certificate of Recognition and Appreciation of ACS Publication Peer Reviewers",
+    "Runner-up of OGB Large Scale Challenge @NeurIPS2022 competition",
+    "Top Downloaded Article Award by Wiley Press (1st rank of teamwork)",
+    "Certificate of Recognition and Appreciation of ACS Publication Peer Reviewers",
+    "National Scholarship for Doctoral Students",
+    "First Prize of RONG Scholarship by Tsinghua University",
+    "Tang Lixin Scholarship by Tsinghua University",
+    "Innovation Scholarship by Beijing Advanced Innovation Center of Structural Biology",
+    "Distinguished Study Abroad Scholarship by Tsinghua University",
+    "Distinguished Graduation Award of Shandong Province",
+    "Distinguished Graduation Award by Shandong University",
+    "First-class Scholarship by Shandong University"
+  ],
+  "presentations": [
+    {
+      "id": "pres-1",
+      "conference": "Ceremony and Symposium on Capital Frontier Academic Achievements",
+      "location": "Beijing, China",
+      "topic": "How AI revolutionizes protein dynamics research. (Keynote Speech)"
+    },
+    {
+      "id": "pres-2",
+      "conference": "AI + Materials Symposium by Beijing Computational Science Research Center",
+      "location": "Chengdu, China",
+      "topic": "AI driven biomolecular dynamics simulation. (Keynote Speech)"
+    },
+    {
+      "id": "pres-3",
+      "conference": "National Conference of the Chinese Society of Biochemistry and Molecular Biology",
+      "location": "Nanchang, China",
+      "topic": "The coming age of AI driven biomolecular dynamics simulation."
+    },
+    {
+      "id": "pres-4",
+      "conference": "2025 Hong Kong International Biotechnology Convention (BIOHK2025)",
+      "location": "Hong Kong, China",
+      "topic": "The coming age of AI driven biomolecular dynamics simulation."
+    },
+    {
+      "id": "pres-5",
+      "conference": "National Conference of American Chemical Society (ACS Fall 2025)",
+      "location": "Washington, DC, U.S.A.",
+      "topic": "Coming age of AI driven biomolecular dynamics simulation. Machine learning force field for AI-driven protein molecular dynamics simulation"
+    },
+    {
+      "id": "pres-6",
+      "conference": "National Conference of Biomolecular Structure Prediction and Simulation",
+      "location": "Changchun, China",
+      "topic": "The new era of AI driven biomolecular dynamics simulation. (Keynote Speech)"
+    },
+    {
+      "id": "pres-7",
+      "conference": "Artificial Intelligence for BioPharma Conference (AIBC 2025)",
+      "location": "Shanghai, China",
+      "topic": "The new era of AI driven biomolecular dynamics simulation."
+    },
+    {
+      "id": "pres-8",
+      "conference": "National Conference on Artificial Intelligence Biology",
+      "location": "Shanghai, China",
+      "topic": "The coming age of AI driven biomolecular dynamics simulation with ab initio accuracy."
+    },
+    {
+      "id": "pres-9",
+      "conference": "National Conference of American Chemical Society (ACS Fall 2024)",
+      "location": "Denver, CO, U.S.A.",
+      "topic": "Transforming protein dynamics simulation with ab initio accuracy at the cost of empirical force filed."
+    },
+    {
+      "id": "pres-10",
+      "conference": "The 15th National Conference of Theoretical and Computational Chemistry",
+      "location": "Changchun, China",
+      "topic": "ViSNet: A general molecular geometry modeling framework for molecular properties prediction and MD simulations"
+    },
+    {
+      "id": "pres-11",
+      "conference": "The 37th Annual Conference on Neural Information Processing Systems (NeurIPS 2023)",
+      "location": "New Orleans, LA, U.S.A.",
+      "topic": "Geometric transformer with interatomic positional encoding."
+    },
+    {
+      "id": "pres-12",
+      "conference": "The Twelfth National Conference on Bioinformatics and System Biology",
+      "location": "Qingdao, China",
+      "topic": "AI2BMD: transforming protein dynamics simulation with ab initio accuracy at the cost of empirical force filed."
+    },
+    {
+      "id": "pres-13",
+      "conference": "The Eleventh National Conference on Bioinformatics and System Biology",
+      "location": "Guangzhou, China",
+      "topic": "AI-powered MD simulation and drug discovery: from algorithm design to applications in combating COVID-19."
+    },
+    {
+      "id": "pres-14",
+      "conference": "The 36th Annual Conference on Neural Information Processing Systems (NeurIPS 2022)",
+      "location": "Virtual Meeting",
+      "topic": "How to better introduce geometric information for molecular representation modeling"
+    }
+  ],
+  "lectures": [
+    {
+      "id": "lec-1",
+      "institution": "School of AI for Science, Peking University",
+      "topic": "Beyond AlphaFold: How AI transforms protein dynamics research."
+    },
+    {
+      "id": "lec-2",
+      "institution": "School of Life Sciences and Technology, Tongji University",
+      "topic": "Understanding the power of AI in biomolecular dynamics simulation and drug discovery."
+    },
+    {
+      "id": "lec-3",
+      "institution": "College of Chemistry, Central China Normal University",
+      "topic": "Recent advances in AI driven biomolecular dynamics simulation."
+    },
+    {
+      "id": "lec-4",
+      "institution": "Protein Structure In-silicon Forum, Chinese Bioinformatics Society",
+      "topic": "The coming age of AI driven biomolecular dynamics simulation with ab initio accuracy."
+    },
+    {
+      "id": "lec-5",
+      "institution": "Beijing Advanced Research Center for Biological Structures, Tsinghua University",
+      "topic": "The coming age of AI driven biomolecular dynamics simulation with ab initio accuracy."
+    },
+    {
+      "id": "lec-6",
+      "institution": "Center for Quantitative Biology, Peking University",
+      "topic": "The coming age of AI driven biomolecular dynamics simulation with ab initio accuracy."
+    },
+    {
+      "id": "lec-7",
+      "institution": "Institute of Systems and Physical Biology, Shenzhen Bay Laboratory",
+      "topic": "The coming age of AI driven biomolecular dynamics simulation with ab initio accuracy."
+    },
+    {
+      "id": "lec-8",
+      "institution": "School of Science, Xi'an Jiaotong-Liverpool University",
+      "topic": "Advancing the frontiers of protein dynamics research through AI."
+    },
+    {
+      "id": "lec-9",
+      "institution": "Kuang Yaming Honors School, Nanjing University",
+      "topic": "Recent advances in machine learning force fields and biomolecular simulations by AI."
+    },
+    {
+      "id": "lec-10",
+      "institution": "School of Mathematics, Renmin University",
+      "topic": "Ab initio characterization protein dynamics with AI2BMD."
+    },
+    {
+      "id": "lec-11",
+      "institution": "Institute of Systems and Physical Biology, Shenzhen Bay Laboratory",
+      "topic": "AI2BMD: Transforming biomolecular dynamics simulation with ab initio accuracy driven by ViSNet."
+    },
+    {
+      "id": "lec-12",
+      "institution": "Westlake University",
+      "topic": "How AI driven MD facilitates biological research."
+    },
+    {
+      "id": "lec-13",
+      "institution": "Protein Structure In-silicon Forum, Chinese Bioinformatics Society",
+      "topic": "AI2BMD: Transforming biomolecular dynamics simulation with ab initio accuracy at the cost of empirical force field."
+    },
+    {
+      "id": "lec-14",
+      "institution": "Beijing Advanced Research Center for Biological Structures, Tsinghua University",
+      "topic": "Algorithm design and application for MD simulation and drug discovery."
+    },
+    {
+      "id": "lec-15",
+      "institution": "Protein Structure In-silicon Forum, Chinese Bioinformatics Society",
+      "topic": "Algorithm design and applications for protein structure computational research."
+    },
+    {
+      "id": "lec-16",
+      "institution": "School of Mathematics, Renmin University",
+      "topic": "DeepFragLib: improved fragment sampling for ab initio protein structure prediction"
+    }
+  ],
+  "courses": [
+    {
+      "id": "course-1",
+      "name": "AI-driven Biomacromolecule Simulation and Computing",
+      "semester": "2025 Fall",
+      "note": "Co-taught with other faculty members"
+    }
+  ]
+}
+

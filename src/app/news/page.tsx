@@ -1,9 +1,99 @@
+"use client";
+
+import { useState, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import Link from "next/link";
 import ImageCarousel from "@/components/ImageCarousel";
+import { getNewsData } from "@/lib/data";
+import { useAdmin, FloatingEditButton } from "@/components/admin";
+import { NewsArticleEditor } from "@/components/admin/editors/NewsEditors";
+import type { NewsArticle, NewsData } from "@/types";
+
+// 获取类别标签
+function getCategoryLabel(category: NewsArticle['category']) {
+  const labels = {
+    'lab-news': 'Lab News',
+    'publication': 'Publication',
+    'award': 'Award',
+    'conference': 'Conference'
+  };
+  return labels[category] || 'Lab News';
+}
+
+// 新闻条目组件
+function NewsItem({
+  article,
+  onEdit
+}: {
+  article: NewsArticle;
+  onEdit?: () => void;
+}) {
+  return (
+    <article className="relative border-b border-gray-200 pb-16">
+      {onEdit && (
+        <FloatingEditButton
+          label="Edit"
+          onClick={onEdit}
+          position="top-right"
+        />
+      )}
+      <div className="flex flex-col lg:flex-row gap-8 items-start">
+        {/* Left side - Text content */}
+        <div className="flex-1 w-full lg:w-auto">
+          <div className="text-sm text-muted-foreground mb-2">
+            {article.date}
+          </div>
+          <h2 className="text-2xl font-bold text-primary mb-4 hover:underline cursor-pointer">
+            {article.title}
+          </h2>
+          <p className="text-muted-foreground leading-relaxed mb-4">
+            {article.content}
+          </p>
+          {article.links && article.links.length > 0 && (
+            <div className="flex gap-4 mb-4 flex-wrap">
+              {article.links.map((link, index) => (
+                <Link key={index} href={link.url} target="_blank" rel="noopener noreferrer">
+                  <Button variant="link" className="text-primary p-0 h-auto">
+                    <ExternalLink className="h-4 w-4 mr-2" />
+                    {link.text}
+                  </Button>
+                </Link>
+              ))}
+            </div>
+          )}
+          <div className="mt-4 text-sm text-primary">
+            {getCategoryLabel(article.category)}
+          </div>
+        </div>
+
+        {/* Right side - Image Carousel */}
+        {article.images.length > 0 && (
+          <div className="w-full lg:w-80 flex-shrink-0">
+            <ImageCarousel
+              images={article.images}
+              alt={article.title}
+            />
+          </div>
+        )}
+      </div>
+    </article>
+  );
+}
 
 export default function NewsPage() {
+  const { isDevMode } = useAdmin();
+  const [data, setData] = useState<NewsData>(getNewsData());
+  const { articles } = data;
+
+  // Editing states
+  const [editingArticle, setEditingArticle] = useState<NewsArticle | null>(null);
+
+  // Refresh data callback
+  const refreshData = useCallback(() => {
+    setData(getNewsData());
+  }, []);
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="max-w-6xl mx-auto">
@@ -15,228 +105,27 @@ export default function NewsPage() {
         {/* Recent News */}
         <section className="mb-12">
           <div className="space-y-16">
-
-            {/* News 6 - December 2025 */}
-            <article className="border-b border-gray-200 pb-16">
-              <div className="flex flex-col lg:flex-row gap-8 items-start">
-                {/* Left side - Text content */}
-                <div className="flex-1 w-full lg:w-auto">
-                  <div className="text-sm text-muted-foreground mb-2">
-                    December 6, 2025
-                  </div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 hover:underline cursor-pointer">
-                    Prof. Wang Receives 2025 Capital Frontier Academic Achievement Award
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Prof. Wang was honored with the 2025 Capital Frontier Academic Achievement Award. Organized by the Beijing Computer Society, this prestigious selection involved a rigorous two-stage peer review process aimed at highlighting top-tier innovations at the intersection of Artificial Intelligence and Computer Science. Prof. Wang attended the award ceremony and delivered an invited talk, sharing insights on the development of the AI2BMD framework and its impact on the field.
-                  </p>
-                  <Link href="https://mp.weixin.qq.com/s/2F9G0QLxlF9Uwo8OHGcCAw" target="_blank" rel="noopener noreferrer">
-                    <Button variant="link" className="text-primary p-0 h-auto">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Read More (Chinese)
-                    </Button>
-                  </Link>
-                  <div className="mt-4 text-sm text-primary">
-                    Lab News
-                  </div>
-                </div>
-
-                {/* Right side - Image Carousel */}
-                <div className="w-full lg:w-80 flex-shrink-0">
-                  <ImageCarousel
-                    images={["/news/image14.jpeg", "/news/image15.jpeg"]}
-                    alt="Prof. Wang Receives Award"
-                  />
-                </div>
-              </div>
-            </article>
-
-            {/* News 5 - November 2025 */}
-            <article className="border-b border-gray-200 pb-16">
-              <div className="flex flex-col lg:flex-row gap-8 items-start">
-                <div className="flex-1 w-full lg:w-auto">
-                  <div className="text-sm text-muted-foreground mb-2">
-                    November 28, 2025
-                  </div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 hover:underline cursor-pointer">
-                    Prof. Wang&apos;s Team Reviews Advances in AI-Driven Biomolecular Simulations
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Prof. Wang&apos;s group published a comprehensive review titled &quot;Recent Advances in Artificial Intelligence-Driven Biomolecular Dynamics Simulations Based on Machine Learning Force Fields&quot; in Current Opinion in Structural Biology. This article systematically surveys the landscape of Machine Learning Force Fields (MLFFs), evaluating architectures ranging from classically parametrized terms to end-to-end neural networks. It highlights how MLFFs resolve the long-standing trade-off between computational efficiency and quantum mechanical accuracy, and discusses emerging universal models like AI2BMD.
-                  </p>
-                  <div className="flex gap-4 mb-4">
-                    <Link href="https://doi.org/10.1016/j.sbi.2025.103191" target="_blank" rel="noopener noreferrer">
-                      <Button variant="link" className="text-primary p-0 h-auto">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Read Paper
-                      </Button>
-                    </Link>
-                    <Link href="https://www.tsinghua.edu.cn/info/1175/122851.htm" target="_blank" rel="noopener noreferrer">
-                      <Button variant="link" className="text-primary p-0 h-auto">
-                        <ExternalLink className="h-4 w-4 mr-2" />
-                        Tsinghua News (Chinese)
-                      </Button>
-                    </Link>
-                  </div>
-                  <div className="text-sm text-primary">
-                    Publication
-                  </div>
-                </div>
-
-                <div className="w-full lg:w-80 flex-shrink-0">
-                  <ImageCarousel
-                    images={["/news/image13.png"]}
-                    alt="Review Article"
-                  />
-                </div>
-              </div>
-            </article>
-
-            {/* News 5.5 - November 4, 2025 */}
-            <article className="border-b border-gray-200 pb-16">
-              <div className="flex flex-col lg:flex-row gap-8 items-start">
-                <div className="flex-1 w-full lg:w-auto">
-                  <div className="text-sm text-muted-foreground mb-2">
-                    November 4, 2025
-                  </div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 hover:underline cursor-pointer">
-                    Prof. Wang Featured in Interview with China Science Communication
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    On November 4, Prof. Wang was interviewed by China Science Communication, a leading platform for public science education. In the feature video, Prof. Wang introduced the fundamentals of molecular dynamics simulations to a general audience. He discussed the current challenges facing the field and explained how our laboratory is utilizing artificial intelligence to overcome these bottlenecks, making complex scientific concepts accessible to the public.
-                  </p>
-                  <Link href="https://www.163.com/v/video/VLCJH2499.html" target="_blank" rel="noopener noreferrer">
-                    <Button variant="link" className="text-primary p-0 h-auto">
-                      <ExternalLink className="h-4 w-4 mr-2" />
-                      Watch Interview (Chinese)
-                    </Button>
-                  </Link>
-                  <div className="mt-4 text-sm text-primary">
-                    Lab News
-                  </div>
-                </div>
-
-                <div className="w-full lg:w-80 flex-shrink-0">
-                  <ImageCarousel
-                    images={["/news/image12.png"]}
-                    alt="China Science Communication Interview"
-                  />
-                </div>
-              </div>
-            </article>
-
-            {/* News 4 - September 2025 */}
-            <article className="border-b border-gray-200 pb-16">
-              <div className="flex flex-col lg:flex-row gap-8 items-start">
-                <div className="flex-1 w-full lg:w-auto">
-                  <div className="text-sm text-muted-foreground mb-2">
-                    September 11, 2025
-                  </div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 hover:underline cursor-pointer">
-                    Prof. Wang Delivers Invited Speech at BIOHK2025 AI Forum
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    On September 11, Prof. Wang delivered an invited speech at BIOHK2025 in Hong Kong. He presented at the AI Forum, a highlight session co-hosted by the School of Life Sciences, Tsinghua University. As part of the university&apos;s delegation, Prof. Wang shared insights on the intersection of artificial intelligence and life sciences, contributing to the significant presence of Tsinghua researchers at this international convention.
-                  </p>
-                  <div className="text-sm text-primary">
-                    Lab News
-                  </div>
-                </div>
-
-                <div className="w-full lg:w-80 flex-shrink-0">
-                  <ImageCarousel
-                    images={["/news/image10.jpeg", "/news/image11.jpeg"]}
-                    alt="BIOHK2025 Conference"
-                  />
-                </div>
-              </div>
-            </article>
-
-            {/* News 3 - August 2025 */}
-            <article className="border-b border-gray-200 pb-16">
-              <div className="flex flex-col lg:flex-row gap-8 items-start">
-                <div className="flex-1 w-full lg:w-auto">
-                  <div className="text-sm text-muted-foreground mb-2">
-                    August 18, 2025
-                  </div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 hover:underline cursor-pointer">
-                    Prof. Wang Presents Latest Research at ACS Fall 2025
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Prof. Wang attended the American Chemical Society (ACS) Fall 2025 meeting held in Washington, DC from August 17–21. On August 18, he delivered two presentations titled &quot;The Coming Age of AI-Driven Biomolecular Dynamics Simulation with Ab Initio Accuracy&quot; and &quot;Machine Learning Force Field for AI-Driven Protein Molecular Dynamics Simulation.&quot; These talks highlighted the laboratory&apos;s recent breakthroughs in applying machine learning to enhance the accuracy and efficiency of protein molecular dynamics simulations.
-                  </p>
-                  <div className="text-sm text-primary">
-                    Lab News
-                  </div>
-                </div>
-
-                <div className="w-full lg:w-80 flex-shrink-0">
-                  <ImageCarousel
-                    images={["/news/image8.jpeg", "/news/image9.jpeg"]}
-                    alt="ACS Fall 2025"
-                  />
-                </div>
-              </div>
-            </article>
-
-            {/* News 2 - June 2025 Conferences */}
-            <article className="border-b border-gray-200 pb-16">
-              <div className="flex flex-col lg:flex-row gap-8 items-start">
-                <div className="flex-1 w-full lg:w-auto">
-                  <div className="text-sm text-muted-foreground mb-2">
-                    June 2025
-                  </div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 hover:underline cursor-pointer">
-                    Prof. Tong Wang Presents at Major Conferences in June
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    Concurrent with the establishment of the new laboratory, Prof. Wang participated in a series of academic conferences throughout June. He delivered an invited speech at the National Conference on Artificial Intelligence Biology in Hangzhou on June 7, followed by another invited speech at the Artificial Intelligence for BioPharma Conference in Shanghai on June 12. Subsequently, on June 15, he presented a keynote speech at the National Conference of Biomolecular Structure Prediction and Simulation in Changchun.
-                  </p>
-                  <div className="text-sm text-primary">
-                    Lab News
-                  </div>
-                </div>
-
-                <div className="w-full lg:w-80 flex-shrink-0">
-                  <ImageCarousel
-                    images={["/news/image5.jpeg", "/news/image6.jpeg", "/news/image7.jpeg"]}
-                    alt="Conference Presentations"
-                  />
-                </div>
-              </div>
-            </article>
-
-            {/* News 1 - Lab Launch */}
-            <article className="border-b border-gray-200 pb-16">
-              <div className="flex flex-col lg:flex-row gap-8 items-start">
-                <div className="flex-1 w-full lg:w-auto">
-                  <div className="text-sm text-muted-foreground mb-2">
-                    June 9, 2025
-                  </div>
-                  <h2 className="text-2xl font-bold text-primary mb-4 hover:underline cursor-pointer">
-                    Official Launch of the Wang Lab at Tsinghua University
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed mb-4">
-                    We are excited to announce that the Wang Lab was officially established at Tsinghua University on June 9, 2025. Our new research facilities are located in the Biomedicine Hall, Tsinghua University, with Prof. Tong Wang&apos;s office in Room A216-A and the main laboratory in Room A208. This marks the beginning of a new chapter, and we welcome researchers, students and anyone who is interested in our lab research to visit our new space to discuss innovation and collaboration.
-                  </p>
-                  <div className="text-sm text-primary">
-                    Lab News
-                  </div>
-                </div>
-
-                <div className="w-full lg:w-80 flex-shrink-0">
-                  <ImageCarousel
-                    images={["/news/image1.jpeg", "/news/image2.jpeg", "/news/image3.jpeg", "/news/image4.jpeg"]}
-                    alt="Wang Lab Facilities"
-                  />
-                </div>
-              </div>
-            </article>
-
+            {articles.map((article) => (
+              <NewsItem
+                key={article.id}
+                article={article}
+                onEdit={isDevMode ? () => setEditingArticle(article) : undefined}
+              />
+            ))}
           </div>
         </section>
 
       </div>
+
+      {/* Edit Modals */}
+      {isDevMode && editingArticle && (
+        <NewsArticleEditor
+          isOpen={!!editingArticle}
+          onClose={() => setEditingArticle(null)}
+          initialData={editingArticle}
+          onSave={refreshData}
+        />
+      )}
     </div>
   );
 }

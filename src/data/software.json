@@ -1,0 +1,32 @@
+{
+  "pageTitle": "Software",
+  "pageSubtitle": "Tools and software developed by our research group",
+  "comingSoonMessage": "We are currently preparing our software tools and packages for public release. This page will soon feature our research software, computational tools, and open-source packages for AI-driven biomolecular dynamics simulation.",
+  "software": [
+    {
+      "id": "ai2bmd-suite",
+      "name": "AI2BMD Suite",
+      "description": "AI-driven biomolecular dynamics simulation tools with ab initio accuracy",
+      "status": "coming-soon"
+    },
+    {
+      "id": "molecular-analysis",
+      "name": "Molecular Analysis Tools",
+      "description": "Advanced tools for molecular structure characterization and property prediction",
+      "status": "coming-soon"
+    },
+    {
+      "id": "visualization",
+      "name": "Visualization Packages",
+      "description": "Interactive visualization tools for biomolecular dynamics and structural analysis",
+      "status": "coming-soon"
+    },
+    {
+      "id": "ml-models",
+      "name": "Machine Learning Models",
+      "description": "Pre-trained models and frameworks for molecular property prediction",
+      "status": "coming-soon"
+    }
+  ]
+}
+
