@@ -14,7 +14,7 @@ import type { ResearchInterest, RecentPublication, LabNewsItem } from "@/types";
 
 export default function Home() {
   // 从 JSON 读取数据 - 使用 state 来支持刷新
-  const [homepageData, setHomepageData] = useState(getHomepageData());
+  const [homepageData] = useState(getHomepageData());
   const {
     backgroundImage,
     heroTitle,
@@ -29,7 +29,7 @@ export default function Home() {
   const [currentNewsIndex, setCurrentNewsIndex] = useState(0);
 
   // 编辑状态
-  const { isDevMode } = useAdmin();
+  const { isDevMode } = useAdmin(); // Used in conditional rendering below
   const [editingHero, setEditingHero] = useState(false);
   const [editingWelcome, setEditingWelcome] = useState(false);
   const [editingResearchInterest, setEditingResearchInterest] = useState<ResearchInterest | null>(null);
@@ -345,7 +345,7 @@ export default function Home() {
       </section>
 
       {/* Editor Modals */}
-      {editingHero && (
+      {isDevMode && editingHero && (
         <HeroEditor
           isOpen={editingHero}
           onClose={() => setEditingHero(false)}

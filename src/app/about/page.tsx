@@ -9,10 +9,8 @@ import { useAdmin, FloatingEditButton } from "@/components/admin";
 import {
   PersonalInfoEditor,
   BiographyEditor,
-  EducationEditor,
-  AwardEditor,
 } from "@/components/admin/editors/AboutEditors";
-import type { AboutPIData, Education, Presentation, Lecture, Course, EducationItem, Award } from "@/types";
+import type { AboutPIData } from "@/types";
 
 export default function AboutPage() {
   const { isDevMode } = useAdmin();
@@ -21,8 +19,6 @@ export default function AboutPage() {
   // Editing states
   const [editingPersonalInfo, setEditingPersonalInfo] = useState(false);
   const [editingBiography, setEditingBiography] = useState(false);
-  const [editingEducation, setEditingEducation] = useState<Education | null>(null);
-  const [editingHonor, setEditingHonor] = useState<{ index: number; value: string } | null>(null);
 
   // Refresh data callback
   const refreshData = useCallback(() => {

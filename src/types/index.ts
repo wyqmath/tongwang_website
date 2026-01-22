@@ -96,6 +96,24 @@ export interface AboutPIData {
   courses: CourseItem[];
 }
 
+// Personal Info type for editing
+export interface PersonalInfo {
+  name: string;
+  title: string;
+  position: string;
+  affiliation: string;
+  location: string;
+  avatar: string;
+}
+
+// Award type
+export interface Award {
+  id: string;
+  title: string;
+  year: string;
+  organization?: string;
+}
+
 // ==================== People Types ====================
 
 export interface TeamMember {

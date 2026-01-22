@@ -195,7 +195,7 @@ export function LabNewsEditor({
     { name: 'date', label: 'Date', type: 'text', required: true },
     { name: 'image', label: 'Image URL', type: 'text', required: true },
     { name: 'link', label: 'Link URL', type: 'text', required: true },
-    { name: 'isRecruiting', label: 'Is Recruiting', type: 'checkbox' },
+    { name: 'isRecruiting', label: 'Is Recruiting', type: 'select', options: [{ value: 'true', label: 'Yes' }, { value: 'false', label: 'No' }] },
   ];
 
   const handleSave = async (data: Record<string, unknown>) => {

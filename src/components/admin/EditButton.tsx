@@ -44,9 +44,11 @@ export function EditButton({
 export function FloatingEditButton({
   onClick,
   position = 'top-right',
+  label,
 }: {
   onClick: () => void;
   position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left';
+  label?: string;
 }) {
   const { isDevMode } = useAdmin();
 
@@ -65,7 +67,7 @@ export function FloatingEditButton({
     <button
       onClick={onClick}
       className={`absolute ${positionClasses[position]} p-2 rounded-full bg-amber-100 hover:bg-amber-200 border border-amber-300 text-amber-700 shadow-md transition-all hover:scale-110 z-50`}
-      title="Edit (Dev Mode)"
+      title={label || "Edit (Dev Mode)"}
     >
       <Pencil className="h-4 w-4" />
     </button>

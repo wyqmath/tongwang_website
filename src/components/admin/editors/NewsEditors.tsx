@@ -1,6 +1,8 @@
 "use client";
 
-import { EditModal, type FieldConfig } from "../EditModal";
+import React from 'react';
+import { EditModal, FieldConfig } from '@/components/admin';
+import { saveData, generateId } from '@/lib/admin-api';
 import type { NewsArticle } from "@/types";
 
 // News Article Editor
@@ -14,7 +16,7 @@ export function NewsArticleEditor({
   isOpen: boolean;
   onClose: () => void;
   initialData?: NewsArticle;
-  onSave?: () => void;
+  onSave: () => void;
   isNew?: boolean;
 }) {
   const fields: FieldConfig[] = [
@@ -36,6 +38,7 @@ export function NewsArticleEditor({
       label: "Content",
       type: "textarea",
       required: true,
+      rows: 5,
     },
     {
       name: "category",
@@ -54,27 +57,40 @@ export function NewsArticleEditor({
       label: "Images (one URL per line)",
       type: "array",
       placeholder: "/images/news/example.jpg",
+      rows: 3,
     },
   ];
 
-  // Convert images array to string for editing
-  const formattedData = initialData ? {
-    ...initialData,
-    images: Array.isArray(initialData.images) ? initialData.images.join('\n') : '',
-  } : undefined;
+  // Default data for new articles
+  const defaultData: Record<string, unknown> = {
+    id: generateId(),
+    date: '',
+    title: '',
+    content: '',
+    category: 'lab-news',
+    images: [],
+  };
+
+  const handleSave = async (data: Record<string, unknown>) => {
+    const result = await saveData({
+      dataType: 'news',
+      data: { ...data, id: initialData?.id || defaultData.id },
+      itemId: isNew ? undefined : initialData?.id,
+      arrayField: 'articles'
+    });
+    if (!result.success) throw new Error(result.error);
+    onSave();
+  };
 
   return (
     <EditModal
       isOpen={isOpen}
       onClose={onClose}
+      onSave={handleSave}
       title={isNew ? "Add News Article" : "Edit News Article"}
-      dataFile="news.json"
-      dataPath={isNew ? "articles" : `articles[id:${initialData?.id}]`}
+      description={isNew ? "Add a new news article" : "Edit this news article"}
       fields={fields}
-      initialData={formattedData}
-      onSave={onSave}
-      isArrayItem={true}
-      isNew={isNew}
+      initialData={(initialData || defaultData) as Record<string, unknown>}
     />
   );
 }

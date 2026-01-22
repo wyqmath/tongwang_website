@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import fs from 'fs/promises';
 import path from 'path';
 
+// 用于静态导出兼容 - 静态构建时会生成空的响应
+export const dynamic = 'force-static';
+
 // Data file type mapping
 const DATA_FILES: Record<string, string> = {
   homepage: 'homepage.json',

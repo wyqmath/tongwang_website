@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
+// 使用 STATIC_EXPORT 环境变量控制是否启用静态导出
+// npm run build 会设置这个变量，npm run dev 不会
+const enableStaticExport = process.env.STATIC_EXPORT === 'true';
+
 const nextConfig: NextConfig = {
-  output: 'export', // 启用静态导出
+  // 只在 STATIC_EXPORT=true 时启用静态导出
+  ...(enableStaticExport && { output: 'export' }),
   images: {
     unoptimized: true, // 静态导出需要禁用图片优化
     remotePatterns: [

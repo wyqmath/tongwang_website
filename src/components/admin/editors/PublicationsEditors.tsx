@@ -1,6 +1,8 @@
 "use client";
 
-import { EditModal, type FieldConfig } from "../EditModal";
+import React from 'react';
+import { EditModal, FieldConfig } from '@/components/admin';
+import { saveData, generateId } from '@/lib/admin-api';
 import type { Publication, PublicationsLegend } from "@/types";
 
 // Publication Editor
@@ -14,7 +16,7 @@ export function PublicationEditor({
   isOpen: boolean;
   onClose: () => void;
   initialData?: Publication;
-  onSave?: () => void;
+  onSave: () => void;
   isNew?: boolean;
 }) {
   const fields: FieldConfig[] = [
@@ -24,6 +26,7 @@ export function PublicationEditor({
       type: "textarea",
       required: true,
       placeholder: "e.g., <u>Wang T</u><sup>#*</sup>, Smith J<sup>#</sup>",
+      rows: 2,
     },
     {
       name: "title",
@@ -75,21 +78,51 @@ export function PublicationEditor({
     },
   ];
 
+  // Default data for new publications
+  const defaultData: Record<string, unknown> = {
+    id: generateId(),
+    authors: '',
+    title: '',
+    journal: '',
+    year: new Date().getFullYear(),
+    volume: '',
+    pages: '',
+    link: '',
+    note: '',
+    isHighlighted: 'false',
+  };
+
+  const handleSave = async (data: Record<string, unknown>) => {
+    // Convert isHighlighted back to boolean
+    const processedData = {
+      ...data,
+      id: initialData?.id || defaultData.id,
+      isHighlighted: data.isHighlighted === 'true',
+    };
+    const result = await saveData({
+      dataType: 'publications',
+      data: processedData,
+      itemId: isNew ? undefined : initialData?.id,
+      arrayField: 'publications'
+    });
+    if (!result.success) throw new Error(result.error);
+    onSave();
+  };
+
+  const formattedData = initialData ? {
+    ...initialData,
+    isHighlighted: String(initialData.isHighlighted ?? false),
+  } : defaultData;
+
   return (
     <EditModal
       isOpen={isOpen}
       onClose={onClose}
+      onSave={handleSave}
       title={isNew ? "Add Publication" : "Edit Publication"}
-      dataFile="publications.json"
-      dataPath={isNew ? "publications" : `publications[id:${initialData?.id}]`}
+      description={isNew ? "Add a new publication" : "Edit this publication"}
       fields={fields}
-      initialData={{
-        ...initialData,
-        isHighlighted: String(initialData?.isHighlighted ?? false),
-      }}
-      onSave={onSave}
-      isArrayItem={true}
-      isNew={isNew}
+      initialData={formattedData as Record<string, unknown>}
     />
   );
 }
@@ -104,7 +137,7 @@ export function PublicationsLegendEditor({
   isOpen: boolean;
   onClose: () => void;
   initialData: PublicationsLegend;
-  onSave?: () => void;
+  onSave: () => void;
 }) {
   const fields: FieldConfig[] = [
     {
@@ -123,16 +156,24 @@ export function PublicationsLegendEditor({
     },
   ];
 
+  const handleSave = async (data: Record<string, unknown>) => {
+    const result = await saveData({
+      dataType: 'publications',
+      data: { legend: data }
+    });
+    if (!result.success) throw new Error(result.error);
+    onSave();
+  };
+
   return (
     <EditModal
       isOpen={isOpen}
       onClose={onClose}
+      onSave={handleSave}
       title="Edit Legend"
-      dataFile="publications.json"
-      dataPath="legend"
+      description="Edit the publication legend symbols"
       fields={fields}
-      initialData={initialData}
-      onSave={onSave}
+      initialData={initialData as unknown as Record<string, unknown>}
     />
   );
 }
