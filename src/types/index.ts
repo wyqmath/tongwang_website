@@ -121,10 +121,9 @@ export interface TeamMember {
   name: string;
   title?: string;
   degree?: string;
-  category: 'admin' | 'postdoc' | 'phd' | 'master' | 'undergraduate' | 'alumni';
+  category: 'postdoc' | 'phd' | 'ra_or_intern' ;
   photo: string;
   intro: string;
-  email?: string;
   joinYear?: number;
   graduationYear?: number;
   currentPosition?: string; // For alumni
