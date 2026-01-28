@@ -8,6 +8,7 @@ import Link from "next/link";
 import { getPeopleData } from "@/lib/data";
 import { useAdmin, FloatingEditButton } from "@/components/admin";
 import { TeamMemberEditor, JoinTeamEditor } from "@/components/admin/editors/PeopleEditors";
+import GroupPhotoCarousel from "@/components/GroupPhotoCarousel";
 import type { TeamMember, PeopleData } from "@/types";
 
 // Member component
@@ -52,14 +53,6 @@ function MemberProfile({
         <div className="text-gray-700 leading-relaxed text-justify">
           {member.intro}
         </div>
-        {member.email && (
-          <div className="mt-4 flex items-center text-sm text-gray-600">
-            <Mail className="h-4 w-4 mr-2" />
-            <a href={`mailto:${member.email}`} className="hover:text-blue-600">
-              {member.email}
-            </a>
-          </div>
-        )}
       </div>
     </div>
   );
@@ -80,30 +73,25 @@ export default function TeamPage() {
   }, []);
 
   // 按类别分组成员
-  const adminMembers = members.filter(m => m.category === 'admin');
+  const raOrInternMembers = members.filter(m => m.category === 'ra_or_intern');
   const postdocMembers = members.filter(m => m.category === 'postdoc');
   const phdMembers = members.filter(m => m.category === 'phd');
-  const masterMembers = members.filter(m => m.category === 'master');
-  const undergraduateMembers = members.filter(m => m.category === 'undergraduate');
-  const alumniMembers = members.filter(m => m.category === 'alumni');
+
+  // 合照数据
+  const groupPhotos = [
+    {
+      src: "/group/2026-1-23.png",
+      alt: "23 January 2026",
+    }
+  ];
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-5xl mx-auto">
-
-        {/* Lab Administrator Section */}
-        {adminMembers.length > 0 && (
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-10">Lab Administrator</h2>
-            {adminMembers.map((member) => (
-              <MemberProfile
-                key={member.id}
-                member={member}
-                onEdit={isDevMode ? () => setEditingMember(member) : undefined}
-              />
-            ))}
-          </section>
-        )}
+    <div>
+      {/* Group Photo Carousel - Full Width */}
+      <GroupPhotoCarousel photos={groupPhotos} />
+      
+      <div className="container mx-auto px-4 py-12">
+        <div className="max-w-5xl mx-auto">
 
         {/* Postdoctoral Researchers Section */}
         {postdocMembers.length > 0 && (
@@ -133,39 +121,11 @@ export default function TeamPage() {
           </section>
         )}
 
-        {/* Master Students Section */}
-        {masterMembers.length > 0 && (
+        {/* RA or Intern Section */}
+        {raOrInternMembers.length > 0 && (
           <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-10">Master Students</h2>
-            {masterMembers.map((member) => (
-              <MemberProfile
-                key={member.id}
-                member={member}
-                onEdit={isDevMode ? () => setEditingMember(member) : undefined}
-              />
-            ))}
-          </section>
-        )}
-
-        {/* Undergraduate Students Section */}
-        {undergraduateMembers.length > 0 && (
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-10">Undergraduate Students</h2>
-            {undergraduateMembers.map((member) => (
-              <MemberProfile
-                key={member.id}
-                member={member}
-                onEdit={isDevMode ? () => setEditingMember(member) : undefined}
-              />
-            ))}
-          </section>
-        )}
-
-        {/* Alumni Section */}
-        {alumniMembers.length > 0 && (
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold mb-10">Alumni</h2>
-            {alumniMembers.map((member) => (
+            <h2 className="text-3xl font-bold mb-10">RA or Intern</h2>
+            {raOrInternMembers.map((member) => (
               <MemberProfile
                 key={member.id}
                 member={member}
@@ -203,6 +163,7 @@ export default function TeamPage() {
             </Link>
           </div>
         </section>
+        </div>
       </div>
 
       {/* Edit Modals */}

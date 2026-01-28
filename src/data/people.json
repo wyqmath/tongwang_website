@@ -1,26 +1,53 @@
 {
   "members": [
     {
-      "id": "admin-1",
-      "name": "Zhuoxuan Yang",
-      "category": "admin",
-      "photo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
-      "intro": "Laboratory administrator responsible for managing lab operations, coordinating research activities, and supporting team members. Research focuses on AI-assisted biomolecular structure prediction and computational methods for protein-ligand interaction analysis.",
-      "email": "yangzx@example.com"
-    },
-    {
       "id": "phd-1",
-      "name": "Coming Soon",
+      "name": "Zhengyang Wang",
       "category": "phd",
-      "photo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
-      "intro": "Coming Soon"
+      "photo": "/people/wangzhengyang.jpg",
+      "intro": "I am currently working on developing a new generation of molecular dynamics simulation software that can be applied to various biological molecules."
     },
     {
       "id": "phd-2",
-      "name": "Coming Soon",
+      "name": "Dianwei Wu",
       "category": "phd",
+      "photo": "/people/wudianwei.jpg",
+      "intro": "I'm currently analyzing a new dataset and benchmarking the performance of various models on it."
+    },
+    {
+      "id": "phd-3",
+      "name": "Yuyang Wei",
+      "category": "phd",
+      "photo": "/people/weiyuyang.jpg",
+      "intro": "My research focuses on developing next-generation density-aware machine learning force fields  for molecular dynamics simulations."
+    },
+    {
+      "id": "ra-1",
+      "name": "Zhuoxuan Yang",
+      "category": "ra_or_intern",
       "photo": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='320'%3E%3Crect width='240' height='320' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' font-size='16' text-anchor='middle' dy='.3em' fill='%239ca3af' font-family='Arial, sans-serif'%3EPhoto Coming Soon%3C/text%3E%3C/svg%3E",
-      "intro": "Coming Soon"
+      "intro": "Laboratory Administrative Manager, Research Assistant, responsible for managing daily laboratory operations, coordinating research activities, and providing support to team members. Research interests include artificial intelligence-assisted biomolecular structure prediction and computational methods for protein-ligand interaction analysis."
+    },
+    {
+      "id": "intern-1",
+      "name": "Shuai Peng",
+      "category": "ra_or_intern",
+      "photo": "/people/pengshuai.png",
+      "intro": "Laboratory Technology Administrator, Intern, responsible for managing the laboratory's research infrastructure platform and providing technical support to team members. Research areas include high-performance artificial intelligence-assisted molecular dynamics simulation methods."
+    },
+    {
+      "id": "intern-2",
+      "name": "Xin Sun",
+      "category": "ra_or_intern",
+      "photo": "/people/sunxin.jpg",
+      "intro": "I'm a Master's candidate in Big Data Technology and Engineering at Zhejiang University, majoring in drug discovery and molecular dynamics simulation."
+    },
+    {
+      "id": "intern-3",
+      "name": "Yiyang Xu",
+      "category": "ra_or_intern",
+      "photo": "/people/xuyiyang.png",
+      "intro": "I am an undergraduate student from Tongji University.My research focuses on modeling how electrostatic embedding influences the prediction of molecular and atomic properties."
     }
   ],
   "joinTeam": {
