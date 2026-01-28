@@ -110,16 +110,24 @@ export default function Home() {
 
       {/* Welcome Section */}
       <section className="bg-white py-12 md:py-16 relative">
-        <FloatingEditButton onClick={() => setEditingWelcome(true)} position="top-right" />
+        <FloatingEditButton onClick={() => setEditingWelcome(true)}position="top-right" />
         <div className="container mx-auto px-4 sm:px-6 md:px-8">
           <h2 className="font-bold text-gray-900 mb-4 md:mb-6 text-left text-3xl sm:text-4xl md:text-5xl">
             {welcomeTitle}
           </h2>
-          <ul className="text-gray-600 text-left leading-relaxed space-y-2 md:space-y-3 list-disc list-inside text-lg sm:text-xl md:text-2xl lg:text-3xl">
+          <div className="text-gray-600 text-left leading-relaxed space-y-2 md:space-y-3">
             {welcomePoints.map((point, index) => (
-              <li key={index} className="pl-2">{point}</li>
+              <p
+                key={index}
+                style={{
+                  fontSize: 'clamp(0.5rem, 1.5vw, 1.875rem)',
+                  lineHeight: '1.5'
+                }}
+              >
+                • {point}
+              </p>
             ))}
-          </ul>
+          </div>
         </div>
       </section>
 
